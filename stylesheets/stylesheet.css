@@ -8,6 +8,67 @@ body {
     overflow-y: auto;
 }
 
+#description {
+    position: relative;
+    left: 25%;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20%;
+    height: 100%;
+    background: rgb(31, 31, 31);
+}
+
+#downloadbutton {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 20%;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+
+    background: rgb(0, 127, 0);
+    background: -webkit-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
+    background: -o-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
+    background: -moz-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
+    background: linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
+}
+
+#downloadbutton:hover {
+    background: rgb(0, 191, 0);
+    background: -webkit-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
+    background: -o-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
+    background: -moz-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
+    background: linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
+}
+
+#downloadbutton>a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#downloadbutton>a:link {
+    color: rgb(255, 255, 255);
+}
+
+#downloadbutton>a:visited {
+    color: rgb(255, 255, 255);
+}
+
+#downloadbutton>a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#downloadbutton>a:active {
+    color: rgb(255, 255, 255);
+}
+
 .page {
     width:100%;
     min-height:100%;
@@ -24,16 +85,16 @@ body {
 
 #downloads {
     position: relative;
-    background: rgb(15, 15, 15);
+    background: rgb(31, 31, 31);
     color: rgb(255, 255, 255);
 }
 
 .showcase {
-    position: absolute;
+    position: relative;
     top: 10%;
-    right: 32px;
-    width: 640px;
-    height: 80%;
+    left: 25%;
+    width: 65%;
+    height: 50%;
 /*    0.6*/
 }
 
