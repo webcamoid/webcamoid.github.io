@@ -3,93 +3,95 @@
     <head>
         <meta charset="UTF-8">
         <title>Webcamoid, The ultimate webcam suite!</title>
-        <!--
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
-        <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+        <!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">-->
+        <!--<link rel="stylesheet" type="text/css" href="stylesheets/reset.css" media="screen">-->
         <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-        -->
+        <script src="js/main.js"></script>
     </head>
-    <body>
-        <section class="presentation">
-            <header>
-                <h1>Webcamoid</h1>
-            </header>
-            <nav>
-                <h2>The ultimate webcam suite!</h2>
-                <ul>
-                    <li><a href="#">Take pictures and record videos with the webcam</a></li>
-                    <li><a href="#">Add funny effects to the webcam</a></li>
-                    <li><a href="#">Capture from desktop</a></li>
-                    <li><a href="#">Virtual webcam support for feeding other programs</a></li>
-                </ul>
-            </nav>
-            <aside>
-                <img src="data/cap01.png" alt="pic"/>
-            </aside>
-            <footer>
-                <a href="#downloads">Download Now!</a>
-            </footer>
+    <body onload="main();">
+        <section class="page">
+            <article id="presentation">
+                <header>
+                    <h1>Webcamoid</h1>
+                    <h2>The ultimate webcam suite!</h2>
+                </header>
+                <aside class="showcase">
+                    <img src="data/cap01.png" alt="pic" class="showcase-image" />
+                </aside>
+                <nav>
+                    <ul>
+                        <li><a href="#">Take pictures and record videos</a></li>
+                        <li><a href="#">Add funny effects to the webcam</a></li>
+                        <li><a href="#">Capture from desktop</a></li>
+                        <li><a href="#">Create a virtual webcam</a></li>
+                    </ul>
+                </nav>
+                <footer>
+                    <a href="#downloads">Download Now!</a>
+                </footer>
+            </article>
         </section>
-        <section id="downloads" class="downloads">
-            <header>
-                <h1>Downloads</h1>
-            </header>
-            <nav>
-                <h2>GNU/Linux</h2>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://build.opensuse.org/package/repositories/home:hipersayan_x/Webcamoid">
-                            Binary packages for Webcamoid 7.0.0
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
-                <h2>Windows</h2>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-7.0.0-win32.zip">
-                            Webcamoid 7.0.0 32 bits (Installable)
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-7.0.0-win64.zip">
-                            Webcamoid 7.0.0 64 bits (Installable)
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-portable-7.0.0-win32.zip">
-                            Webcamoid 7.0.0 32 bits (Portable)
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-portable-7.0.0-win64.zip">
-                            Webcamoid 7.0.0 64 bits (Portable)
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
-                <h2>Source Code</h2>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid">
-                            View on GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/zipball/7.0.0">
-                            webcamoid-7.0.0.zip
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/tarball/7.0.0">
-                            webcamoid-7.0.0.tar.gz
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <section class="page" id="downloads">
+            <article>
+                <header>
+                    <h1>Downloads</h1>
+                </header>
+                <nav>
+                    <h2>GNU/Linux</h2>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://build.opensuse.org/package/repositories/home:hipersayan_x/Webcamoid">
+                                Binary packages for Webcamoid 7.0.0
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h2>Windows</h2>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-7.0.0-win32.zip">
+                                Webcamoid 7.0.0 32 bits (Installable)
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-7.0.0-win64.zip">
+                                Webcamoid 7.0.0 64 bits (Installable)
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-portable-7.0.0-win32.zip">
+                                Webcamoid 7.0.0 32 bits (Portable)
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/download/7.0.0/webcamoid-portable-7.0.0-win64.zip">
+                                Webcamoid 7.0.0 64 bits (Portable)
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h2>Source Code</h2>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid">
+                                View on GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid/zipball/7.0.0">
+                                webcamoid-7.0.0.zip
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/webcamoid/webcamoid/tarball/7.0.0">
+                                webcamoid-7.0.0.tar.gz
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
         </section>
     </body>
 </html>
