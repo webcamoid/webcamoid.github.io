@@ -10,28 +10,82 @@ body {
 
 #description {
     position: relative;
-    left: 25%;
+    left: 275px;
+}
+
+header>h1 {
+    font-size: 48px;
+    padding-top: 16px;
+}
+
+header>h2 {
+    position: relative;
+    left: 128px;
+    font-size: 18px;
+    font-style: italic;
+    padding-top: 4px;
 }
 
 #sidebar {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 20%;
+    width: 250px;
     height: 100%;
     background: rgb(31, 31, 31);
 }
 
-#downloadbutton {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 20%;
+.contbutton {
+    width: 100%;
     height: 48px;
     text-align: center;
     vertical-align: middle;
     line-height: 48px;
+}
 
+.button {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.button:link {
+    color: rgb(255, 255, 255);
+}
+
+.button:visited {
+    color: rgb(255, 255, 255);
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.button:active {
+    color: rgb(255, 255, 255);
+}
+
+.feature:hover {
+    font-weight: bold;
+    background: rgba(170, 127, 255, 127);
+    background: -webkit-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
+    background: -o-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
+    background: -moz-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
+    background: linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
+}
+
+.downloadbutton {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 18px;
     background: rgb(0, 127, 0);
     background: -webkit-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
     background: -o-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
@@ -39,7 +93,7 @@ body {
     background: linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
 }
 
-#downloadbutton:hover {
+.downloadbutton:hover {
     background: rgb(0, 191, 0);
     background: -webkit-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
     background: -o-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
@@ -47,38 +101,20 @@ body {
     background: linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
 }
 
-#downloadbutton>a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+.downloadbutton {
     font-weight: bold;
-}
-
-#downloadbutton>a:link {
-    color: rgb(255, 255, 255);
-}
-
-#downloadbutton>a:visited {
-    color: rgb(255, 255, 255);
-}
-
-#downloadbutton>a:hover {
-    color: rgb(255, 255, 255);
-}
-
-#downloadbutton>a:active {
-    color: rgb(255, 255, 255);
 }
 
 .page {
     width:100%;
-    min-height:100%;
+    height:100%;
 }
 
 #presentation {
     position: fixed;
     top: 0px;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     background: rgb(63, 31, 127);
     color: rgb(255, 255, 255);
 }
@@ -90,12 +126,11 @@ body {
 }
 
 .showcase {
-    position: relative;
-    top: 10%;
-    left: 25%;
-    width: 65%;
-    height: 50%;
-/*    0.6*/
+    position: fixed;
+    top: 100px;
+    bottom: 25px;
+    left: 275px;
+    right: 25px;
 }
 
 .showcase-image {
