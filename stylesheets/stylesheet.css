@@ -13,12 +13,12 @@ body {
     left: 275px;
 }
 
-header>h1 {
+#description > h1 {
     font-size: 48px;
     padding-top: 16px;
 }
 
-header>h2 {
+#description > h2 {
     position: relative;
     left: 128px;
     font-size: 18px;
@@ -32,7 +32,7 @@ header>h2 {
     left: 0px;
     width: 250px;
     height: 100%;
-    background: rgb(31, 31, 31);
+    background: rgb(31, 31, 31) url('../data/textures/dirty-old-black-shirt.png');
 }
 
 .contbutton {
@@ -115,14 +115,76 @@ header>h2 {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: rgb(63, 31, 127);
+    background: rgb(63, 31, 127) url('../data/textures/handmade-paper.png');
     color: rgb(255, 255, 255);
 }
 
 #downloads {
     position: relative;
-    background: rgb(31, 31, 31);
+    background: rgb(31, 31, 31) url('../data/textures/dirty-old-black-shirt.png');
     color: rgb(255, 255, 255);
+}
+
+.downloads-container {
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+}
+
+.downloads-title {
+    font-size: 32px;
+    padding-bottom: 16px;
+}
+
+nav > h2 {
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+
+.download-option-container {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.download-option {
+    display: table-cell;
+    position: relative;
+    height: 250px;
+    border-left: 5px solid rgb(170, 127, 255);
+    padding-left: 16px;
+}
+
+.option-next {
+    padding-right: 16px;
+}
+
+.download-option > ul > li {
+    padding-bottom: 8px;
+}
+
+.download-option > ul > li > a {
+    color: rgb(255, 127, 0);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.download-option > ul > li > a:link {
+    color: rgb(255, 127, 0);
+}
+
+.download-option > ul > li > a:visited {
+    color: rgb(255, 127, 0);
+}
+
+.download-option > ul > li > a:hover {
+    color: rgb(255, 191, 63);
+}
+
+.download-option > ul > li > a:active {
+    color: rgb(255, 191, 63);
 }
 
 .showcase {
