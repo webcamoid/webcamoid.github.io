@@ -1,4 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Quicksand Light'), local('Quicksand-Light'), url('../data/fonts/Quicksand-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url('../data/fonts/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url('../data/fonts/Quicksand-Bold.ttf') format('truetype');
+}
 
 html {
     height: 100%;
@@ -83,6 +102,22 @@ body {
     background: -o-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
     background: -moz-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
     background: linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
+}
+
+.feature-selected {
+    background: rgb(255, 191, 63);
+    background: -webkit-linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
+    background: -o-linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
+    background: -moz-linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
+    background: linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
+}
+
+.feature-selected:hover {
+    background: rgb(63, 191, 255);
+    background: -webkit-linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
+    background: -o-linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
+    background: -moz-linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
+    background: linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
 }
 
 .downloadbutton {
@@ -171,7 +206,7 @@ nav > h2 {
 }
 
 .download-option > ul > li {
-    padding-bottom: 8px;
+    padding-bottom: 16px;
 }
 
 .download-option > ul > li > a {
