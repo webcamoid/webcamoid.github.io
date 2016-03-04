@@ -1,5 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
 html {
     height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
 }
 
 body {
@@ -14,14 +18,14 @@ body {
 }
 
 #description > h1 {
-    font-size: 48px;
     padding-top: 16px;
+    font-weight: bold;
 }
 
 #description > h2 {
     position: relative;
     left: 128px;
-    font-size: 18px;
+    font-size: 45%;
     font-style: italic;
     padding-top: 4px;
 }
@@ -53,7 +57,7 @@ body {
     line-height: 48px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 12px;
+    font-size: 28%;
 }
 
 .button:link {
@@ -85,7 +89,7 @@ body {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    font-size: 18px;
+    font-size: 40%;
     background: rgb(0, 127, 0);
     background: -webkit-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
     background: -o-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
@@ -134,12 +138,13 @@ body {
 }
 
 .downloads-title {
-    font-size: 32px;
+    font-size: 67%;
+    font-weight: bold;
     padding-bottom: 16px;
 }
 
 nav > h2 {
-    font-size: 20px;
+    font-size: 45%;
     padding-bottom: 16px;
 }
 
@@ -153,8 +158,12 @@ nav > h2 {
     display: table-cell;
     position: relative;
     height: 250px;
-    border-left: 5px solid rgb(170, 127, 255);
+    border-left: 5px solid rgb(127, 63, 255);
     padding-left: 16px;
+}
+
+.download-option:hover {
+    border-left: 5px solid rgb(170, 127,255);
 }
 
 .option-next {
@@ -166,9 +175,10 @@ nav > h2 {
 }
 
 .download-option > ul > li > a {
+    display: block;
     color: rgb(255, 127, 0);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 35%;
 }
 
 .download-option > ul > li > a:link {
