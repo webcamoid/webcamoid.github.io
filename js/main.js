@@ -33,33 +33,32 @@ function showPreview()
 
 var scroll = 0;
 var scrolling = false;
-var transitionTime = 0.2;
-var steps = 50;
+var transitionTime = 0.1;
+var steps = 25;
 var threshold = 6;
-var scrollTimeout = 500;
+var scrollTimeout = 0.5;
 
-function scrollToMain()
+function scrollTo(height)
 {
-    if (window.pageYOffset <= 0)
-        return false;
+    var diff = window.pageYOffset - height;
 
-    window.scrollBy(0, -document.body.clientHeight / steps);
-    setTimeout(scrollToMain, 1000 * transitionTime / steps);
+    if (Math.abs(diff) <= 0) {
+        stopScrolling();
+
+        return false;
+    }
+
+    var sign = diff >= 0? -1: 1;
+    window.scrollBy(0, sign * document.body.clientHeight / steps);
+    setTimeout(scrollTo, 1000 * transitionTime / steps, height);
 
     return false;
 }
 
-function scrollToDownloads()
+function stopScrolling()
 {
-    var downloadsPage = document.getElementById("downloads");
-
-    if (window.pageYOffset >= downloadsPage.scrollHeight)
-        return false;
-
-    window.scrollBy(0, document.body.clientHeight / steps);
-    setTimeout(scrollToDownloads, 1000 * transitionTime / steps);
-
-    return false;
+    scroll = 0;
+    scrolling = false;
 }
 
 function scrollHandler(event)
@@ -74,20 +73,44 @@ function scrollHandler(event)
 
     scroll += delta;
 
-    if (!scrolling) {
-        if (scroll > threshold && delta > 0) {
-            scrolling = true;
-            scrollToDownloads();
-        } else if (scroll < -threshold && delta < 0) {
-            scrolling = true;
-            scrollToMain();
+    if (!scrolling
+        && Math.abs(scroll) >= threshold) {
+        scrolling = true;
+
+        if (delta > 0) {
+            var downloadsPage = document.getElementById("downloads");
+            scrollTo(downloadsPage.scrollHeight);
+        } else if (delta < 0) {
+            scrollTo(0);
         }
     }
 
-    setTimeout(function() {
-        scroll = 0;
-        scrolling = false;
-    }, scrollTimeout);
+    if (!scrolling)
+        setTimeout(stopScrolling, 1000 * scrollTimeout);
+
+    event.returnValue = false;
+
+    if (event.preventDefault)
+        event.preventDefault();
+
+    return false;
+}
+
+function keyPressHandler(event)
+{
+    switch (event.keyCode) {
+        case 38: // go up
+            scrollTo(0);
+
+            break;
+        case 40: // go down
+            var downloadsPage = document.getElementById("downloads");
+            scrollTo(downloadsPage.scrollHeight);
+
+            break;
+        default:
+            break;
+    }
 
     event.returnValue = false;
 
@@ -99,6 +122,19 @@ function scrollHandler(event)
 
 function main()
 {
+    var ssfound = false;
+
+    for (var ss in document.styleSheets)
+        if (document.styleSheets[ss].href
+            && document.styleSheets[ss].href.indexOf("stylesheets/stylesheet.css") >= 0) {
+            ssfound = true;
+
+            break;
+        }
+
+    if (!ssfound)
+        return;
+
     for (feature in features) {
         var feat = document.getElementById(feature);
 
@@ -112,7 +148,12 @@ function main()
     }
 
     var downloadButton = document.getElementById("downloadbutton");
-    downloadButton.onclick = scrollToDownloads;
+    downloadButton.onclick = function () {
+         var downloadsPage = document.getElementById("downloads");
+         scrollTo(downloadsPage.scrollHeight);
+
+        return false;
+    };
 
     if (document.addEventListener) {
         document.addEventListener("mousewheel", scrollHandler, false);
@@ -124,5 +165,6 @@ function main()
         document.attachEvent("onmousewheel", scrollHandler);
     }
 
+    document.addEventListener("keypress", keyPressHandler, false);
     document.body.className = "hiddenscrollbars";
 }
