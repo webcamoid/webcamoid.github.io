@@ -96,28 +96,60 @@ function scrollHandler(event)
     return false;
 }
 
+keycodes = {
+    "0,9": "Tab",
+    "0,33": "PageUp",
+    "0,34": "PageDown",
+    "0,37": "ArrowLeft",
+    "0,38": "ArrowUp",
+    "0,39": "ArrowRight",
+    "0,40": "ArrowDown",
+    "32,0": " "
+};
+
 function keyPressHandler(event)
 {
-    switch (event.keyCode) {
-        case 38: // go up
-            scrollTo(0);
+    console.log(event)
 
-            break;
-        case 40: // go down
+    var key = keycodes[event.charCode + "," + event.keyCode];
+
+    switch (key) {
+        case "PageUp":
+        case "ArrowLeft":
+        case "ArrowUp":
+            // go up
+            scrollTo(0);
+            event.returnValue = false;
+
+            if (event.preventDefault)
+                event.preventDefault();
+
+            return false;
+        case " ":
+        case "PageDown":
+        case "ArrowRight":
+        case "ArrowDown":
+            // go down
             var downloadsPage = document.getElementById("downloads");
             scrollTo(downloadsPage.scrollHeight);
+            event.returnValue = false;
 
-            break;
+            if (event.preventDefault)
+                event.preventDefault();
+
+            return false;
+        case "Tab":
+            event.returnValue = false;
+
+            if (event.preventDefault)
+                event.preventDefault();
+
+            return false;
         default:
             break;
     }
 
-    event.returnValue = false;
-
-    if (event.preventDefault)
-        event.preventDefault();
-
-    return false;
+    return true;
 }
 
 function main()
@@ -126,7 +158,7 @@ function main()
 
     for (var ss in document.styleSheets)
         if (document.styleSheets[ss].href
-            && document.styleSheets[ss].href.indexOf("stylesheets/stylesheet.css") >= 0) {
+            && document.styleSheets[ss].href.indexOf("stylesheets/desktop.css") >= 0) {
             ssfound = true;
 
             break;
