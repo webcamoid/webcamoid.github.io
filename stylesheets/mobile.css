@@ -1,3 +1,35 @@
+#presentation {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+#description {
+    left: 16px;
+}
+
+#description > h1 {
+    font-size: 80%;
+}
+
+#description > h2 {
+    font-size: 35%;
+    padding-left: 32px;
+}
+
+#sidebar {
+    position: relative;
+    background: none;
+    width: 100%;
+}
+
 .downloads-title {
     color: rgb(255, 0, 0);
 }

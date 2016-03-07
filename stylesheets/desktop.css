@@ -237,6 +237,43 @@ nav > h2 {
     color: rgb(255, 191, 63);
 }
 
+.share-title {
+    font-size: 67%;
+    font-weight: bold;
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+.share-buttons {
+    font-size: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.share-buttons > li {
+    display: inline;
+    padding-right: 8px;
+}
+
+.share-buttons > li > a {
+    text-decoration: none;
+}
+
+.share-buttons > li > a > img {
+    width: 48px;
+    opacity: 0.8;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    filter: gray;
+}
+
+.share-buttons > li > a > img:hover {
+    opacity: 1;
+    -webkit-filter: none;
+    filter: none
+}
+
 .showcase {
     position: fixed;
     top: 100px;

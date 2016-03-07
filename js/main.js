@@ -1,9 +1,9 @@
 var features = {
-    "featMain": "data/cap01.png",
-    "featRecord": "data/cap02.png",
-    "featEffects": "data/cap03.png",
-    "featDesktop": "data/cap04.png",
-    "featVirtual": "data/cap05.png"
+    "featMain": ["data/cap01.png", "Device selection showing the available webcam controls"],
+    "featRecord": ["data/cap02.png", "Support for all possible video formats and codecs"],
+    "featEffects": ["data/cap03.png", "Applying effects in real-time to a video"],
+    "featDesktop": ["data/cap04.png", "Desktop capture"],
+    "featVirtual": ["data/cap05.png", "Virtual camera support"]
 };
 
 function showPreview()
@@ -14,7 +14,8 @@ function showPreview()
         return;
 
     var caller = this.getAttribute("id");
-    preview.src = features[caller];
+    preview.src = features[caller][0];
+    preview.alt = preview.title = features[caller][1];
 
     for (feature in features) {
         var feat = document.getElementById(feature);
