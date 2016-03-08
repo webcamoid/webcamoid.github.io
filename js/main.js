@@ -110,8 +110,6 @@ keycodes = {
 
 function keyPressHandler(event)
 {
-    console.log(event)
-
     var key = keycodes[event.charCode + "," + event.keyCode];
 
     switch (key) {

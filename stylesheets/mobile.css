@@ -30,6 +30,81 @@
     width: 100%;
 }
 
+#featurelist {
+    position: absolute;
+    top: 0px;
+    bottom: 48px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.feature {
+    position: absolute;
+    bottom: 48px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid rgba(191, 191, 191, 0.5);
+    border-bottom: 2px solid rgba(191, 191, 191, 0.5);
+}
+
+.feature:hover {
+    font-weight: bold;
+    background: rgb(0, 0, 0);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.contbutton {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.downloads-container {
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+
 .downloads-title {
-    color: rgb(255, 0, 0);
+    font-size: 55%;
+}
+
+nav > h2 {
+    font-size: 35%;
+}
+
+.download-option {
+    height: 150px;
+    padding-left: 6px;
+    border-left: 2px solid rgb(127, 63, 255);
+}
+
+.download-option:hover {
+    border-left: 2px solid rgb(170, 127, 255);
+}
+
+.download-option > ul > li > a {
+    font-size: 30%;
+}
+
+.share-title {
+    font-size: 55%;
+}
+
+.share-buttons > li {
+    padding-right: 4px;
+}
+
+.share-buttons > li > a > img {
+    width: 32px;
+}
+
+.showcase {
+    position: fixed;
+    top: 76px;
+    bottom: 48px;
+    left: 0px;
+    right: 0px;
 }
