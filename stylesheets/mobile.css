@@ -36,7 +36,7 @@
     bottom: 48px;
     width: 100%;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .feature {

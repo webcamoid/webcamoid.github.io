@@ -44,7 +44,7 @@ function scrollTo(height)
     var diff = Math.abs(window.pageYOffset - height);
 
     if (diff <= 0) {
-        stopScrolling();
+        scrolling = false;
 
         return false;
     }
@@ -62,7 +62,7 @@ function scrollListTo(featureList, offset)
     var diff = Math.abs(featureList.scrollTop - offset[1]);
 
     if (diff <= 0) {
-        stopScrolling();
+        scrolling = false;
         var preview = document.getElementById("preview");
 
         if (!preview)
@@ -95,38 +95,33 @@ function scrollListTo(featureList, offset)
     return false;
 }
 
-function stopScrolling()
-{
-    scroll = 0;
-    scrolling = false;
-}
-
 function scrollHandler(event)
 {
-    event = window.event || event;
-    var delta = event.detail? event.detail: event.wheelDelta;
+    if (!scrolling) {
+        event = window.event || event;
+        var delta = event.detail? event.detail: event.wheelDelta;
 
-    if ((scroll > 0 && delta < 0)
-        || (scroll < 0 && delta > 0)) {
-        scroll = 0;
-    }
+        if ((scroll > 0 && delta < 0)
+            || (scroll < 0 && delta > 0)) {
+            scroll = 0;
+        }
 
-    scroll += delta;
+        scroll += delta;
 
-    if (!scrolling
-        && Math.abs(scroll) >= threshold) {
-        scrolling = true;
+        if (Math.abs(scroll) >= threshold) {
+            scrolling = true;
+            scroll = 0;
 
-        if (delta > 0) {
-            var downloadsPage = document.getElementById("downloads");
-            scrollTo(downloadsPage.scrollHeight);
-        } else if (delta < 0) {
-            scrollTo(0);
+            if (delta > 0) {
+                var downloadsPage = document.getElementById("downloads");
+                scrollTo(downloadsPage.scrollHeight);
+            } else if (delta < 0) {
+                scrollTo(0);
+            }
+        } else {
+            setTimeout(function() { scroll = 0; }, 1000 * scrollTimeout);
         }
     }
-
-    if (!scrolling)
-        setTimeout(stopScrolling, 1000 * scrollTimeout);
 
     event.returnValue = false;
 
@@ -158,30 +153,31 @@ function nearestOffset(featureList, offset)
 
 function listScrollHandler(event)
 {
-    event = window.event || event;
-    var delta = event.detail? event.detail: event.wheelDelta;
+    if (!scrolling) {
+        event = window.event || event;
+        var delta = event.detail? event.detail: event.wheelDelta;
 
-    if ((scroll > 0 && delta < 0)
-        || (scroll < 0 && delta > 0)) {
-        scroll = 0;
-    }
+        if ((scroll > 0 && delta < 0)
+            || (scroll < 0 && delta > 0)) {
+            scroll = 0;
+        }
 
-    scroll += delta;
+        scroll += delta;
 
-    if (!scrolling
-        && Math.abs(scroll) >= threshold) {
-        scrolling = true;
-        var featureList = document.getElementById("featurelist");
-        var diff = featureList.children[0].clientHeight;
+        if (Math.abs(scroll) >= threshold) {
+            scrolling = true;
+            scroll = 0;
+            var featureList = document.getElementById("featurelist");
+            var diff = featureList.children[0].clientHeight;
 
-        if (delta != 0) {
-            var offset = featureList.scrollTop + diff * (delta > 0? 1: -1);
-            scrollListTo(featureList, nearestOffset(featureList, offset));
+            if (delta != 0) {
+                var offset = featureList.scrollTop + diff * (delta > 0? 1: -1);
+                scrollListTo(featureList, nearestOffset(featureList, offset));
+            }
+        } else {
+            setTimeout(function() { scroll = 0; }, 1000 * scrollTimeout);
         }
     }
-
-    if (!scrolling)
-        setTimeout(stopScrolling, 1000 * scrollTimeout);
 
     event.returnValue = false;
 
@@ -193,26 +189,27 @@ function listScrollHandler(event)
 
 function downloadsScrollHandler(event)
 {
-    event = window.event || event;
-    var delta = event.detail? event.detail: event.wheelDelta;
+    if (!scrolling) {
+        event = window.event || event;
+        var delta = event.detail? event.detail: event.wheelDelta;
 
-    if ((scroll > 0 && delta < 0)
-        || (scroll < 0 && delta > 0)) {
-        scroll = 0;
+        if ((scroll > 0 && delta < 0)
+            || (scroll < 0 && delta > 0)) {
+            scroll = 0;
+        }
+
+        scroll += delta;
+
+        if (Math.abs(scroll) >= threshold) {
+            scrolling = true;
+            scroll = 0;
+
+            if (delta < 0)
+                scrollTo(0);
+        } else {
+            setTimeout(function() { scroll = 0; }, 1000 * scrollTimeout);
+        }
     }
-
-    scroll += delta;
-
-    if (!scrolling
-        && Math.abs(scroll) >= threshold) {
-        scrolling = true;
-
-        if (delta < 0)
-            scrollTo(0);
-    }
-
-    if (!scrolling)
-        setTimeout(stopScrolling, 1000 * scrollTimeout);
 
     event.returnValue = false;
 
@@ -309,7 +306,8 @@ var isMobile = false;
 
 function checkMobile()
 {
-    return document.body.clientWidth < 200 * ppmm[0] || document.body.clientHeight < 120 * ppmm[1];
+    return document.body.clientWidth < 200 * ppmm[0]
+        || document.body.clientHeight < 120 * ppmm[1];
 }
 
 function resizeHandler(event)
@@ -381,8 +379,12 @@ function main()
 
     var downloadButton = document.getElementById("downloadbutton");
     downloadButton.onclick = function () {
-         var downloadsPage = document.getElementById("downloads");
-         scrollTo(downloadsPage.scrollHeight);
+        if (!scrolling) {
+            scrolling = true;
+            scroll = 0;
+            var downloadsPage = document.getElementById("downloads");
+            scrollTo(downloadsPage.scrollHeight);
+        }
 
         return false;
     };
