@@ -34,24 +34,43 @@ function showPreview()
 
 var scroll = 0;
 var scrolling = false;
-var transitionTime = 0.1;
+var transitionTime = 0.3;
 var steps = 25;
 var threshold = 6;
 var scrollTimeout = 0.5;
 
 function scrollTo(height)
 {
-    var diff = window.pageYOffset - height;
+    var diff = Math.abs(window.pageYOffset - height);
 
-    if (Math.abs(diff) <= 0) {
+    if (diff <= 0) {
         stopScrolling();
 
         return false;
     }
 
-    var sign = diff >= 0? -1: 1;
-    window.scrollBy(0, sign * document.body.clientHeight / steps);
+    var sign = window.pageYOffset >= height? -1: 1;
+    var k = Math.min(diff, Math.round(document.body.clientHeight / steps));
+    window.scrollBy(0, sign * k);
     setTimeout(scrollTo, 1000 * transitionTime / steps, height);
+
+    return false;
+}
+
+function scrollListTo(featureList, height)
+{
+    var diff = Math.abs(featureList.scrollTop - height);
+
+    if (diff <= 0) {
+        stopScrolling();
+
+        return false;
+    }
+
+    var sign = featureList.scrollTop >= height? -1: 1;
+    var k = Math.min(diff, Math.round(featureList.clientHeight / steps));
+    featureList.scrollBy(0, sign * k);
+    setTimeout(scrollListTo, 1000 * transitionTime / steps, featureList, height);
 
     return false;
 }
@@ -84,6 +103,90 @@ function scrollHandler(event)
         } else if (delta < 0) {
             scrollTo(0);
         }
+    }
+
+    if (!scrolling)
+        setTimeout(stopScrolling, 1000 * scrollTimeout);
+
+    event.returnValue = false;
+
+    if (event.preventDefault)
+        event.preventDefault();
+
+    return false;
+}
+
+function nearestOffset(featureList, offset)
+{
+    var diff = Number.MAX_VALUE;
+    var offsetY = 0;
+
+    for (var children in featureList.children) {
+        var offsetTop = featureList.children[children].offsetTop;
+        var d = Math.abs(offsetTop - offset);
+
+        if (d < diff) {
+            diff = d;
+            offsetY = offsetTop;
+        }
+    }
+
+    return offsetY;
+}
+
+function listScrollHandler(event)
+{
+    event = window.event || event;
+    var delta = event.detail? event.detail: event.wheelDelta;
+
+    if ((scroll > 0 && delta < 0)
+        || (scroll < 0 && delta > 0)) {
+        scroll = 0;
+    }
+
+    scroll += delta;
+
+    if (!scrolling
+        && Math.abs(scroll) >= threshold) {
+        scrolling = true;
+        var featureList = document.getElementById("featurelist");
+        var diff = featureList.children[0].clientHeight;
+
+        if (delta != 0) {
+            var offset = featureList.scrollTop + diff * (delta > 0? 1: -1);
+            scrollListTo(featureList, nearestOffset(featureList, offset));
+        }
+    }
+
+    if (!scrolling)
+        setTimeout(stopScrolling, 1000 * scrollTimeout);
+
+    event.returnValue = false;
+
+    if (event.preventDefault)
+        event.preventDefault();
+
+    return false;
+}
+
+function downloadsScrollHandler(event)
+{
+    event = window.event || event;
+    var delta = event.detail? event.detail: event.wheelDelta;
+
+    if ((scroll > 0 && delta < 0)
+        || (scroll < 0 && delta > 0)) {
+        scroll = 0;
+    }
+
+    scroll += delta;
+
+    if (!scrolling
+        && Math.abs(scroll) >= threshold) {
+        scrolling = true;
+
+        if (delta < 0)
+            scrollTo(0);
     }
 
     if (!scrolling)
@@ -151,6 +254,78 @@ function keyPressHandler(event)
     return true;
 }
 
+function mobileToggled(isMobile)
+{
+    if (isMobile) {
+        listenForScroll(document.getElementById("downloads"), downloadsScrollHandler);
+        listenForScroll(document.getElementById("featurelist"), listScrollHandler);
+        unlistenForScroll(document, scrollHandler);
+    } else {
+        listenForScroll(document, scrollHandler);
+        unlistenForScroll(document.getElementById("downloads"), downloadsScrollHandler);
+        unlistenForScroll(document.getElementById("featurelist"), listScrollHandler);
+    }
+}
+
+var ppmm = [0, 0];
+
+function testResolution()
+{
+    var div = document.createElement("div");
+    div.style.overflow = "hidden";
+    div.style.visibility = "hidden";
+    div.style.width = "1in";
+    div.style.height = "1in";
+    document.body.appendChild(div);
+    var resolution = [div.offsetWidth / 25.4, div.offsetHeight / 25.4];
+    document.body.removeChild(div);
+
+    return resolution;
+}
+
+var isMobile = false;
+
+function checkMobile()
+{
+    return document.body.clientWidth < 200 * ppmm[0];
+}
+
+function resizeHandler(event)
+{
+    if (checkMobile() != isMobile) {
+        isMobile = !isMobile;
+        mobileToggled(isMobile);
+    }
+}
+
+function listenForScroll(element, handler)
+{
+
+    if (element.addEventListener) {
+        element.addEventListener("mousewheel", handler, false);
+        element.addEventListener("DOMMouseScroll", handler, false);
+    } else if (document.attachEvent) {
+        element.attachEvent("mousewheel", handler);
+        element.attachEvent("DOMMouseScroll", handler);
+    } else {
+        element.attachEvent("onmousewheel", handler);
+    }
+}
+
+function unlistenForScroll(element, handler)
+{
+
+    if (element.removeEventListener) {
+        element.removeEventListener("mousewheel", handler);
+        element.removeEventListener("DOMMouseScroll", handler);
+    } else if (document.detachEvent) {
+        element.detachEvent("mousewheel", handler);
+        element.detachEvent("DOMMouseScroll", handler);
+    } else {
+        element.detachEvent("onmousewheel", handler);
+    }
+}
+
 function main()
 {
     var ssfound = false;
@@ -165,6 +340,10 @@ function main()
 
     if (!ssfound)
         return;
+
+    ppmm = testResolution();
+    isMobile = checkMobile();
+    mobileToggled(isMobile);
 
     for (feature in features) {
         var feat = document.getElementById(feature);
@@ -186,16 +365,7 @@ function main()
         return false;
     };
 
-    if (document.addEventListener) {
-        document.addEventListener("mousewheel", scrollHandler, false);
-        document.addEventListener("DOMMouseScroll", scrollHandler, false);
-    } else if (document.attachEvent) {
-        document.attachEvent("mousewheel", scrollHandler);
-        document.attachEvent("DOMMouseScroll", scrollHandler);
-    } else {
-        document.attachEvent("onmousewheel", scrollHandler);
-    }
-
     document.addEventListener("keypress", keyPressHandler, false);
     document.body.className = "hiddenscrollbars";
+    window.addEventListener("resize", resizeHandler, false);
 }
