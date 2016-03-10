@@ -324,9 +324,13 @@ function listenForScroll(element, handler)
     if (element.addEventListener) {
         element.addEventListener("mousewheel", handler, false);
         element.addEventListener("DOMMouseScroll", handler, false);
+        element.addEventListener("scroll", handler, false);
+        element.addEventListener("touchmove", handler, false);
     } else if (document.attachEvent) {
         element.attachEvent("mousewheel", handler);
         element.attachEvent("DOMMouseScroll", handler);
+        element.attachEvent("scroll", handler, false);
+        element.attachEvent("touchmove", handler, false);
     } else {
         element.attachEvent("onmousewheel", handler);
     }
@@ -334,13 +338,16 @@ function listenForScroll(element, handler)
 
 function unlistenForScroll(element, handler)
 {
-
     if (element.removeEventListener) {
         element.removeEventListener("mousewheel", handler);
         element.removeEventListener("DOMMouseScroll", handler);
+        element.removeEventListener("scroll", handler);
+        element.removeEventListener("touchmove", handler);
     } else if (document.detachEvent) {
         element.detachEvent("mousewheel", handler);
         element.detachEvent("DOMMouseScroll", handler);
+        element.detachEvent("scroll", handler);
+        element.detachEvent("touchmove", handler);
     } else {
         element.detachEvent("onmousewheel", handler);
     }
