@@ -309,7 +309,7 @@ var isMobile = false;
 
 function checkMobile()
 {
-    return document.body.clientWidth < 200 * ppmm[0];
+    return document.body.clientWidth < 200 * ppmm[0] || document.body.clientHeight < 120 * ppmm[1];
 }
 
 function resizeHandler(event)
