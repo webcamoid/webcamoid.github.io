@@ -57,20 +57,40 @@ function scrollTo(height)
     return false;
 }
 
-function scrollListTo(featureList, height)
+function scrollListTo(featureList, offset)
 {
-    var diff = Math.abs(featureList.scrollTop - height);
+    var diff = Math.abs(featureList.scrollTop - offset[1]);
 
     if (diff <= 0) {
         stopScrolling();
+        var preview = document.getElementById("preview");
+
+        if (!preview)
+            return false;
+
+        var caller = offset[0];
+        preview.src = features[caller][0];
+        preview.alt = preview.title = features[caller][1];
+
+        for (feature in features) {
+            var feat = document.getElementById(feature);
+
+            if (!feat)
+                continue;
+
+            if (feature == caller)
+                feat.className += " feature-selected";
+            else
+                feat.className = feat.className.replace(" feature-selected", "");
+        }
 
         return false;
     }
 
-    var sign = featureList.scrollTop >= height? -1: 1;
+    var sign = featureList.scrollTop >= offset[1]? -1: 1;
     var k = Math.min(diff, Math.round(featureList.clientHeight / steps));
     featureList.scrollBy(0, sign * k);
-    setTimeout(scrollListTo, 1000 * transitionTime / steps, featureList, height);
+    setTimeout(scrollListTo, 1000 * transitionTime / steps, featureList, offset);
 
     return false;
 }
@@ -120,6 +140,7 @@ function nearestOffset(featureList, offset)
 {
     var diff = Number.MAX_VALUE;
     var offsetY = 0;
+    var child = "";
 
     for (var children in featureList.children) {
         var offsetTop = featureList.children[children].offsetTop;
@@ -128,10 +149,11 @@ function nearestOffset(featureList, offset)
         if (d < diff) {
             diff = d;
             offsetY = offsetTop;
+            child = featureList.children[children].children[0].id;
         }
     }
 
-    return offsetY;
+    return [child, offsetY];
 }
 
 function listScrollHandler(event)
