@@ -95,6 +95,8 @@ function scrollListTo(featureList, offset)
     return false;
 }
 
+/* Mouse scroll handlers */
+
 function scrollHandler(event)
 {
     if (!scrolling) {
@@ -219,6 +221,137 @@ function downloadsScrollHandler(event)
     return false;
 }
 
+/* Touch scroll handlers */
+
+var touchStartX = 0;
+var touchStartY = 0;
+var touchTime0 = 0;
+var touchSpeedThreshold = 1;
+
+function touchScrollHandler(event)
+{
+    switch (event.type)
+    {
+        case "touchstart":
+            var element = event.changedTouches[0];
+            touchStartX = element.pageX;
+            touchStartY = element.pageY;
+            touchTime0 = new Date().getTime();
+
+            break;
+        case "touchmove":
+            break;
+        case "touchend":
+            var element = event.changedTouches[0];
+            var speedX = (element.pageX - touchStartX) / (new Date().getTime() - touchTime0);
+            var speedY = (element.pageY - touchStartY) / (new Date().getTime() - touchTime0);
+
+            if (Math.abs(speedY) >= touchSpeedThreshold) {
+                scrolling = true;
+
+                if (speedY > 0) {
+                    scrollTo(0);
+                } else if (speedY < 0) {
+                    var downloadsPage = document.getElementById("downloads");
+                    scrollTo(downloadsPage.scrollHeight);
+                }
+            }
+
+            break;
+        default:
+            break;
+    }
+
+    event.returnValue = false;
+
+    if (event.preventDefault)
+        event.preventDefault();
+
+    return false;
+}
+
+function listTouchScrollHandler(event)
+{
+    switch (event.type)
+    {
+        case "touchstart":
+            var element = event.changedTouches[0];
+            touchStartX = element.pageX;
+            touchStartY = element.pageY;
+            touchTime0 = new Date().getTime();
+
+            break;
+        case "touchmove":
+            break;
+        case "touchend":
+            var element = event.changedTouches[0];
+            var speedX = (element.pageX - touchStartX) / (new Date().getTime() - touchTime0);
+            var speedY = (element.pageY - touchStartY) / (new Date().getTime() - touchTime0);
+
+            if (Math.abs(speedY) >= touchSpeedThreshold) {
+                scrolling = true;
+                var featureList = document.getElementById("featurelist");
+                var diff = featureList.children[0].clientHeight;
+
+                if (speedY != 0) {
+                    var offset = featureList.scrollTop + diff * (speedY < 0? 1: -1);
+                    scrollListTo(featureList, nearestOffset(featureList, offset));
+                }
+            }
+
+            break;
+        default:
+            break;
+    }
+
+    event.returnValue = false;
+
+    if (event.preventDefault)
+        event.preventDefault();
+
+    return false;
+}
+
+function downloadsTouchScrollHandler(event)
+{
+    switch (event.type)
+    {
+        case "touchstart":
+            var element = event.changedTouches[0];
+            touchStartX = element.pageX;
+            touchStartY = element.pageY;
+            touchTime0 = new Date().getTime();
+
+            break;
+        case "touchmove":
+            break;
+        case "touchend":
+            var element = event.changedTouches[0];
+            var speedX = (element.pageX - touchStartX) / (new Date().getTime() - touchTime0);
+            var speedY = (element.pageY - touchStartY) / (new Date().getTime() - touchTime0);
+
+            if (Math.abs(speedY) >= touchSpeedThreshold) {
+                scrolling = true;
+
+                if (speedY > 0)
+                    scrollTo(0);
+            }
+
+            break;
+        default:
+            break;
+    }
+
+    event.returnValue = false;
+
+    if (event.preventDefault)
+        event.preventDefault();
+
+    return false;
+}
+
+/* Key press handlers */
+
 keycodes = {
     "0,9": "Tab",
     "0,33": "PageUp",
@@ -239,7 +372,12 @@ function keyPressHandler(event)
         case "ArrowLeft":
         case "ArrowUp":
             // go up
-            scrollTo(0);
+            if (!scrolling) {
+                scrolling = true;
+                scroll = 0;
+                scrollTo(0);
+            }
+
             event.returnValue = false;
 
             if (event.preventDefault)
@@ -251,8 +389,13 @@ function keyPressHandler(event)
         case "ArrowRight":
         case "ArrowDown":
             // go down
-            var downloadsPage = document.getElementById("downloads");
-            scrollTo(downloadsPage.scrollHeight);
+            if (!scrolling) {
+                scrolling = true;
+                scroll = 0;
+                var downloadsPage = document.getElementById("downloads");
+                scrollTo(downloadsPage.scrollHeight);
+            }
+
             event.returnValue = false;
 
             if (event.preventDefault)
@@ -278,11 +421,17 @@ function mobileToggled(isMobile)
     if (isMobile) {
         listenForScroll(document.getElementById("downloads"), downloadsScrollHandler);
         listenForScroll(document.getElementById("featurelist"), listScrollHandler);
+        listenForTouchScroll(document.getElementById("downloads"), downloadsTouchScrollHandler);
+        listenForTouchScroll(document.getElementById("featurelist"), listTouchScrollHandler);
         unlistenForScroll(document, scrollHandler);
+        unlistenForTouchScroll(document, touchScrollHandler);
     } else {
         listenForScroll(document, scrollHandler);
+        listenForTouchScroll(document, touchScrollHandler);
         unlistenForScroll(document.getElementById("downloads"), downloadsScrollHandler);
         unlistenForScroll(document.getElementById("featurelist"), listScrollHandler);
+        unlistenForTouchScroll(document.getElementById("downloads"), downloadsTouchScrollHandler);
+        unlistenForTouchScroll(document.getElementById("featurelist"), listTouchScrollHandler);
     }
 }
 
@@ -320,17 +469,12 @@ function resizeHandler(event)
 
 function listenForScroll(element, handler)
 {
-
     if (element.addEventListener) {
         element.addEventListener("mousewheel", handler, false);
         element.addEventListener("DOMMouseScroll", handler, false);
-        element.addEventListener("scroll", handler, false);
-        element.addEventListener("touchmove", handler, false);
     } else if (document.attachEvent) {
         element.attachEvent("mousewheel", handler);
         element.attachEvent("DOMMouseScroll", handler);
-        element.attachEvent("scroll", handler, false);
-        element.attachEvent("touchmove", handler, false);
     } else {
         element.attachEvent("onmousewheel", handler);
     }
@@ -341,15 +485,37 @@ function unlistenForScroll(element, handler)
     if (element.removeEventListener) {
         element.removeEventListener("mousewheel", handler);
         element.removeEventListener("DOMMouseScroll", handler);
-        element.removeEventListener("scroll", handler);
-        element.removeEventListener("touchmove", handler);
     } else if (document.detachEvent) {
         element.detachEvent("mousewheel", handler);
         element.detachEvent("DOMMouseScroll", handler);
-        element.detachEvent("scroll", handler);
-        element.detachEvent("touchmove", handler);
     } else {
         element.detachEvent("onmousewheel", handler);
+    }
+}
+
+function listenForTouchScroll(element, handler)
+{
+    if (element.addEventListener) {
+        element.addEventListener("touchstart", handler, false);
+        element.addEventListener("touchmove", handler, false);
+        element.addEventListener("touchend", handler, false);
+    } else if (document.attachEvent) {
+        element.attachEvent("touchstart", handler, false);
+        element.attachEvent("touchmove", handler, false);
+        element.attachEvent("touchend", handler, false);
+    }
+}
+
+function unlistenForTouchScroll(element, handler)
+{
+    if (element.addEventListener) {
+        element.removeEventListener("touchstart", handler, false);
+        element.removeEventListener("touchmove", handler, false);
+        element.removeEventListener("touchend", handler, false);
+    } else if (document.attachEvent) {
+        element.detachEvent("touchstart", handler);
+        element.detachEvent("touchmove", handler);
+        element.detachEvent("touchend", handler);
     }
 }
 

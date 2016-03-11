@@ -261,17 +261,14 @@ nav > h2 {
 
 .share-buttons > li > a > img {
     width: 48px;
-    opacity: 0.8;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-    filter: gray;
 }
 
 .share-buttons > li > a > img:hover {
-    opacity: 1;
-    -webkit-filter: none;
-    filter: none
+    -webkit-filter: brightness(150%);
+    -moz-filter: brightness(150%);
+    -o-filter: brightness(150%);
+    -ms-filter: brightness(150%);
+    filter: brightness(150%);
 }
 
 .showcase {
