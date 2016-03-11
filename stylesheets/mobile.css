@@ -38,6 +38,7 @@
     width: 100%;
     overflow: hidden;
     overflow-y: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .feature {
