@@ -69,10 +69,12 @@
 
 .downloads-title {
     font-size: 55%;
+    padding-bottom: 8px;
 }
 
 nav > h2 {
     font-size: 35%;
+    padding-bottom: 8px;
 }
 
 .download-option {
@@ -86,7 +88,7 @@ nav > h2 {
 }
 
 .download-option > ul > li {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 .download-option > ul > li > a {
@@ -95,6 +97,8 @@ nav > h2 {
 
 .share-title {
     font-size: 55%;
+    margin-top: 8px;
+    padding-bottom: 8px;
 }
 
 .share-buttons > li {
