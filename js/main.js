@@ -51,7 +51,12 @@ function scrollTo(height)
 
     var sign = window.pageYOffset >= height? -1: 1;
     var k = Math.min(diff, Math.round(document.body.clientHeight / steps));
-    window.scrollBy(0, sign * k);
+
+    if (window.scrollBy)
+        window.scrollBy(0, sign * k);
+    else
+        window.scrollTop += sign * k;
+
     setTimeout(scrollTo, 1000 * transitionTime / steps, height);
 
     return false;
@@ -89,7 +94,12 @@ function scrollListTo(featureList, offset)
 
     var sign = featureList.scrollTop >= offset[1]? -1: 1;
     var k = Math.min(diff, Math.round(featureList.clientHeight / steps));
-    featureList.scrollBy(0, sign * k);
+
+    if (featureList.scrollBy)
+        featureList.scrollBy(0, sign * k);
+    else
+        featureList.scrollTop += sign * k;
+
     setTimeout(scrollListTo, 1000 * transitionTime / steps, featureList, offset);
 
     return false;
@@ -360,7 +370,8 @@ keycodes = {
     "0,38": "ArrowUp",
     "0,39": "ArrowRight",
     "0,40": "ArrowDown",
-    "32,0": " "
+    "32,0": " ",
+    "32,32": " "
 };
 
 function keyPressHandler(event)
@@ -563,6 +574,7 @@ function main()
     };
 
     document.addEventListener("keypress", keyPressHandler, false);
+    document.addEventListener("keydown", keyPressHandler, false);
     document.body.className = "hiddenscrollbars";
     window.addEventListener("resize", resizeHandler, false);
 }
