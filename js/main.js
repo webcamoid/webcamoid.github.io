@@ -395,7 +395,6 @@ function keyPressHandler(event)
                 event.preventDefault();
 
             return false;
-        case " ":
         case "PageDown":
         case "ArrowRight":
         case "ArrowDown":
@@ -405,6 +404,25 @@ function keyPressHandler(event)
                 scroll = 0;
                 var downloadsPage = document.getElementById("downloads");
                 scrollTo(downloadsPage.scrollHeight);
+            }
+
+            event.returnValue = false;
+
+            if (event.preventDefault)
+                event.preventDefault();
+
+            return false;
+        case " ":
+            if (!scrolling) {
+                scrolling = true;
+                scroll = 0;
+
+                if (window.pageYOffset > 0) {
+                    scrollTo(0);
+                } else {
+                    var downloadsPage = document.getElementById("downloads");
+                    scrollTo(downloadsPage.scrollHeight);
+                }
             }
 
             event.returnValue = false;
