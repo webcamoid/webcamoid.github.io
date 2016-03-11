@@ -76,13 +76,17 @@ nav > h2 {
 }
 
 .download-option {
-    height: 150px;
+    height: 125px;
     padding-left: 6px;
     border-left: 2px solid rgb(127, 63, 255);
 }
 
 .download-option:hover {
     border-left: 2px solid rgb(170, 127, 255);
+}
+
+.download-option > ul > li {
+    padding-bottom: 4px;
 }
 
 .download-option > ul > li > a {
