@@ -226,7 +226,7 @@ function downloadsScrollHandler(event)
 var touchStartX = 0;
 var touchStartY = 0;
 var touchTime0 = 0;
-var touchSpeedThreshold = 1;
+var touchSpeedThreshold = 0.5;
 
 function touchScrollHandler(event)
 {
