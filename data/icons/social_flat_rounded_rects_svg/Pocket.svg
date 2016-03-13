@@ -5,15 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="48"
-   viewBox="0 0 48 48"
-   width="48"
-   id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="Pocket.svg">
+   id="svg2"
+   width="48"
+   viewBox="0 0 48 48"
+   height="48">
   <metadata
      id="metadata12">
     <rdf:RDF>
@@ -28,46 +24,21 @@
   </metadata>
   <defs
      id="defs10" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="829"
-     inkscape:window-height="480"
-     id="namedview8"
-     showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:zoom="0.4609375"
-     inkscape:cx="256"
-     inkscape:cy="256"
-     inkscape:window-x="34"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
   <g
-     id="g3340"
-     transform="scale(0.09375,0.09375)">
+     transform="scale(0.09375,0.09375)"
+     id="g3340">
     <rect
-       id="rect4"
-       width="512"
-       ry="64"
-       rx="64"
-       height="512"
-       x="0"
+       style="fill:#e84352"
        y="0"
-       style="fill:#e84352" />
+       x="0"
+       height="512"
+       rx="64"
+       ry="64"
+       width="512"
+       id="rect4" />
     <path
-       id="path6"
+       style="fill:#ffffff"
        d="m 388.75443,88.862001 -265.50749,0 c -26.09447,0 -47.24687,21.323449 -47.24687,47.610359 l 0,131.89635 c 0,2.44751 0.18389,4.85227 0.54453,7.20285 -0.3692,3.51234 -0.54453,7.06459 -0.54453,10.65104 0,75.60353 80.5841,136.9154 179.99851,136.9154 99.41295,0 180.00135,-61.31187 180.00135,-136.9154 0,-3.58788 -0.1925,-7.1387 -0.5459,-10.65104 0.3534,-2.34915 0.5459,-4.75534 0.5459,-7.20285 l 0,-131.89494 c 0,-26.29545 -21.1752,-47.611769 -47.2455,-47.611769 z m -22.3725,132.596259 -92.96994,92.95993 c -4.72255,4.72255 -10.92758,7.0489 -17.11977,6.99616 -6.38463,0.21951 -12.83483,-2.10969 -17.72132,-6.99616 l -92.94852,-92.95993 c -9.33961,-9.33533 -9.31681,-24.47799 0,-33.79622 9.3282,-9.3382 24.44378,-9.35244 33.79622,0 l 76.58141,76.58567 76.58562,-76.58567 c 9.3097,-9.3382 24.4809,-9.31396 33.7963,0 9.341,9.33248 9.341,24.44663 0,33.79622 z"
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff" />
+       id="path6" />
   </g>
 </svg>
