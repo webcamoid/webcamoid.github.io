@@ -1,125 +1,57 @@
-#presentation {
-    background: rgb(63, 31, 127);
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+#project-name {
+    font-size: 90%;
 }
 
-#downloads {
-    background: rgb(31, 31, 31);
+#project-description {
+    font-size: 45%;
 }
 
-#description {
-    left: 16px;
+#menu {
+    text-align: right;
 }
 
-#description > h1 {
-    font-size: 80%;
-}
-
-#description > h2 {
-    font-size: 35%;
-    padding-left: 32px;
-}
-
-#sidebar {
-    position: relative;
-    background: none;
-    width: 100%;
-}
-
-#featurelist {
-    position: absolute;
-    top: 0px;
-    bottom: 48px;
-    left: 0px;
-    width: 100%;
-    overflow: hidden;
-    overflow-y: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.feature {
-    position: absolute;
-    bottom: 48px;
-    background: rgba(0, 0, 0, 0.5);
-    border-top: 2px solid rgba(191, 191, 191, 0.5);
-    border-bottom: 2px solid rgba(191, 191, 191, 0.5);
-}
-
-.feature:hover {
-    font-weight: bold;
-    background: rgb(0, 0, 0);
-    border-top: 2px solid rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(255, 255, 255);
-}
-
-.contbutton {
-    position: relative;
-    width: 100%;
+#menu-container {
     height: 100%;
+    width: initial;
+    margin-top: 16px;
+    margin-right: 16px;
 }
 
-.downloads-container {
-    top: 5px;
-    bottom: 5px;
-    left: 5px;
-    right: 5px;
+#menu-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
 }
 
-.downloads-title {
-    font-size: 55%;
-    padding-bottom: 8px;
-}
-
-nav > h2 {
-    font-size: 35%;
-    padding-bottom: 8px;
-}
-
-.download-option {
-    height: 125px;
-    padding-left: 6px;
-    border-left: 2px solid rgb(127, 63, 255);
-}
-
-.download-option:hover {
-    border-left: 2px solid rgb(170, 127, 255);
-}
-
-.download-option > ul > li {
-    padding-bottom: 8px;
-}
-
-.download-option > ul > li > a {
-    font-size: 30%;
-}
-
-.share-title {
-    font-size: 55%;
-    margin-top: 8px;
-    padding-bottom: 8px;
-}
-
-.share-buttons > li {
-    padding-right: 4px;
-}
-
-.share-buttons > li > a > img {
-    width: 32px;
-}
-
-.showcase {
-    position: fixed;
-    top: 76px;
-    bottom: 48px;
-    left: 0px;
+#menu-links {
+    display: none;
+    position: absolute;
     right: 0px;
+    align-items: initial;
+    justify-content: initial;
+    background-color: rgb(255, 63, 127);
+    width: 180px;
+    height: initial;
+    text-align: center;
+    z-index: 2;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#menu-links > li {
+    display: initial;
+    flex: initial;
+}
+
+#menu-links > li > a {
+    vertical-align: initial;
+}
+
+#menu-links > li > a:hover {
+    background-color: rgb(255, 127, 171);
+}
+
+#menu-container:hover #menu-links {
+    display: block;
 }

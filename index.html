@@ -6,37 +6,56 @@
         <meta name="description" content="Webcamoid is a webcam app focused on providing all major features required by power users with a very simple and intuitive interface">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-        <link rel="shortcut icon" type="image/png" href="data/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="data/icons/favicon.png"/>
         <link rel="canonical" href="http://webcamoid.github.io/">
         <link rel="canonical" href="http://webcamoid.github.io/index.html#downloads">
         <link rel="stylesheet" type="text/css" href="stylesheets/reset.css" media="screen">
         <link rel="stylesheet" type="text/css" href="stylesheets/desktop.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/mobile.css" media="all and (max-width: 200mm) and (max-device-width: 200mm), all and (max-height: 120mm) and (max-device-height: 120mm)">
-        <script src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheets/mobile.css" media="all and (max-width: 200mm), all and (max-device-width: 200mm)">
+<!--         <script src="js/main.js"></script> -->
     </head>
     <body onload="main();">
-        <section class="page">
-            <article id="presentation">
-                <header id="description">
-                    <h1>Webcamoid</h1>
-                    <h2>The ultimate webcam suite!</h2>
-                </header>
-                <aside class="showcase">
-                    <img id="preview" src="data/cap01.png" alt="Device selection showing the available webcam controls" title="Device selection showing the available webcam controls" class="showcase-image" />
-                </aside>
-                <nav id="sidebar">
-                    <ul id="featurelist">
-                        <li class="contbutton"><a id="featMain" class="button feature" href="#">Simple and intuitive</a></li>
-                        <li class="contbutton"><a id="featRecord" class="button feature" href="#">Take pictures and record videos</a></li>
-                        <li class="contbutton"><a id="featEffects" class="button feature" href="#">Apply funny effects</a></li>
-                        <li class="contbutton"><a id="featDesktop" class="button feature" href="#">Capture from desktop</a></li>
-                        <li class="contbutton"><a id="featVirtual" class="button feature" href="#">Create a virtual webcam</a></li>
+        <header id="header-main">
+            <a id="homepage-link" href="https://webcamoid.github.io/">
+                <img id="webcamoid-logo" src="data/icons/webcamoid.png" alt="Webcamoid" title="Webcamoid" />
+                <div id="project-title">
+                    <h1 id="project-name">Webcamoid</h1>
+                    <h2 id="project-description">The ultimate webcam suite!</h2>
+                </div>
+            </a>
+            <div id="menu">
+                <div id="menu-container">
+                    <div id="menu-button">
+                        <div class="menu-button-line"></div>
+                        <div class="menu-button-line"></div>
+                        <div class="menu-button-line"></div>
+                    </div>
+                    <h1 id="menu-title">Links</h1>
+                    <ul id="menu-links">
+                        <li><a href="#downloads">Downloads</a></li>
+                        <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki">Docs</a></li>
+                        <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/issues">Support</a></li>
+                        <li><a href="#share-it">Share</a></li>
+                     </ul>
+                </div>
+            </div>
+        </header>
+        <section id="start-page">
+            <div id="showcase">
+                <img id="preview" src="data/screenshots/cap01.png" alt="Device selection showing the available webcam controls" title="Device selection showing the available webcam controls" />
+                <div id="features">
+                    <h1>Features</h1>
+                    <ul id="feature-list">
+                        <li class="feature-item">Simple and intuitive</li>
+                        <li class="feature-item">Take pictures and record videos</li>
+                        <li class="feature-item">Apply funny effects</li>
+                        <li class="feature-item">Capture from desktop</li>
+                        <li class="feature-item">Create a virtual webcam</li>
                     </ul>
-                    <a id="downloadbutton" class="button downloadbutton" href="#downloads">Download Now!</a>
-                </nav>
-            </article>
+                </div>
+            </div>
         </section>
-        <section class="page" id="downloads">
+        <section id="downloads">
             <article class="downloads-container">
                 <header class="downloads-title">
                     <h1>Downloads</h1>
@@ -52,7 +71,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <nav class="download-option option-next">
+                    <nav class="download-option">
                         <h2>Windows</h2>
                         <ul>
                             <li>
@@ -77,7 +96,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <nav class="download-option option-next">
+                    <nav class="download-option">
                         <h2>Source Code</h2>
                         <ul>
                             <li>
@@ -98,6 +117,10 @@
                         </ul>
                     </nav>
                 </div>
+            </article>
+        </section>
+        <section id="share-it">
+            <article class="share-container">
                 <header class="share-title">
                     <h1>Share it!</h1>
                 </header>
@@ -135,13 +158,13 @@
                     </li>
                     <li>
                         <!-- Pinterest -->
-                        <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwebcamoid.github.io%2F&amp;media=https://webcamoid.github.io/data/cap01.png&amp;description=Webcamoid%20is%20a%20webcam%20app%20focused%20on%20providing%20all%20major%20features%20required%20by%20power%20users%20with%20a%20very%20simple%20and%20intuitive%20interface.%20It%20can%20capture%20and%20record%20video%20from%20a%20webcam%2C%20desktop%20and%20video%20files%2C%20it%20has%20a%20lot%20of%20stunning%20video%20effects%20that%20can%20be%20applied%20in%20real-time%2C%20and%20it%20also%20can%20act%20as%20virtual%20camera%20for%20feeding%20other%20webcam%20apps%2C%20ie.%20for%20doing%20a%20video%20chat.%20Try%20it!" target="_blank" title="Pin it">
+                        <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwebcamoid.github.io%2F&amp;media=https://webcamoid.github.io/data/screenshots/cap01.png&amp;description=Webcamoid%20is%20a%20webcam%20app%20focused%20on%20providing%20all%20major%20features%20required%20by%20power%20users%20with%20a%20very%20simple%20and%20intuitive%20interface.%20It%20can%20capture%20and%20record%20video%20from%20a%20webcam%2C%20desktop%20and%20video%20files%2C%20it%20has%20a%20lot%20of%20stunning%20video%20effects%20that%20can%20be%20applied%20in%20real-time%2C%20and%20it%20also%20can%20act%20as%20virtual%20camera%20for%20feeding%20other%20webcam%20apps%2C%20ie.%20for%20doing%20a%20video%20chat.%20Try%20it!" target="_blank" title="Pin it">
                             <img src="data/icons/social_flat_rounded_rects_svg/Pinterest.svg" alt="Pin it">
                         </a>
                     </li>
                     <li>
                         <!-- Wordpress -->
-                        <a href="http://wordpress.com/press-this.php?u=https%3A%2F%2Fwebcamoid.github.io%2F&amp;t=The%20ultimate%20webcam%20suite!&amp;s=Webcamoid%20is%20a%20webcam%20app%20focused%20on%20providing%20all%20major%20features%20required%20by%20power%20users%20with%20a%20very%20simple%20and%20intuitive%20interface.%20It%20can%20capture%20and%20record%20video%20from%20a%20webcam%2C%20desktop%20and%20video%20files%2C%20it%20has%20a%20lot%20of%20stunning%20video%20effects%20that%20can%20be%20applied%20in%20real-time%2C%20and%20it%20also%20can%20act%20as%20virtual%20camera%20for%20feeding%20other%20webcam%20apps%2C%20ie.%20for%20doing%20a%20video%20chat.%20Try%20it!&amp;i=https://webcamoid.github.io/data/cap01.png" target="_blank" title="Publish on WordPress">
+                        <a href="http://wordpress.com/press-this.php?u=https%3A%2F%2Fwebcamoid.github.io%2F&amp;t=The%20ultimate%20webcam%20suite!&amp;s=Webcamoid%20is%20a%20webcam%20app%20focused%20on%20providing%20all%20major%20features%20required%20by%20power%20users%20with%20a%20very%20simple%20and%20intuitive%20interface.%20It%20can%20capture%20and%20record%20video%20from%20a%20webcam%2C%20desktop%20and%20video%20files%2C%20it%20has%20a%20lot%20of%20stunning%20video%20effects%20that%20can%20be%20applied%20in%20real-time%2C%20and%20it%20also%20can%20act%20as%20virtual%20camera%20for%20feeding%20other%20webcam%20apps%2C%20ie.%20for%20doing%20a%20video%20chat.%20Try%20it!&amp;i=https://webcamoid.github.io/data/screenshots/cap01.png" target="_blank" title="Publish on WordPress">
                             <img src="data/icons/social_flat_rounded_rects_svg/Wordpress.svg" alt="Publish on WordPress">
                         </a>
                     </li>

@@ -1,9 +1,9 @@
 var features = {
-    "featMain": ["data/cap01.png", "Device selection showing the available webcam controls"],
-    "featRecord": ["data/cap02.png", "Support for all possible video formats and codecs"],
-    "featEffects": ["data/cap03.png", "Applying effects in real-time to a video"],
-    "featDesktop": ["data/cap04.png", "Desktop capture"],
-    "featVirtual": ["data/cap05.png", "Virtual camera support"]
+    "featMain":    ["data/screenshots/cap01.png", "Device selection showing the available webcam controls"],
+    "featRecord":  ["data/screenshots/cap02.png", "Support for all possible video formats and codecs"],
+    "featEffects": ["data/screenshots/cap03.png", "Applying effects in real-time to a video"],
+    "featDesktop": ["data/screenshots/cap04.png", "Desktop capture"],
+    "featVirtual": ["data/screenshots/cap05.png", "Virtual camera support"]
 };
 
 function showPreview()

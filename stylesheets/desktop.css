@@ -1,3 +1,5 @@
+/* Fonts setup */
+
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
@@ -19,198 +21,250 @@
   src: local('Quicksand Bold'), local('Quicksand-Bold'), url('../data/fonts/Quicksand-Bold.ttf') format('truetype');
 }
 
+/* General elements setup */
+
 html {
     height: 100%;
     font-family: 'Quicksand', sans-serif;
-    font-size: 48px;
+    font-size: 7.5mm; /*28px;*/
 }
 
 body {
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    background: rgb(31, 15, 63);
+    color: rgb(255, 255, 255);
 }
 
-.hiddenscrollbars {
-    overflow: hidden;
-}
-
-#description {
-    position: relative;
-    left: 275px;
-}
-
-#description > h1 {
-    padding-top: 16px;
-    font-weight: bold;
-}
-
-#description > h2 {
-    position: relative;
-    font-size: 45%;
-    font-style: italic;
-    padding-top: 4px;
-    padding-left: 128px;
-}
-
-#sidebar {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 250px;
-    height: 100%;
-    background: rgb(31, 31, 31) url('../data/textures/dirty-old-black-shirt.png');
-}
-
-.contbutton {
-    width: 100%;
-    height: 48px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 48px;
-}
-
-.button {
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    height: 48px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 48px;
+a {
+    display: inline-block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 28%;
 }
 
-.button:link {
+a:link {
     color: rgb(255, 255, 255);
 }
 
-.button:visited {
+a:visited {
     color: rgb(255, 255, 255);
 }
 
-.button:hover {
+a:hover {
     color: rgb(255, 255, 255);
 }
 
-.button:active {
+a:active {
     color: rgb(255, 255, 255);
 }
 
-.feature:hover {
-    font-weight: bold;
-    background: rgba(170, 127, 255, 127);
-    background: -webkit-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
-    background: -o-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
-    background: -moz-linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
-    background: linear-gradient(rgba(170, 127, 255, 127), rgb(127, 63, 255));
+/* Header setup */
+
+#header-row {
+    display: table-row;
 }
 
-.feature-selected {
-    background: rgb(255, 191, 63);
-    background: -webkit-linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
-    background: -o-linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
-    background: -moz-linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
-    background: linear-gradient(rgb(255, 191, 63), rgb(255, 127, 0));
+#header-cell {
+    display: table-cell;
+    height: 64px;
 }
 
-.feature-selected:hover {
-    background: rgb(63, 191, 255);
-    background: -webkit-linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
-    background: -o-linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
-    background: -moz-linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
-    background: linear-gradient(rgb(63, 191, 255), rgb(0, 127, 255));
+#header-main {
+    display: table;
+    width: 100%;
+    height: 64px;
+    background-color: rgb(63, 31, 127);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.downloadbutton {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    font-size: 40%;
-    background: rgb(0, 127, 0);
-    background: -webkit-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
-    background: -o-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
-    background: -moz-linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
-    background: linear-gradient(rgb(0, 127, 0), rgb(0, 255, 0));
+/* Home page link */
+#homepage-link {
+    display: table-cell;
+    width: 300px;
+    height: 100%;
+    vertical-align: middle;
 }
 
-.downloadbutton:hover {
-    background: rgb(0, 191, 0);
-    background: -webkit-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
-    background: -o-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
-    background: -moz-linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
-    background: linear-gradient(rgb(0, 191, 0), rgb(63, 255, 63));
+#homepage-link:hover {
+    background-color: rgb(85, 63, 127);
 }
 
-.downloadbutton {
+#webcamoid-logo {
+    height: 100%;
+    vertical-align: middle;
+}
+
+#project-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#project-name {
+    font-size: 100%;
     font-weight: bold;
 }
 
-.page {
-    width:100%;
-    height:100%;
+#project-description {
+    position: relative;
+    left: 16px;
+    font-size: 50%;
+    font-style: italic;
 }
 
-#presentation {
-    position: fixed;
-    top: 0px;
+/* Menu */
+#menu {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+#menu-title {
+    display: none;
+}
+
+#menu-links {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    list-style-type: none;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: 75%;
+}
+
+#menu-links > li {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    flex: 0 1 auto;
+}
+
+#menu-links > li > a {
     width: 100%;
     height: 100%;
-    background: rgb(63, 31, 127) url('../data/textures/handmade-paper.png');
-    color: rgb(255, 255, 255);
+    vertical-align: middle;
+    line-height: 64px;
+}
+
+#menu-links > li > a:hover {
+    background-color: rgb(255, 63, 127);
+}
+
+#menu-button {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+#menu-button:hover {
+    background-color: rgb(255, 63, 127);
+}
+
+.menu-button-line {
+    width: 75%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5px;
+    margin-left: 4px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* Setup first page */
+
+#start-page {
+    width: 100%;
+    text-align: center;
+    max-height: 480px;
+}
+
+/* Screenshots and descriptions  */
+
+#showcase {
+/*     height: 480px; */
+}
+
+#preview {
+    max-width: 100%;
+    max-height: 480px;
+}
+
+#features {
+    position: relative;
+    bottom: 96px;
+    width: 100%;
+    z-index: 1;
+}
+
+#features > h1 {
+    display: none;
+}
+
+.feature-item {
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 75%;
+}
+
+.feature-item:nth-child(n+2) {
+    display: none;
 }
 
 #downloads {
-    position: relative;
-    background: rgb(31, 31, 31) url('../data/textures/dirty-old-black-shirt.png');
+    background-color: rgb(28, 28, 28);
     color: rgb(255, 255, 255);
-}
-
-.downloads-container {
-    position: absolute;
-    top: 25px;
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
+    padding: 32px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .downloads-title {
-    font-size: 67%;
+    font-size: 75%;
     font-weight: bold;
     padding-bottom: 16px;
 }
 
 nav > h2 {
-    font-size: 45%;
+    font-size: 63%;
     padding-bottom: 16px;
 }
 
 .download-option-container {
-    display: table;
     width: 100%;
-    table-layout: fixed;
 }
 
 .download-option {
-    display: table-cell;
     position: relative;
-    height: 250px;
     border-left: 5px solid rgb(127, 63, 255);
+    margin-left: 16px;
+    margin-bottom: 16px;
     padding-left: 16px;
+    padding-bottom: 16px;
 }
 
 .download-option:hover {
     border-left: 5px solid rgb(170, 127, 255);
-    background: rgb(31, 31, 31);
-}
-
-.option-next {
-    padding-right: 16px;
+    background: rgb(35, 35, 35);
 }
 
 .download-option > ul > li {
+    margin-left: 16px;
     padding-bottom: 16px;
 }
 
@@ -218,7 +272,7 @@ nav > h2 {
     display: block;
     color: rgb(255, 127, 0);
     text-decoration: none;
-    font-size: 35%;
+    font-size: 50%;
 }
 
 .download-option > ul > li > a:link {
@@ -237,16 +291,20 @@ nav > h2 {
     color: rgb(255, 191, 63);
 }
 
+#share-it {
+    padding: 32px;
+}
+
 .share-title {
-    font-size: 67%;
+    font-size: 75%;
     font-weight: bold;
-    margin-top: 16px;
     padding-bottom: 16px;
 }
 
 .share-buttons {
     font-size: 0px;
     list-style-type: none;
+    margin-left: 16px;
     padding: 0px;
 }
 
@@ -269,18 +327,4 @@ nav > h2 {
     -o-filter: brightness(150%);
     -ms-filter: brightness(150%);
     filter: brightness(150%);
-}
-
-.showcase {
-    position: fixed;
-    top: 100px;
-    bottom: 25px;
-    left: 275px;
-    right: 25px;
-}
-
-.showcase-image {
-   width: 100%;
-   height: 100%;
-   object-fit: contain;
 }
