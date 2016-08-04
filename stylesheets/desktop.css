@@ -26,7 +26,7 @@
 html {
     height: 100%;
     font-family: 'Quicksand', sans-serif;
-    font-size: 7.5mm; /*28px;*/
+    font-size: 7.5mm;
 }
 
 body {
@@ -231,6 +231,43 @@ a:active {
 
 .feature-item:nth-child(n+2) {
     display: none;
+}
+
+#slides-controls-wrapper {
+    display: inline-block;
+    position: relative;
+    bottom: 92px;
+}
+
+#slides-controls {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.slides-control {
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgb(255, 63, 127);
+    background-color: rgba(255, 63, 127, 0.5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.slides-control:hover {
+    border: 2px solid rgb(255, 127, 171);
+    background-color: rgba(255, 127, 171, 0.5);
+}
+
+.slides-control-selected {
+    background-color: rgb(255, 63, 127);
+}
+
+.slides-control-selected:hover {
+    background-color: rgb(255, 127, 171);
 }
 
 #downloads {
