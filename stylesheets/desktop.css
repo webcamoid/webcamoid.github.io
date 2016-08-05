@@ -191,21 +191,20 @@ a:active {
 
 /* Screenshots and descriptions  */
 
-#showcase {
-/*     height: 480px; */
-}
-
 #preview > h1 {
     display: none;
 }
 
 .screenshot {
+    display: none;
+    opacity: 0;
     max-width: 100%;
     max-height: 480px;
 }
 
-.screenshot:nth-child(n+3) {
-    display: none;
+.screenshot-selected {
+    display: inline;
+    opacity: 1;
 }
 
 #features {

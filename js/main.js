@@ -21,12 +21,12 @@ function slidesControlClicked(event)
 
     for (var i = 0; i < controls.length; i++) {
         controls[i].className = controls[i].className.replace(" slides-control-selected", "");
-        screenshots.children[i + 1].style.display = "none";
+        screenshots.children[i + 1].className = screenshots.children[i + 1].className.replace(" screenshot-selected", "");
         features.children[i].style.display = "none";
 
         if (controls[i] == event.target) {
             controls[i].className += " slides-control-selected";
-            screenshots.children[i + 1].style.display = "inline";
+            screenshots.children[i + 1].className += " screenshot-selected";
             features.children[i].style.display = "list-item";
         }
     }
@@ -41,13 +41,13 @@ function advanceSlide()
     for (var i = 0; i < controls.length; i++) {
         var cur = controls[i].className.indexOf(" slides-control-selected") >= 0;
         controls[i].className = controls[i].className.replace(" slides-control-selected", "");
-        screenshots.children[i + 1].style.display = "none";
+        screenshots.children[i + 1].className = screenshots.children[i + 1].className.replace(" screenshot-selected", "");
         features.children[i].style.display = "none";
 
         if (cur) {
             var next = (i + 1) % controls.length;
             controls[next].className += " slides-control-selected";
-            screenshots.children[next + 1].style.display = "inline";
+            screenshots.children[next + 1].className += " screenshot-selected";
             features.children[next].style.display = "list-item";
             i++;
         }
