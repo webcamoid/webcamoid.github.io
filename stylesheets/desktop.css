@@ -284,9 +284,23 @@ a:active {
     padding-bottom: 16px;
 }
 
-nav > h2 {
+nav h2 {
     font-size: 63%;
     padding-bottom: 16px;
+}
+
+nav h3 {
+    font-size: 59%;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+nav h4 {
+    font-size: 54%;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 16px;
+    margin-bottom: 8px;
 }
 
 .download-option-container {
@@ -312,27 +326,56 @@ nav > h2 {
     padding-bottom: 16px;
 }
 
-.download-option > ul > li > a {
+.download-option a {
     display: block;
     color: rgb(255, 127, 0);
     text-decoration: none;
     font-size: 50%;
 }
 
-.download-option > ul > li > a:link {
+.download-option a:link {
     color: rgb(255, 127, 0);
 }
 
-.download-option > ul > li > a:visited {
+.download-option a:visited {
     color: rgb(255, 127, 0);
 }
 
-.download-option > ul > li > a:hover {
+.download-option a:hover {
     color: rgb(255, 191, 63);
 }
 
-.download-option > ul > li > a:active {
+.download-option a:active {
     color: rgb(255, 191, 63);
+}
+
+.download-option b {
+    font-weight: bold;
+}
+
+.download-option p {
+    font-size: 50%;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+.download-option p > a {
+    display: inline-block;
+    font-size: 100%;
+}
+
+.download-option pre {
+    font-family: monospace;
+    font-style: italic;
+    font-size: 50%;
+    text-align: left;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin-left: 48px;
+    margin-bottom: 16px;
 }
 
 #share-it {
