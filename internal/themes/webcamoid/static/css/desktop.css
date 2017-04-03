@@ -1,0 +1,625 @@
+/* Fonts setup */
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Quicksand Light'), local('Quicksand-Light'), url('../fonts/Quicksand-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quicksand Regular'), local('Quicksand-Regular'), url('../fonts/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Quicksand Bold'), local('Quicksand-Bold'), url('../fonts/Quicksand-Bold.ttf') format('truetype');
+}
+
+:root {
+    /* Palette */
+    --color-main-base:      hsl(255,  50%,   33%);
+    --color-main-hi:        hsl(255,  50%, 37.5%);
+    --color-main-low:       hsl(255,  50%, 16.5%);
+    --color-secondary-base: hsl(330, 100%, 62.5%);
+    --color-secondary-hi:   hsl(330, 100%,   75%);
+    --color-back-base:      hsl(  0,   0%,   12%);
+    --color-back-hi:        hsl(  0,   0%,   15%);
+    --color-text:           hsl(  0,   0%,  100%);
+
+    /* Transparent palette */
+    --color-secondary-base-so: hsla(330, 100%, 62.5%,  0.5);
+    --color-secondary-hi-so:   hsla(330, 100%,   75%,  0.5);
+    --color-back-base-ts:      hsla(  0,   0%,   12%, 0.75);
+
+    /* Font sizes */
+    --font-size-logo      : 2rem;
+    --font-size-logo-small: 1.8rem;
+    --font-size-hi        : 1.4rem;
+    --font-size-hz        : 1.3rem;
+    --font-size-he        : 1.2rem;
+    --font-size-ha        : 1.1rem;
+    --font-size-text      : 1rem;
+    --font-size-sub-text  : 0.8rem;
+}
+
+/* General elements setup */
+
+html {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4.25mm;
+}
+
+body {
+    height: 100%;
+    background: hsl(255, 50%, 16.5%);
+    background: var(--color-main-low);
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-size: var(--font-size-hi);
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-size: var(--font-size-hz);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-size: var(--font-size-he);
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-size: var(--font-size-ha);
+    font-style: italic;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(330, 100%, 62.5%);
+    color: var(--color-secondary-base);
+}
+
+a:link {
+    color: hsl(330, 100%, 62.5%);
+    color: var(--color-secondary-base);
+}
+
+a:visited {
+    color: hsl(330, 100%, 62.5%);
+    color: var(--color-secondary-base);
+}
+
+a:hover {
+    color: hsl(330, 100%, 75%);
+    color: var(--color-secondary-hi);
+}
+
+a:active {
+    color: hsl(330, 100%, 75%);
+    color: var(--color-secondary-hi);
+}
+
+ul, ol {
+    margin-bottom: 16px;
+}
+
+ol {
+    counter-reset: li;
+}
+
+ol ol {
+    list-style-type: lower-alpha
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+ul li::before {
+    font-family: monospace;
+    content: "\2022";
+    direction: rtl;
+    text-align: right;
+    color: hsl(330, 100%, 62.5%);
+    color: var(--color-secondary-base);
+    width: 2rem;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+ol li::before {
+    font-family: monospace;
+    content: "." counter(li);
+    counter-increment: li;
+    direction: rtl;
+    text-align: right;
+    color: hsl(330, 100%, 62.5%);
+    color: var(--color-secondary-base);
+    width: 3rem;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.nolist {
+    margin-bottom: 0px;
+}
+
+.nolist li {
+    margin-bottom: 0px;
+}
+
+.nolist li::before {
+    content: none;
+    margin-right: 0px;
+}
+
+#contents-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header setup */
+
+#header-row {
+    display: table-row;
+}
+
+#header-cell {
+    display: table-cell;
+    height: 64px;
+}
+
+#header-main {
+    display: table;
+    width: 100%;
+    height: 64px;
+    background-color: hsl(255, 50%, 33%);
+    background-color: var(--color-main-base);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Home page link */
+#homepage-link {
+    display: table-cell;
+    width: 320px;
+    height: 100%;
+    vertical-align: middle;
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#homepage-link:link {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#homepage-link:visited {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#homepage-link:hover {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+    background-color: hsl(255, 50%, 37.5%);
+    background-color: var(--color-main-hi);
+}
+
+#homepage-link:active {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#webcamoid-logo {
+    height: 100%;
+    vertical-align: middle;
+}
+
+#project-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#project-name {
+    font-size: 2rem;
+    font-size: var(--font-size-logo);
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+#project-description {
+    position: relative;
+    left: 16px;
+    font-size: 1rem;
+    font-size: var(--font-size-text);
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+/* Menu */
+#menu {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+#menu-title {
+    display: none;
+}
+
+#menu-links {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    list-style-type: none;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-size: var(--font-size-he);
+}
+
+#menu-links > li {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    flex: 0 1 auto;
+}
+
+#menu-links > li > a {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 64px;
+}
+
+#menu-links > li > a:link {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#menu-links > li > a:visited {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#menu-links > li > a:hover {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+    background-color: hsl(330, 100%, 62.5%);
+    background-color: var(--color-secondary-base);
+}
+
+#menu-links > li > a:active {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+#menu-button {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+#menu-button:hover {
+    background-color: hsl(330, 100%, 62.5%);
+    background-color: var(--color-secondary-base);
+}
+
+.menu-button-line {
+    width: 75%;
+    height: 4px;
+    background-color: hsl(0, 0%, 100%);
+    background-color: var(--color-text);
+    margin-top: 5px;
+    margin-left: 4px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* Setup first page */
+
+#start-page {
+    width: 100%;
+    text-align: center;
+    max-height: 480px;
+}
+
+/* Screenshots and descriptions  */
+
+#preview > h1 {
+    display: none;
+    margin-bottom: 0px;
+}
+
+.screenshot {
+    display: none;
+    opacity: 0;
+    max-width: 100%;
+    max-height: 480px;
+}
+
+.screenshot-selected {
+    display: inline;
+    opacity: 1;
+}
+
+#features {
+    position: relative;
+    bottom: 96px;
+    width: 100%;
+    z-index: 1;
+}
+
+#features > h1 {
+    display: none;
+    margin-bottom: 0px;
+}
+
+.feature-item {
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    background-color: hsla(0, 0%, 12%, 0.75);
+    background-color: var(--color-back-base-ts);
+    font-size: 1.2rem;
+    font-size: var(--font-size-he);
+}
+
+.feature-item:nth-child(n+2) {
+    display: none;
+}
+
+#slides-controls-wrapper {
+    display: inline-block;
+    position: relative;
+    bottom: 92px;
+}
+
+#slides-controls {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.slides-control {
+    width: 12px;
+    height: 12px;
+    border: 2px solid hsl(330, 100%, 62.5%);
+    border: 2px solid var(--color-secondary-base);
+    background-color: hsla(330, 100%, 62.5%, 0.5);
+    background-color: var(--color-secondary-base-so);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.slides-control:hover {
+    border: 2px solid hsl(330, 100%, 75%);
+    border: 2px solid var(--color-secondary-hi);
+    background-color: hsla(330, 100%,   75%,  0.5);
+    background-color: var(--color-secondary-hi-so);
+}
+
+.slides-control-selected {
+    background-color: hsl(330, 100%, 62.5%);
+    background-color: var(--color-secondary-base);
+}
+
+.slides-control-selected:hover {
+    background-color: hsl(330, 100%, 75%);
+    background-color: var(--color-secondary-hi);
+}
+
+#downloads {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+    background-color: hsl(0, 0%, 12%);
+    background-color: var(--color-back-base);
+    padding: 32px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+nav h4 {
+    margin-left: 16px;
+}
+
+.download-option-container {
+    width: 100%;
+}
+
+.download-option {
+    position: relative;
+    border-left: 5px solid hsl(255,  50%, 33%);
+    border-left: 5px solid var(--color-main-base);
+    margin-left: 16px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.download-option:hover {
+    border-left: 5px solid hsl(255,  50%, 37.5%);
+    border-left: 5px solid var(--color-main-hi);
+    background: hsl(0, 0%, 15%);
+    background: var(--color-back-hi);
+}
+
+.download-option > ul > li {
+    margin-left: 16px;
+    padding-bottom: 16px;
+}
+
+.download-option a {
+    display: block;
+}
+
+.download-option b {
+    font-weight: bold;
+}
+
+.download-option p {
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+.download-option p > a {
+    display: inline-block;
+}
+
+.download-option pre {
+    font-family: monospace;
+    font-style: italic;
+    text-align: left;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin-left: 48px;
+    margin-bottom: 16px;
+}
+
+#share-it {
+    padding: 32px;
+    padding-bottom: 64px;
+}
+
+.share-title {
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.share-buttons {
+    font-size: 0rem;
+    list-style-type: none;
+    margin-left: 16px;
+    padding: 0px;
+}
+
+.share-buttons > li {
+    display: inline;
+    padding-right: 8px;
+}
+
+.share-buttons > li > a {
+    text-decoration: none;
+}
+
+.share-buttons > li > a > img {
+    width: 48px;
+}
+
+.share-buttons > li > a > img:hover {
+    -webkit-filter: brightness(150%);
+    -moz-filter: brightness(150%);
+    -o-filter: brightness(150%);
+    -ms-filter: brightness(150%);
+    filter: brightness(150%);
+}
+
+#page-footer {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+}
+
+#page-footer > address {
+    display: table-cell;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle
+}
+
+/* Blog section */
+
+#blog-articles {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#footer-separator {
+    height: 64px;
+}
+
+#opening-soon {
+    font-size: 1.3rem;
+    font-size: var(--font-size-hz);
+    text-align: center;
+    margin: 64px;
+}
+
+.blog-article {
+    background-color: hsl(0, 0%, 12%);
+    background-color: var(--color-back-base);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 16px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.post-date {
+    font-size: 0.8rem;
+    font-size: var(--font-size-sub-text);
+    font-style: italic;
+}
+
+.post-contents {
+    padding-left: 8px;
+}

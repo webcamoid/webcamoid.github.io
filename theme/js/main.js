@@ -1,7 +1,11 @@
 function maxRatio()
 {
-    var rmax = 0;
     var screenshots = document.getElementById("preview");
+
+    if (!screenshots)
+        return 0;
+
+    var rmax = 0;
 
     for (var i = 1; i < screenshots.children.length; i++) {
         var r = screenshots.children[i].height / screenshots.children[i].width;
@@ -16,6 +20,10 @@ function maxRatio()
 function slidesControlClicked(event)
 {
     var screenshots = document.getElementById("preview");
+
+    if (!screenshots)
+        return;
+
     var features = document.getElementById("feature-list");
     var controls = document.getElementsByClassName("slides-control");
 
@@ -35,6 +43,10 @@ function slidesControlClicked(event)
 function advanceSlide()
 {
     var screenshots = document.getElementById("preview");
+
+    if (!screenshots)
+        return;
+
     var features = document.getElementById("feature-list");
     var controls = document.getElementsByClassName("slides-control");
 
@@ -59,15 +71,18 @@ var ratio = 0.75;
 function resizeHandler(event)
 {
     var showcase = document.getElementById("showcase");
-    var preview = document.getElementById("preview");
     var width = document.body.clientWidth;
     var height = document.body.clientHeight;
 
-    if (ratio * width < 480) {
+    var preview = document.getElementById("preview");
+
+    if (!preview)
+        return;
+
+    if (ratio * width < 480)
         preview.style.height = showcase.style.height = ratio * width + "px";
-    } else {
+    else
         preview.style.height = showcase.style.height = "auto";
-    }
 }
 
 function main()
@@ -76,7 +91,7 @@ function main()
 
     for (var ss in document.styleSheets)
         if (document.styleSheets[ss].href
-            && document.styleSheets[ss].href.indexOf("stylesheets/desktop.css") >= 0) {
+            && document.styleSheets[ss].href.indexOf("theme/css/main.css") >= 0) {
             ssfound = true;
 
             break;

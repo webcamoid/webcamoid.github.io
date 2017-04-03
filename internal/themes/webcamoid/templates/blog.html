@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{ BLOGNAME }}{% endblock %}
+
+{% block header %}
+    <meta name="description" content="Official Webcamoid news blog.">
+    <link rel="canonical" href="http://webcamoid.github.io/blog">
+{% endblock %}
+
+{% block content %}
+    <section id="blog-articles">
+        <h1>{{ self.title() }}</h1>
+
+        {% for article in articles %}
+            {% if status != "draft" %}
+                <article class="blog-article">
+                    <p class="post-date">{{ article.date | strftime(article.date_format) }}</p>
+                    <h2><a href="/{{ article.url }}">{{ article.title }}</a></h1>
+
+                    {% if article.summary %}
+                        <div class="post-contents">
+                            {{ article.summary }}
+                            <p><a href="/{{ article.url }}">Read more &#x276f;</a></p>
+                        </div>
+                    {% endif %}
+                </article>
+            {% endif %}
+        {% else %}
+            <article class="blog-article">
+                <p id="opening-soon">Opening Soon!</p>
+            </article>
+        {% endfor %}
+        <div id="footer-separator">
+        </div>
+    </section>
+{% endblock %}

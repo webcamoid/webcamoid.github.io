@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+    <head>
+            <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+            <meta charset="{{ CHARSET }}" />
+            <meta http-equiv="Content-Type" content="text/html; charset={{ CHARSET }}">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <link rel="shortcut icon" type="image/png" href="/{{ THEME_STATIC_DIR }}/images/icons/favicon.png"/>
+            <link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+            <script src="/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+
+            {% block header %}
+            {% endblock %}
+
+            {% if FEED_ALL_ATOM %}
+                <link href="/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ self.title() }} Atom Feed" />
+            {% endif %}
+
+            {% if FEED_ALL_RSS %}
+                <link href="/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ self.title() }} RSS Feed" />
+            {% endif %}
+    </head>
+    <body onload="main();">
+        <div id="contents-wrapper">
+            <header id="header-main">
+                <a id="homepage-link" href="/">
+                    <img id="webcamoid-logo" src="/{{ THEME_STATIC_DIR }}/images/icons/webcamoid.png" alt="Webcamoid" title="Webcamoid" />
+                    <div id="project-title">
+                        <h1 id="project-name">Webcamoid</h1>
+                        <h2 id="project-description">The ultimate webcam suite!</h2>
+                    </div>
+                </a>
+                <div id="menu">
+                    <div id="menu-container">
+                        <div id="menu-button">
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                        </div>
+                        <h1 id="menu-title">Links</h1>
+                        <ul id="menu-links" class="nolist">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/#downloads">Downloads</a></li>
+                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki">Docs</a></li>
+                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/issues">Support</a></li>
+                            <li><a href="/#share-it">Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            {% block content %}
+            {% endblock %}
+            <footer id="page-footer">
+                <address>
+                    Site powered by <a target="_blank" href="http://getpelican.com/">Pelican</a>.
+                </address>
+            </footer>
+        </div>
+    </body>
+</html>

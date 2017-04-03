@@ -1,0 +1,67 @@
+#project-name {
+    font-size: 1.8rem;
+    font-size: var(--font-size-logo-small);
+}
+
+#project-description {
+    font-size: 0.8rem;
+    font-size: var(--font-size-sub-text);
+    font-weight: normal;
+}
+
+#menu {
+    text-align: right;
+}
+
+#menu-container {
+    height: 100%;
+    width: initial;
+    margin-top: 16px;
+    margin-right: 16px;
+}
+
+#menu-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+#menu-links {
+    display: none;
+    position: absolute;
+    right: 0px;
+    align-items: initial;
+    justify-content: initial;
+    background-color: hsl(330, 100%, 62.5%);
+    background-color: var(--color-secondary-base);
+    width: 180px;
+    height: initial;
+    text-align: center;
+    z-index: 2;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#menu-links > li {
+    display: initial;
+    flex: initial;
+}
+
+#menu-links > li > a {
+    vertical-align: initial;
+}
+
+#menu-links > li > a:hover {
+    background-color: hsl(330, 100%, 75%);
+    background-color: var(--color-secondary-hi);
+}
+
+#menu-container:hover #menu-links {
+    display: block;
+}
+
+.feature-item {
+    font-size: 1rem;
+    font-size: var(--font-size-text);
+}

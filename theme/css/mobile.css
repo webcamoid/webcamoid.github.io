@@ -1,9 +1,12 @@
 #project-name {
-    font-size: 80%;
+    font-size: 1.8rem;
+    font-size: var(--font-size-logo-small);
 }
 
 #project-description {
-    font-size: 40%;
+    font-size: 0.8rem;
+    font-size: var(--font-size-sub-text);
+    font-weight: normal;
 }
 
 #menu {
@@ -29,7 +32,8 @@
     right: 0px;
     align-items: initial;
     justify-content: initial;
-    background-color: rgb(255, 63, 127);
+    background-color: hsl(330, 100%, 62.5%);
+    background-color: var(--color-secondary-base);
     width: 180px;
     height: initial;
     text-align: center;
@@ -49,9 +53,15 @@
 }
 
 #menu-links > li > a:hover {
-    background-color: rgb(255, 127, 171);
+    background-color: hsl(330, 100%, 75%);
+    background-color: var(--color-secondary-hi);
 }
 
 #menu-container:hover #menu-links {
     display: block;
+}
+
+.feature-item {
+    font-size: 1rem;
+    font-size: var(--font-size-text);
 }
