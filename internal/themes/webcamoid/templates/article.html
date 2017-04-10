@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ article.title }}{% endblock %}
+{% block title %}{{ BLOGNAME }}: {{ article.title }}{% endblock %}
 
 {% block content %}
     <section id="blog-articles">
@@ -10,15 +10,12 @@
             <header>
                 <p class="post-date">{{ article.date | strftime(article.date_format) }}</p>
                 <h2 class="entry-title">
-                    <a href="/{{ article.url }}">{{ self.title() }}</a>
+                    <a href="/{{ article.url }}">{{ article.title }}</a>
                 </h2>
             </header>
             <div class="post-contents">
-                {{ article.summary }}
                 {{ article.content }}
             </div>
         </article>
-        <div id="footer-separator">
-        </div>
     </section>
 {% endblock %}

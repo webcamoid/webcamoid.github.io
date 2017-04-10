@@ -28,7 +28,10 @@ AUTHOR_FEED_RSS = None
 
 DIRECT_TEMPLATES = ['index', 'blog']
 PAGINATED_DIRECT_TEMPLATES = ['index', 'blog']
+STATIC_PATHS = ['images', 'static']
 
+DELETE_OUTPUT_DIRECTORY = False
+USE_FOLDER_AS_CATEGORY = False
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 PAGE_URL = 'pages/{slug}/'

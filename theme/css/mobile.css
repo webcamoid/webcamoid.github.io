@@ -46,6 +46,7 @@
 #menu-links > li {
     display: initial;
     flex: initial;
+    width: 60px;
 }
 
 #menu-links > li > a {

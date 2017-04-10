@@ -1,2 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2017-04-03T12:17:46Z</updated></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2017-05-01T00:00:00+02:00</updated><entry><title>Webcamoid 8.0.0 released!</title><link href="https://webcamoid.github.io/posts/2017/05/01/webcamoid-800-released/" rel="alternate"></link><published>2017-05-01T00:00:00+02:00</published><updated>2017-05-01T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2017-05-01:/posts/2017/05/01/webcamoid-800-released/</id><summary type="html">&lt;p&gt;Mac support, more audio options, more recording options, more flexibility.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Support for Mac&lt;/h2&gt;
+&lt;p&gt;Adding support for Mac was one of the most important ojetives for Webcamoid 8.0.0, since there was not many Free Open Source webcam apps for this platform. I hope Webcamoid can fill the gap for Open Source enthusiasts using Mac, and users of this platform in general.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/WebcamoidInMac.png"&gt;
+        &lt;img src="/images/20170501-1/WebcamoidInMac.png" alt="Webcamoid in Mac" title="Webcamoid in Mac" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Support for FreeBSD/TrueOs&lt;/h2&gt;
+&lt;p&gt;After a few small fixes, Webcamoid is now finally working pretty well in this platform. Webcamoid requires V4L and Linux compatibility layer to be enabled in your system. If Webcamoid doesn't list any webcam, in order to make it work, first you must list your USB devices:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;lsusb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;All your webcam devices will be listed as &lt;em&gt;/dev/ugenX.Y&lt;/em&gt;, where &lt;strong&gt;X&lt;/strong&gt; and &lt;strong&gt;Y&lt;/strong&gt; are numbers. And then you must map that device to a v4l device:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;webcamd -d ugenX.Y -i 0 -v Z -B
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Where &lt;strong&gt;Z&lt;/strong&gt; is the number of V4L device where you want to map the ugen device, so it will appear as &lt;em&gt;/dev/videoZ&lt;/em&gt; in Webcamoid.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/WebcamoidInTrueOS.png"&gt;
+        &lt;img src="/images/20170501-1/WebcamoidInTrueOS.png" alt="Webcamoid in TrueOS" title="Webcamoid in TrueOS" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Improved audio configs&lt;/h2&gt;
+&lt;p&gt;In previous versions only PulseAudio was supported; now Webcamoid supports 4 new systems: ALSA, JACK, OSS and QtMultimedia. And is also possible to select the output and input you want to use for playback and capture.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/InputDeviceSelection.png"&gt;
+        &lt;img src="/images/20170501-1/InputDeviceSelection.png" alt="Input device selection" title="Input device selection" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For each input and output, you can set the sample format, number of channels and sample rate.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/AudioDeviceOptions.png"&gt;
+        &lt;img src="/images/20170501-1/AudioDeviceOptions.png" alt="Audio device options" title="Audio device options" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;More options for recording&lt;/h2&gt;
+&lt;p&gt;In older versions it was not possible to easily configure codecs and format parameters.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/RecordingOptions.png"&gt;
+        &lt;img src="/images/20170501-1/RecordingOptions.png" alt="Recording options" title="Recording options" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;But now each codec offers its own config dialog, ideal for more advanced users who want to fine tune recording.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/CodecOptions.png"&gt;
+        &lt;img src="/images/20170501-1/CodecOptions.png" alt="Codec options" title="Codec options" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Libraries configs&lt;/h2&gt;
+&lt;p&gt;Webcamoid support FFmpeg and GStreamer for playback, recording, video and audio convertion, but in previous versions, only one of both were available at compile time, so you had to choose between using one or the other. Noww, Webcamoid can be compiled with support for both frameworks and the user will be able choose between both at runtime. And not just that, users can also select the audio system and camera capture library.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/LibrariesOptions.png"&gt;
+        &lt;img src="/images/20170501-1/LibrariesOptions.png" alt="Libraries options" title="Libraries options" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Plugin configs&lt;/h2&gt;
+&lt;p&gt;For developers and more advanced users there is now a new menu for configuring plugins search paths where you can also enable or disable plugins you don't want to load.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/PluginsOptions.png"&gt;
+        &lt;img src="/images/20170501-1/PluginsOptions.png" alt="Plugins options" title="Plugins options" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Updates&lt;/h2&gt;
+&lt;p&gt;From now on you will be informed if you are using an old or a development version of Webcamoid, so you can be up to date with bleeding edge features and bug fixes.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/Updates.png"&gt;
+        &lt;img src="/images/20170501-1/Updates.png" alt="Updates" title="Updates" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Installers and portables for GNU/Linux&lt;/h2&gt;
+&lt;p&gt;GNU/Linux users will not need to wait for Weamoid to be packaged for their distros, and they will not need to use an outdated version anymore. Since Webcamoid 8.0.0 you will be able to install it from a nice graphical installer or, if you prefer, run it as a portable program, just make it executable and click it to run.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20170501-1/GNULinuxBinaries.png"&gt;
+        &lt;img src="/images/20170501-1/GNULinuxBinaries.png" alt="GNU/Linux binaries" title="GNU/Linux binaries" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</content></entry></feed>
