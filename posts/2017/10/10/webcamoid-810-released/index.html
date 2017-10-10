@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+            <title>Webcamoid blog: Webcamoid 8.1.0 released!</title>
+            <meta charset="UTF-8" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <link rel="shortcut icon" type="image/png" href="/theme/images/icons/favicon.png"/>
+            <link rel="stylesheet" href="/theme/css/main.css" />
+            <script src="/theme/js/main.js"></script>
+
+
+                <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Webcamoid blog: Webcamoid 8.1.0 released! Atom Feed" />
+
+                <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Webcamoid blog: Webcamoid 8.1.0 released! RSS Feed" />
+    </head>
+    <body onload="main();">
+        <div id="contents-wrapper">
+            <header id="header-main">
+                <a id="homepage-link" href="/">
+                    <img id="webcamoid-logo" src="/theme/images/icons/webcamoid.png" alt="Webcamoid" title="Webcamoid" />
+                    <div id="project-title">
+                        <h1 id="project-name">Webcamoid</h1>
+                        <h2 id="project-description">The ultimate webcam suite!</h2>
+                    </div>
+                </a>
+                <div id="menu">
+                    <div id="menu-container">
+                        <div id="menu-button">
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                        </div>
+                        <h1 id="menu-title">Links</h1>
+                        <ul id="menu-links" class="nolist">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/#downloads">Downloads</a></li>
+                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki">Docs</a></li>
+                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/issues">Support</a></li>
+                            <li><a href="/#share-it">Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+    <section id="blog-articles">
+        <h1>Webcamoid blog</h1>
+
+        <article class="blog-article">
+            <header>
+                <p class="post-date">10/10/2017</p>
+                <h2 class="entry-title">
+                    <a href="/posts/2017/10/10/webcamoid-810-released/">Webcamoid 8.1.0 released!</a>
+                </h2>
+            </header>
+            <div class="post-contents">
+                <h2>Many bug fix</h2>
+<p>In previous version there were a problem when audio recording was enabled in which after a few seconds of recording Webcamoid freezed, this problem may be solved and audio recording is enabled by default now.  </p>
+<p>In this version, startup time may be improved after removed unnecessary checks in plugins load. Webcamoid may have a bit slow startup just the first time and load faster in successive runs.  </p>
+<p>There where many reports of random crashes with almost nothing in common, and I can confirm Webcamoid crashed randomly sometimes, after an exhaustive memory leak scan with Valgrind and Dr. Memory, I found many problems related to how video frames were displayed in the screen, so Webcamoid may be more stable now. Also, enabled linear filtering for frames display.  </p>
+<p>In Mac, screen capture glitched a lot making impossible to do a smooth screen capture recording, this is because Qt uses Cocoa for screen capture, after adding support for AVFoundation in screen capture, the problem was solved.  </p>
+<p>Fixed default install paths for Windows installer.</p>
+<h2>Reduced binary packages size</h2>
+<p>This time I applied a proper cleaning of debug symbols and unnecessary files, this change is more noticeable for Mac and Windows users. Webcamoid will consume less disc space than before.</p>
+<h2>Virtual camera for Mac through Syphon</h2>
+<p>Virtual camera support in Mac is a bit tricky, if you want to share frames with other webcams programs, and do it well, you need to write a kernel extension, and kernel extensions requires signing, and signing requires payment, and at this point is not possible, yet I'm not discarding that option.  </p>
+<p>So the best solution I've found for now is Syphon for sharing frames with other programs, Syphon is a framework that allow sharing frames as OpenGL textures with other programs also using Syphon. This is More or less a solution for the virtual camera, and I guess most Free Open Source programs will not have problem adding support for Syphon, if they didn't yet, for closed source programs it's a different story.</p>
+            </div>
+        </article>
+    </section>
+            <div id="footer-separator">
+            </div>
+            <footer id="page-footer">
+                <p id="pelican-notice">
+                    Site powered by <a target="_blank" href="http://getpelican.com/">Pelican</a>.
+                </p>
+                <p id="legals">
+                    Linux is a trademark of Linus Torvalds<br />
+                    Windows is a trademark of Microsoft Corporation<br />
+                    Mac is a trademark of Apple Inc.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
