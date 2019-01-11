@@ -32,8 +32,8 @@
     right: 0px;
     align-items: initial;
     justify-content: initial;
-    background-color: hsl(330, 100%, 62.5%);
-    background-color: var(--color-secondary-base);
+    background-color: hsl(150, 100%, 33%);
+    background-color: var(--color-secondary-low);
     width: 180px;
     height: initial;
     text-align: center;
@@ -54,8 +54,8 @@
 }
 
 #menu-links > li > a:hover {
-    background-color: hsl(330, 100%, 75%);
-    background-color: var(--color-secondary-hi);
+    background-color: hsl(150, 100%, 50%);
+    background-color: var(--color-secondary-base);
 }
 
 #menu-container:hover #menu-links {

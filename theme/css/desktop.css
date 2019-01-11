@@ -26,17 +26,19 @@
     --color-main-base:      hsl(255,  50%,   33%);
     --color-main-hi:        hsl(255,  50%, 37.5%);
     --color-main-low:       hsl(255,  50%, 16.5%);
-    --color-secondary-base: hsl(330, 100%, 62.5%);
-    --color-secondary-hi:   hsl(330, 100%,   75%);
+    --color-secondary-base: hsl(150, 100%,   50%);
+    --color-secondary-hi:   hsl(150, 100%,   75%);
+    --color-secondary-low:  hsl(150, 100%,   33%);
     --color-back-base:      hsl(  0,   0%,   12%);
     --color-back-hi:        hsl(  0,   0%,   15%);
     --color-text:           hsl(  0,   0%,  100%);
 
     /* Transparent palette */
-    --color-secondary-base-so: hsla(330, 100%, 62.5%,  0.5);
-    --color-secondary-hi-so:   hsla(330, 100%,   75%,  0.5);
-    --color-back-base-ts:      hsla(  0,   0%,   12%, 0.75);
-    --color-text-so:           hsla(  0,   0%,  100%,  0.5);
+    --color-secondary-base-so: hsla(150, 100%,  50%,  0.5);
+    --color-secondary-hi-so:   hsla(150, 100%,  75%,  0.5);
+    --color-secondary-low-so:  hsla(150, 100%,  33%,  0.5);
+    --color-back-base-ts:      hsla(  0,   0%,  12%, 0.75);
+    --color-text-so:           hsla(  0,   0%, 100%,  0.5);
 
     /* Font sizes */
     --font-size-logo      : 2rem;
@@ -95,38 +97,38 @@ p {
     margin-bottom: 16px;
 }
 
-strong {
+b, strong {
     font-weight: bold;
 }
 
-em {
+i, em {
     font-style: italic;
 }
 
 a {
     display: inline-block;
     text-decoration: none;
-    color: hsl(330, 100%, 62.5%);
+    color: hsl(150, 100%, 50%);
     color: var(--color-secondary-base);
 }
 
 a:link {
-    color: hsl(330, 100%, 62.5%);
+    color: hsl(150, 100%, 50%);
     color: var(--color-secondary-base);
 }
 
 a:visited {
-    color: hsl(330, 100%, 62.5%);
+    color: hsl(150, 100%, 50%);
     color: var(--color-secondary-base);
 }
 
 a:hover {
-    color: hsl(330, 100%, 75%);
+    color: hsl(150, 100%, 75%);
     color: var(--color-secondary-hi);
 }
 
 a:active {
-    color: hsl(330, 100%, 75%);
+    color: hsl(150, 100%, 75%);
     color: var(--color-secondary-hi);
 }
 
@@ -151,7 +153,7 @@ ul li::before {
     content: "\2022";
     direction: rtl;
     text-align: right;
-    color: hsl(330, 100%, 62.5%);
+    color: hsl(150, 100%, 50%);
     color: var(--color-secondary-base);
     width: 2rem;
     margin-right: 8px;
@@ -164,7 +166,7 @@ ol li::before {
     counter-increment: li;
     direction: rtl;
     text-align: right;
-    color: hsl(330, 100%, 62.5%);
+    color: hsl(150, 100%, 50%);
     color: var(--color-secondary-base);
     width: 3rem;
     margin-right: 8px;
@@ -200,18 +202,9 @@ td {
 }
 
 thead td {
-    background-color: hsl(330, 100%, 62.5%);
-    background-color: var(--color-secondary-base);
+    background-color: hsl(150, 100%, 33%);
+    background-color: var(--color-secondary-low);
 }
-
-/* Have no idea why this is not working, need help here. */
-/* thead td:first-child {
-    border-top-left-radius: 8px;
-}
-
-thead td:last-child {
-    border-top-right-radius: 8px;
-}*/
 
 pre {
     font-family: monospace;
@@ -369,8 +362,8 @@ pre {
 #menu-links > li > a:hover {
     color: hsl(0, 0%, 100%);
     color: var(--color-text);
-    background-color: hsl(330, 100%, 62.5%);
-    background-color: var(--color-secondary-base);
+    background-color: hsl(150, 100%, 33%);
+    background-color: var(--color-secondary-low);
 }
 
 #menu-links > li > a:active {
@@ -388,8 +381,8 @@ pre {
 }
 
 #menu-button:hover {
-    background-color: hsl(330, 100%, 62.5%);
-    background-color: var(--color-secondary-base);
+    background-color: hsl(150, 100%, 33%);
+    background-color: var(--color-secondary-low);
 }
 
 .menu-button-line {
@@ -475,9 +468,9 @@ pre {
 .slides-control {
     width: 12px;
     height: 12px;
-    border: 2px solid hsl(330, 100%, 62.5%);
+    border: 2px solid hsl(150, 100%, 50%);
     border: 2px solid var(--color-secondary-base);
-    background-color: hsla(330, 100%, 62.5%, 0.5);
+    background-color: hsla(150, 100%, 50%, 0.5);
     background-color: var(--color-secondary-base-so);
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -486,19 +479,19 @@ pre {
 }
 
 .slides-control:hover {
-    border: 2px solid hsl(330, 100%, 75%);
+    border: 2px solid hsl(150, 100%, 75%);
     border: 2px solid var(--color-secondary-hi);
-    background-color: hsla(330, 100%,   75%,  0.5);
+    background-color: hsla(150, 100%,   75%,  0.5);
     background-color: var(--color-secondary-hi-so);
 }
 
 .slides-control-selected {
-    background-color: hsl(330, 100%, 62.5%);
+    background-color: hsl(150, 100%, 50%);
     background-color: var(--color-secondary-base);
 }
 
 .slides-control-selected:hover {
-    background-color: hsl(330, 100%, 75%);
+    background-color: hsl(150, 100%, 75%);
     background-color: var(--color-secondary-hi);
 }
 
