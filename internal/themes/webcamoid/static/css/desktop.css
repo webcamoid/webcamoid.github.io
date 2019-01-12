@@ -201,7 +201,13 @@ td {
     border-style: solid;
 }
 
-thead td {
+th {
+    padding: 8px;
+    text-align: center;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 100%, 0.5);
+    border-color: var(--color-text-so);
+    border-style: solid;
     background-color: hsl(150, 100%, 33%);
     background-color: var(--color-secondary-low);
 }

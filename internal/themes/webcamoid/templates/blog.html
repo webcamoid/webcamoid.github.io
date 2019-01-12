@@ -15,7 +15,7 @@
             {% if status != "draft" %}
                 <article class="blog-article">
                     <p class="post-date">{{ article.date | strftime(article.date_format) }}</p>
-                    <h2><a href="/{{ article.url }}">{{ article.title }}</a></h1>
+                    <h2><a href="/{{ article.url }}">{{ article.title }}</a></h2>
 
                     {% if article.summary %}
                         <div class="post-contents">

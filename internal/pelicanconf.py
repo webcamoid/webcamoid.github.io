@@ -12,7 +12,7 @@ OUTPUT_PATH = '..'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en-us'
 CHARSET = 'UTF-8'
-DEFAULT_DATE_FORMAT = '%d/%m/%Y'
+DEFAULT_DATE_FORMAT = '%Y/%m/%d'
 DEFAULT_CATEGORY = 'news'
 THEME = 'themes/webcamoid'
 LOCALE = 'C'
@@ -27,7 +27,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 DIRECT_TEMPLATES = ['index', 'blog']
-PAGINATED_DIRECT_TEMPLATES = ['index', 'blog']
+PAGINATED_TEMPLATES = {'index': None, 'blog': None}
 STATIC_PATHS = ['images', 'static']
 
 DELETE_OUTPUT_DIRECTORY = False
@@ -46,7 +46,7 @@ TAG_SAVE_AS = ''
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
