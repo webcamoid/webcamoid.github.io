@@ -225,6 +225,20 @@ pre {
     margin-bottom: 16px;
 }
 
+::selection {
+    background-color: hsl(150, 100%, 33%);
+    background-color: var(--color-secondary-low);
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
+::-moz-selection {
+    background-color: hsl(150, 100%,   33%);
+    background-color: var(--color-secondary-low);
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+}
+
 #contents-wrapper {
     min-height: 100%;
     position: relative;
