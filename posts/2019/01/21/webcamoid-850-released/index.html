@@ -62,19 +62,27 @@
 <li>Configurable default picture in case no input signal available.</li>
 </ul>
 <p>There are more advantages of this driver, you can check the <a href="https://github.com/webcamoid/akvcam/wiki">wiki</a> for more information.</p>
+<div class="img-preview">
+    <a href="/images/20190121-1/VCamInFFandChr.png">
+        <img src="/images/20190121-1/VCamInFFandChr.png" alt="Virtual camera working in Chromium and Firefox" title="Virtual camera working in Chromium and Firefox" />
+    </a>
+</div>
+
 <p>In previous versions of Webcamoid, the virtual camera for Mac was implemented using <a href="https://github.com/Syphon">Syphon</a>, this was far from ideal since the capturing program need to implement a Syphon client and AVFoundation (the default video capture API for OS X) capable programs can't capture from a Syphon server. Since Webcamoid 8.5.0, the virtual camera is implemented as a CoreMediaIO plugin, so now this is can be detected by any AVFoundation capable program.</p>
 <p><strong>Note</strong>: <strong>since OS X 10.14, the virtual camera plugin need to be signed</strong>, otherwise some programs (mostly from App Store) will not be able to detect the camera.</p>
-<p>Windows virtual camera also received many improvements. Old version was based on DirectShow BaseClasses which had an ambiguous license, so it made quite hard to distribute the code, later Microsoft re-licensed the code of BaseClasses to a clear very well known MIT license, so now licensing is not a problem now, but some technical and portability problems still persisted. The code had many problems keeping track of new changes in MSVC and MinGW, it depended on  certain libraries to be loaded dynamically on run-time, 32 bits programs where not able to see the webcam from 64 bits Webcamoid and vice-versa, it was not possible to create more than one virtual camera at same time, and only one instance of Webcamoid was able to send frames to the virtual camera at time. All those problems are solved in Webcamoid 8.5.0.</p>
-<p><strong>Note</strong>: many programs based on DirectShow may be able to detect and use the camera, but those <strong>programs based in Microsoft Media Foundation will not work</strong>.</p>
+<p>Windows virtual camera also received many improvements. Old version was based on DirectShow BaseClasses which had an ambiguous license, so it made quite hard to distribute the code, later Microsoft re-licensed the code of BaseClasses to a clear very well known MIT license, so licensing is not a problem now, but some technical and portability problems still persisted. The code had many problems keeping track of new changes in MSVC and MinGW, it depended on  certain libraries to be loaded dynamically on run-time, 32 bits programs where not able to see the webcam from 64 bits Webcamoid and vice-versa, it was not possible to create more than one virtual camera at same time, and only one instance of Webcamoid was able to send frames to the virtual camera at time. All those problems are solved in Webcamoid 8.5.0.</p>
+<p><strong>Note</strong>: many programs based on DirectShow may be able to detect and use the camera, but those <strong>programs based on Microsoft Media Foundation will not work</strong>.</p>
 <p>You can see a full compatibility <a href="https://github.com/webcamoid/webcamoid/wiki/Virtual-camera-support">here</a>.</p>
 <h2>QtQuick Controls 2</h2>
 <p>With Qt deprecating QQC1 it was necessary to port the UI to QQC2, there is not any remarkable visual difference between the old and the new UI, that was only an API change. Some bugs and glitches may appears, but is too late to go back to QQC1 or rewrite the UI completely, despite of this, most of them can be worked around.</p>
 <h2>Recording</h2>
-<p><em>TODO</em></p>
+<p>In certain cases when you tried to record a video with audio enabled, it crashed, it happened because the alignment of the samples was not taken into account. In Windows, audio was not recorded at all, this bug was caused because the supported formats were not read and set properly.</p>
+<p>When you changed the capture resolution of the webcam, Webcamoid was not aware of the change and it was still recording in the default resolution (640x480 in most cases). Also, default video bit rate is now 1.5 Mbps instead of 200 kbps for better video quality.</p>
+<p>All this bugs were fixed with this release.</p>
+<h2>Crash on launch fixed</h2>
+<p>In some platforms when you tried to run Webcamoid it crashed straightforward, it was caused by certain combination of Qt and the used compiler, the cause is unknown but anyway it was fixed.</p>
 <h2>Microsoft Media Foundation</h2>
-<p><em>TODO</em></p>
-<h2>Crash fixed</h2>
-<p><em>TODO</em></p>
+<p>MMF is the new multimedia framework created by Microsoft and is intended to supersede DirectShow, support for MMF is enabled if you compile Webcamoid with MSVC. MMF is not yet supported in MinGW.</p>
             </div>
         </article>
     </section>
