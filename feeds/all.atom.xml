@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2019-01-21T00:00:00+01:00</updated><entry><title>Webcamoid 8.5.0 released!</title><link href="https://webcamoid.github.io/posts/2019/01/21/webcamoid-850-released/" rel="alternate"></link><published>2019-01-21T00:00:00+01:00</published><updated>2019-01-21T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2019-01-21:/posts/2019/01/21/webcamoid-850-released/</id><summary type="html">&lt;p&gt;Reworked virtual camera drivers, UI ported to QtQuick Controls 2, fixed recording bugs.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Virtual camera drivers&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2019-01-22T00:00:00+01:00</updated><entry><title>Webcamoid 8.5.0 released!</title><link href="https://webcamoid.github.io/posts/2019/01/22/webcamoid-850-released/" rel="alternate"></link><published>2019-01-22T00:00:00+01:00</published><updated>2019-01-22T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2019-01-22:/posts/2019/01/22/webcamoid-850-released/</id><summary type="html">&lt;p&gt;Reworked virtual camera drivers, UI ported to QtQuick Controls 2, fixed recording bugs.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Virtual camera drivers&lt;/h2&gt;
 &lt;p&gt;This is the feature that consumed most part of the development time. The virtual camera for GNU/Linux, Mac and Windows was rewritten from scratch.&lt;/p&gt;
 &lt;p&gt;For GNU/Linux, in addition to &lt;a href="https://github.com/umlaeute/v4l2loopback"&gt;v4l2loopback&lt;/a&gt; support, there was also added support for &lt;a href="https://github.com/webcamoid/webcamoid/akvcam"&gt;akvcam&lt;/a&gt; driver. &lt;strong&gt;akvcam&lt;/strong&gt; is an in-house v4l2 driver for Linux designed to offer the same exact features offered by Mac and Windows drivers, like for example:&lt;/p&gt;
 &lt;ul&gt;
@@ -9,8 +9,8 @@
 &lt;/ul&gt;
 &lt;p&gt;There are more advantages of this driver, you can check the &lt;a href="https://github.com/webcamoid/akvcam/wiki"&gt;wiki&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20190121-1/VCamInFFandChr.png"&gt;
-        &lt;img src="/images/20190121-1/VCamInFFandChr.png" alt="Virtual camera working in Chromium and Firefox" title="Virtual camera working in Chromium and Firefox" /&gt;
+    &lt;a href="/images/20190122-1/VCamInFFandChr.png"&gt;
+        &lt;img src="/images/20190122-1/VCamInFFandChr.png" alt="Virtual camera working in Chromium and Firefox" title="Virtual camera working in Chromium and Firefox" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
