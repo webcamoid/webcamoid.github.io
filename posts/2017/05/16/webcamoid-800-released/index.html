@@ -64,12 +64,12 @@
 
 <h2>Support for FreeBSD/TrueOs</h2>
 <p>After a few small fixes, Webcamoid is now finally working pretty well in this platform. Webcamoid requires V4L and Linux compatibility layer to be enabled in your system. If Webcamoid doesn't list any webcam, in order to make it work, first you must list your USB devices:</p>
-<div class="highlight"><pre><span></span>sudo usbconfig
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">usbconfig</span>
 </pre></div>
 
 
 <p>All your webcam devices will be listed as <em>ugenX.Y</em>, where <strong>X</strong> and <strong>Y</strong> are numbers. And then you must map that device to a v4l device:</p>
-<div class="highlight"><pre><span></span>sudo webcamd -d ugenX.Y -i 0 -v Z -B
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">webcamd</span> <span class="o">-</span><span class="n">d</span> <span class="n">ugenX</span><span class="p">.</span><span class="n">Y</span> <span class="o">-</span><span class="n">i</span> <span class="mi">0</span> <span class="o">-</span><span class="n">v</span> <span class="n">Z</span> <span class="o">-</span><span class="n">B</span>
 </pre></div>
 
 
