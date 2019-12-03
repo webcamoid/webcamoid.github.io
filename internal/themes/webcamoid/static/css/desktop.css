@@ -1,24 +1,59 @@
 /* Fonts setup */
 
 @font-face {
-    font-family: 'Quicksand';
+    font-family: 'MainFont';
     font-style: normal;
     font-weight: 300;
-    src: local('Quicksand Light'), local('Quicksand-Light'), url('../fonts/Quicksand-Light.ttf') format('truetype');
+    src: local('Clear Sans'), local('ClearSans-Regular'), url('../fonts/ClearSans/ClearSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Quicksand';
+    font-family: 'MainFont Light';
     font-style: normal;
-    font-weight: 400;
-    src: local('Quicksand Regular'), local('Quicksand-Regular'), url('../fonts/Quicksand-Regular.ttf') format('truetype');
+    font-weight: 200;
+    src: local('Clear Sans Light'), local('ClearSans-Light'), url('../fonts/ClearSans/ClearSans-Light.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Quicksand';
+    font-family: 'MainFont Thin';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Clear Sans Thin'), local('ClearSans-Thin'), url('../fonts/ClearSans/ClearSans-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MainFont Italic';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Clear Sans Italic'), local('ClearSans-Italic'), url('../fonts/ClearSans/ClearSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MainFont Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Clear Sans Medium'), local('ClearSans-Medium'), url('../fonts/ClearSans/ClearSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MainFont Medium Italic';
+    font-style: italic;
+    font-weight: 500;
+    src: local('Clear Sans Medium Italic'), local('ClearSans-MediumItalic'), url('../fonts/ClearSans/ClearSans-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MainFont Bold';
     font-style: normal;
     font-weight: 700;
-    src: local('Quicksand Bold'), local('Quicksand-Bold'), url('../fonts/Quicksand-Bold.ttf') format('truetype');
+    src: local('Clear Sans Bold'), local('ClearSans-Bold'), url('../fonts/ClearSans/ClearSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MainFont Bold Italic';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Clear Sans Bold Italic'), local('ClearSans-BoldItalic'), url('../fonts/ClearSans/ClearSans-BoldItalic.ttf') format('truetype');
 }
 
 :root {
@@ -55,8 +90,8 @@
 
 html {
     height: 100%;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 4.25mm;
+    font-family: 'MainFont Light', sans-serif;
+    font-size: 12; /*4.25mm;*/
 }
 
 body {
