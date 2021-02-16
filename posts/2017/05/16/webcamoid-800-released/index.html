@@ -38,7 +38,6 @@
                             <li><a href="/#downloads">Downloads</a></li>
                             <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki">Docs</a></li>
                             <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/issues">Support</a></li>
-                            <li><a href="/#share-it">Share</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,14 +63,12 @@
 
 <h2>Support for FreeBSD/TrueOs</h2>
 <p>After a few small fixes, Webcamoid is now finally working pretty well in this platform. Webcamoid requires V4L and Linux compatibility layer to be enabled in your system. If Webcamoid doesn't list any webcam, in order to make it work, first you must list your USB devices:</p>
-<div class="highlight"><pre><span></span><span class="err">sudo usbconfig</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">sudo usbconfig</span>
+</code></pre></div>
 
 <p>All your webcam devices will be listed as <em>ugenX.Y</em>, where <strong>X</strong> and <strong>Y</strong> are numbers. And then you must map that device to a v4l device:</p>
-<div class="highlight"><pre><span></span><span class="err">sudo webcamd -d ugenX.Y -i 0 -v Z -B</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">sudo webcamd -d ugenX.Y -i 0 -v Z -B</span>
+</code></pre></div>
 
 <p>Where <strong>Z</strong> is the number of V4L device where you want to map the ugen device, so it will appear as <em>/dev/videoZ</em> in Webcamoid.</p>
 <div class="img-preview">

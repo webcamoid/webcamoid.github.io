@@ -586,43 +586,6 @@ nav h4 {
     background: var(--color-back-hi);
 }
 
-#share-it {
-    padding: 32px;
-}
-
-.share-title {
-    font-weight: bold;
-    padding-bottom: 16px;
-}
-
-.share-buttons {
-    font-size: 0rem;
-    list-style-type: none;
-    margin-left: 16px;
-    padding: 0px;
-}
-
-.share-buttons > li {
-    display: inline;
-    padding-right: 8px;
-}
-
-.share-buttons > li > a {
-    text-decoration: none;
-}
-
-.share-buttons > li > a > img {
-    width: 48px;
-}
-
-.share-buttons > li > a > img:hover {
-    -webkit-filter: brightness(150%);
-    -moz-filter: brightness(150%);
-    -o-filter: brightness(150%);
-    -ms-filter: brightness(150%);
-    filter: brightness(150%);
-}
-
 #page-footer {
     display: table;
     position: absolute;

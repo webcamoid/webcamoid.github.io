@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2019-10-22T00:00:00+02:00</updated><entry><title>Webcamoid 8.7.1 released!</title><link href="https://webcamoid.github.io/posts/2019/10/22/webcamoid-871-released/" rel="alternate"></link><published>2019-10-22T00:00:00+02:00</published><updated>2019-10-22T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2019-10-22:/posts/2019/10/22/webcamoid-871-released/</id><summary type="html">&lt;p&gt;Bug fixes for Mac and Windows.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;VERY IMPORTANT ADVICE PLEASE READ!!!&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2021-02-16T00:00:00+01:00</updated><entry><title>Webcamoid 8.8.0 released!</title><link href="https://webcamoid.github.io/posts/2021/02/16/webcamoid-880-released/" rel="alternate"></link><published>2021-02-16T00:00:00+01:00</published><updated>2021-02-16T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2021-02-16:/posts/2021/02/16/webcamoid-880-released/</id><summary type="html">&lt;p&gt;Fixed auto exposure bug in Windows, improved FaceDetect plugin.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Fixed auto exposure bug in Windows&lt;/h2&gt;
+&lt;p&gt;This was a &lt;a href="https://github.com/webcamoid/webcamoid/issues/148"&gt;very hard to catch bug&lt;/a&gt; since not all webcams has this control and it was not clear how it was triggered. The bug consisted in Webcamoid turning off all boolean type controls (auto. exposure, auto. focus, etc.) with the exposure control being the most affected one turning the image darker, and since Windows does not provides any native options for setting the controls back, users needed to use 3rd-party programs to fix the problem.  &lt;/p&gt;
+&lt;p&gt;This bug is finally fixed once for all.&lt;/p&gt;
+&lt;h2&gt;Improved FaceDetect plugin&lt;/h2&gt;
+&lt;p&gt;Since this release was more focused on fixing the above bug, I did not wanted to make an almost void release for the rest of the platforms so I've back ported some small but interesting changes from &lt;a href="https://github.com/webcamoid/webcamoid"&gt;Webcamoid's master branch&lt;/a&gt;. And one of those interesting changes is that the FaceDetect plugin can now blur the outsides of the detected faces (&lt;a href="https://github.com/webcamoid/webcamoid/pull/332"&gt;PR #332&lt;/a&gt;) and the face detection algorithm can be used directly in other plugins (&lt;a href="https://github.com/webcamoid/webcamoid/pull/329"&gt;PR #329&lt;/a&gt;).  &lt;/p&gt;
+&lt;p&gt;Thanks you very much to &lt;a href="https://github.com/kno10"&gt;Erich Schubert&lt;/a&gt; and &lt;a href="https://github.com/cjbarth"&gt;Chris Barth&lt;/a&gt; for this improvement.&lt;/p&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 8.7.1 released!</title><link href="https://webcamoid.github.io/posts/2019/10/22/webcamoid-871-released/" rel="alternate"></link><published>2019-10-22T00:00:00+02:00</published><updated>2019-10-22T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2019-10-22:/posts/2019/10/22/webcamoid-871-released/</id><summary type="html">&lt;p&gt;Bug fixes for Mac and Windows.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;VERY IMPORTANT ADVICE PLEASE READ!!!&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt; To solve all the bugs mentioned bellow, please remove all virtual cameras and create a new one. &lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Bug fixes targeting Mac&lt;/h2&gt;
 &lt;p&gt;This release was specially intended to fix bugs impacting Mac users experience.  &lt;/p&gt;
@@ -85,14 +90,12 @@ Finally, a there was a memleak when playing a webcam, a video or the desktop, th
 
 &lt;h2&gt;Support for FreeBSD/TrueOs&lt;/h2&gt;
 &lt;p&gt;After a few small fixes, Webcamoid is now finally working pretty well in this platform. Webcamoid requires V4L and Linux compatibility layer to be enabled in your system. If Webcamoid doesn't list any webcam, in order to make it work, first you must list your USB devices:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;sudo usbconfig&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo usbconfig&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;All your webcam devices will be listed as &lt;em&gt;ugenX.Y&lt;/em&gt;, where &lt;strong&gt;X&lt;/strong&gt; and &lt;strong&gt;Y&lt;/strong&gt; are numbers. And then you must map that device to a v4l device:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;sudo webcamd -d ugenX.Y -i 0 -v Z -B&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo webcamd -d ugenX.Y -i 0 -v Z -B&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;strong&gt;Z&lt;/strong&gt; is the number of V4L device where you want to map the ugen device, so it will appear as &lt;em&gt;/dev/videoZ&lt;/em&gt; in Webcamoid.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
