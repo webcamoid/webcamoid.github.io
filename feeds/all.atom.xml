@@ -90,11 +90,11 @@ Finally, a there was a memleak when playing a webcam, a video or the desktop, th
 
 &lt;h2&gt;Support for FreeBSD/TrueOs&lt;/h2&gt;
 &lt;p&gt;After a few small fixes, Webcamoid is now finally working pretty well in this platform. Webcamoid requires V4L and Linux compatibility layer to be enabled in your system. If Webcamoid doesn't list any webcam, in order to make it work, first you must list your USB devices:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo usbconfig&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo usbconfig
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;All your webcam devices will be listed as &lt;em&gt;ugenX.Y&lt;/em&gt;, where &lt;strong&gt;X&lt;/strong&gt; and &lt;strong&gt;Y&lt;/strong&gt; are numbers. And then you must map that device to a v4l device:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo webcamd -d ugenX.Y -i 0 -v Z -B&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo webcamd -d ugenX.Y -i 0 -v Z -B
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;strong&gt;Z&lt;/strong&gt; is the number of V4L device where you want to map the ugen device, so it will appear as &lt;em&gt;/dev/videoZ&lt;/em&gt; in Webcamoid.&lt;/p&gt;
