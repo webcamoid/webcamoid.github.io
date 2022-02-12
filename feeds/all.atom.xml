@@ -1,5 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2021-02-16T00:00:00+01:00</updated><entry><title>Webcamoid 8.8.0 released!</title><link href="https://webcamoid.github.io/posts/2021/02/16/webcamoid-880-released/" rel="alternate"></link><published>2021-02-16T00:00:00+01:00</published><updated>2021-02-16T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2021-02-16:/posts/2021/02/16/webcamoid-880-released/</id><summary type="html">&lt;p&gt;Fixed auto exposure bug in Windows, improved FaceDetect plugin.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Fixed auto exposure bug in Windows&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2022-02-22T00:00:00+01:00</updated><subtitle></subtitle><entry><title>Webcamoid 9.0.0 released!</title><link href="https://webcamoid.github.io/posts/2022/02/22/webcamoid-900-released/" rel="alternate"></link><published>2022-02-22T00:00:00+01:00</published><updated>2022-02-22T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2022-02-22:/posts/2022/02/22/webcamoid-900-released/</id><summary type="html">&lt;p&gt;Remastered GUI, added PipeWire support, fixed video recording, security bug fix, now accepting donations.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Remastered GUI&lt;/h2&gt;
+&lt;p&gt;Finally, after 2 years of hard work I can present the new and more modern graphical interface. I took inspiration from phone camera apps to give a similar experience to the user, but still preserving the same features.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/00%20-%20Main.webp"&gt;
+        &lt;img src="/images/20220222-1/00%20-%20Main.webp" alt="Main window" title="Main window" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;All UI components were designed taking as reference the &lt;a href="https://material.io/"&gt;Material style&lt;/a&gt; guidelines but adapting it to work with both PC and phone devices, and adapting it to the color scheme of your desktop.&lt;br&gt;
+You can see bellow how the camera controls looks with the new design:&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/01%20-%20Camera%20Controls.webp"&gt;
+        &lt;img src="/images/20220222-1/01%20-%20Camera%20Controls.webp" alt="Camera controls" title="Camera controls" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Photos and videos previews&lt;/h2&gt;
+&lt;p&gt;Similar to phone camera apps, you can now open the last photo or video taken clicking the preview in the bottom left or right corner, it will open the file in your default image viewer or video player.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/02%20-%20Photo%20preview.webp"&gt;
+        &lt;img src="/images/20220222-1/02%20-%20Photo%20preview.webp" alt="Last photo preview" title="Last photo preview" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Added PipeWire support&lt;/h2&gt;
+&lt;p&gt;Now Webcamoid have screen capture support for Wayland using PipeWire. I if you are using Wayland, go to &lt;em&gt;Menu &amp;gt; Preferences &amp;gt; General Options &amp;gt; Desktop capture&lt;/em&gt; and select &lt;strong&gt;PipeWire screen capture&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/03%20-%20PipeWire%20Wayland%20capture.webp"&gt;
+        &lt;img src="/images/20220222-1/03%20-%20PipeWire%20Wayland%20capture.webp" alt="PipeWire Wayland capture" title="PipeWire Wayland capture" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;VLC playback support&lt;/h2&gt;
+&lt;p&gt;In previous versions of Webcamoid, FFmpeg was the default video playback back-end, which had the problem of choppy audio, now VLC is used as default back-end which offers a more fluent video playback.&lt;/p&gt;
+&lt;h2&gt;Virtual camera&lt;/h2&gt;
+&lt;p&gt;For many years, many developers Mac and Windows developers asked how they can use the Webcamoid's virtual camera for their own projects, other users also reported errors when uninstalling Webcamoid it leaves the virtual camera still present in their system, plus other bugs, and many other bugs, for these reason the virtual camera was splited to its own project, you can now use the virtual camera by separate, and Webcamoid also gives to option to download and install it when needed.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/04%20-%20Virtual%20camera%20install.webp"&gt;
+        &lt;img src="/images/20220222-1/04%20-%20Virtual%20camera%20install.webp" alt="Virtual camera install" title="Virtual camera install" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When clicking on &lt;strong&gt;Install&lt;/strong&gt;, Webcamoid will download the appropriate virtual camera for your system.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/05%20-%20Virtual%20camera%20download.webp"&gt;
+        &lt;img src="/images/20220222-1/05%20-%20Virtual%20camera%20download.webp" alt="Virtual camera download" title="Virtual camera download" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Click &lt;strong&gt;Yes&lt;/strong&gt; and follow the virtual camera install instructions.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/06%20-%20Virtual%20camera%20install%20confirmation.webp"&gt;
+        &lt;img src="/images/20220222-1/06%20-%20Virtual%20camera%20install%20confirmation.webp" alt="Virtual camera install confirmation" title="Virtual camera install confirmation" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Webamoid 9.0.0 offers many options to customize the virtual camera.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/07%20-%20Virtual%20camera%20management.webp"&gt;
+        &lt;img src="/images/20220222-1/07%20-%20Virtual%20camera%20management.webp" alt="Virtual camera management" title="Virtual camera management" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When creating the camera you will have the option to define the formats, resolutions, and frame rates of the virtual camera.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/08%20-%20Configuring%20the%20virtual%20camera.webp"&gt;
+        &lt;img src="/images/20220222-1/08%20-%20Configuring%20the%20virtual%20camera.webp" alt="Configuring the virtual camera" title="Configuring the virtual camera" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And you will get the virtual camera ready to use.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/09%20-%20The%20virtual%20camera%20is%20ready%20to%20use.webp"&gt;
+        &lt;img src="/images/20220222-1/09%20-%20The%20virtual%20camera%20is%20ready%20to%20use.webp" alt="Virtual camera ready" title="Virtual camera ready" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also control how the virtual camera will be seen in the client side.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/10%20-%20Virtual%20camera%20settings.webp"&gt;
+        &lt;img src="/images/20220222-1/10%20-%20Virtual%20camera%20settings.webp" alt="Virtual camera settings" title="Virtual camera settings" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And one of the most wanted features was setting the default camera picture, which now Webcamoid offers the option to customize it.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/11%20-%20Configuring%20the%20default%20picture%20for%20the%20virtual%20camera.webp"&gt;
+        &lt;img src="/images/20220222-1/11%20-%20Configuring%20the%20default%20picture%20for%20the%20virtual%20camera.webp" alt="Virtual camera default picture" title="Virtual camera default picture" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Improved effects&lt;/h2&gt;
+&lt;p&gt;Added face tracking plugin that detect, follow, and zoom in to your face, thanks to &lt;a href="https://github.com/cjbarth"&gt;Chris Barth&lt;/a&gt;.&lt;br&gt;
+Many others improvements were made by &lt;a href="https://github.com/cont1nuity"&gt;cont1nuity&lt;/a&gt;, like adding support for background image replacement, fixing masks rendering,and adding more options in FaceDetect plugin.&lt;br&gt;
+Also added a new Otsu threshold plugin which do a smart classification by gray levels. FalseColor has now a more intuitive settings. ASCII art plugin algorithm also received some optimizations.&lt;/p&gt;
+&lt;h2&gt;Security bug fix&lt;/h2&gt;
+&lt;p&gt;In previous versions, when creating, editing, or removing a virtual camera a script was created with the purpose of configuring the virtual camera in the system, the script required in most cases Administrative privileges, an attacker could detect when that script was created and append malicious code inside. This bug was fixed and no script is created in any way.&lt;/p&gt;
+&lt;h2&gt;Fixed video recording&lt;/h2&gt;
+&lt;p&gt;Many users reported problems with blank files when recoding, this bug was fixed and also added support for compiling with FFmpeg 5.0.&lt;/p&gt;
+&lt;h2&gt;Now accepting donations&lt;/h2&gt;
+&lt;p&gt;Finally, many users asked me over the years how they can donate to the project, I've added many options to donate, from flat money to crypto currencies, as a one unique or regular payments, in the most popular sites. Of course, Webcamoid development won't change, Webcamoid is still a &lt;a href="https://github.com/webcamoid/webcamoid/blob/master/COPYING"&gt;Free Open Source Software&lt;/a&gt; project, no feature will be locked under any paywall. Any donation amount is welcome and very appreciated.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20220222-1/12%20-%20Donations.webp"&gt;
+        &lt;img src="/images/20220222-1/12%20-%20Donations.webp" alt="Donations" title="Donations" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 8.8.0 released!</title><link href="https://webcamoid.github.io/posts/2021/02/16/webcamoid-880-released/" rel="alternate"></link><published>2021-02-16T00:00:00+01:00</published><updated>2021-02-16T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2021-02-16:/posts/2021/02/16/webcamoid-880-released/</id><summary type="html">&lt;p&gt;Fixed auto exposure bug in Windows, improved FaceDetect plugin.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Fixed auto exposure bug in Windows&lt;/h2&gt;
 &lt;p&gt;This was a &lt;a href="https://github.com/webcamoid/webcamoid/issues/148"&gt;very hard to catch bug&lt;/a&gt; since not all webcams has this control and it was not clear how it was triggered. The bug consisted in Webcamoid turning off all boolean type controls (auto. exposure, auto. focus, etc.) with the exposure control being the most affected one turning the image darker, and since Windows does not provides any native options for setting the controls back, users needed to use 3rd-party programs to fix the problem.  &lt;/p&gt;
 &lt;p&gt;This bug is finally fixed once for all.&lt;/p&gt;
 &lt;h2&gt;Improved FaceDetect plugin&lt;/h2&gt;
@@ -18,8 +123,8 @@ Instead of doing some hackery to load the frame from resources, the plugins will
 The UI still does not play well with small screen devices, this is a pending task that will be solved before the official release.&lt;br&gt;
 You can read more at the &lt;a href="https://github.com/webcamoid/webcamoid/issues/169"&gt;Android port&lt;/a&gt; issue. Also, if you feel a bit adventurous you can download and test the APK at the &lt;a href="https://bintray.com/webcamoid/webcamoid/webcamoid/daily#files/android"&gt;daily build&lt;/a&gt; page.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20191001-1/WebcamoidInAndroid.png"&gt;
-        &lt;img src="/images/20191001-1/WebcamoidInAndroid.png" alt="Webcamoid in Android" title="Webcamoid in Android" /&gt;
+    &lt;a href="/images/20191001-1/WebcamoidInAndroid.webp"&gt;
+        &lt;img src="/images/20191001-1/WebcamoidInAndroid.webp" alt="Webcamoid in Android" title="Webcamoid in Android" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -51,8 +156,8 @@ Finally, a there was a memleak when playing a webcam, a video or the desktop, th
 &lt;/ul&gt;
 &lt;p&gt;There are more advantages of this driver, you can check the &lt;a href="https://github.com/webcamoid/akvcam/wiki"&gt;wiki&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20190122-1/VCamInFFandChr.png"&gt;
-        &lt;img src="/images/20190122-1/VCamInFFandChr.png" alt="Virtual camera working in Chromium and Firefox" title="Virtual camera working in Chromium and Firefox" /&gt;
+    &lt;a href="/images/20190122-1/VCamInFFandChr.webp"&gt;
+        &lt;img src="/images/20190122-1/VCamInFFandChr.webp" alt="Virtual camera working in Chromium and Firefox" title="Virtual camera working in Chromium and Firefox" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -83,8 +188,8 @@ Finally, a there was a memleak when playing a webcam, a video or the desktop, th
 &lt;p&gt;So the best solution I've found for now is Syphon for sharing frames with other programs, Syphon is a framework that allow sharing frames as OpenGL textures with other programs also using Syphon. This is More or less a solution for the virtual camera, and I guess most Free Open Source programs will not have problem adding support for Syphon, if they didn't yet, for closed source programs it's a different story.&lt;/p&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 8.0.0 released!</title><link href="https://webcamoid.github.io/posts/2017/05/16/webcamoid-800-released/" rel="alternate"></link><published>2017-05-16T00:00:00+02:00</published><updated>2017-05-16T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2017-05-16:/posts/2017/05/16/webcamoid-800-released/</id><summary type="html">&lt;p&gt;Mac support, more audio options, more recording options, more flexibility.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Support for Mac&lt;/h2&gt;
 &lt;p&gt;Adding support for Mac was one of the most important ojectives for Webcamoid 8.0.0, since there was not many Free Open Source webcam apps for this platform. I hope Webcamoid can fill the gap for Open Source enthusiasts using Mac, and users of this platform in general.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/WebcamoidInMac.png"&gt;
-        &lt;img src="/images/20170516-1/WebcamoidInMac.png" alt="Webcamoid in Mac" title="Webcamoid in Mac" /&gt;
+    &lt;a href="/images/20170516-1/WebcamoidInMac.webp"&gt;
+        &lt;img src="/images/20170516-1/WebcamoidInMac.webp" alt="Webcamoid in Mac" title="Webcamoid in Mac" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -99,69 +204,69 @@ Finally, a there was a memleak when playing a webcam, a video or the desktop, th
 
 &lt;p&gt;Where &lt;strong&gt;Z&lt;/strong&gt; is the number of V4L device where you want to map the ugen device, so it will appear as &lt;em&gt;/dev/videoZ&lt;/em&gt; in Webcamoid.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/WebcamoidInTrueOS.png"&gt;
-        &lt;img src="/images/20170516-1/WebcamoidInTrueOS.png" alt="Webcamoid in TrueOS" title="Webcamoid in TrueOS" /&gt;
+    &lt;a href="/images/20170516-1/WebcamoidInTrueOS.webp"&gt;
+        &lt;img src="/images/20170516-1/WebcamoidInTrueOS.webp" alt="Webcamoid in TrueOS" title="Webcamoid in TrueOS" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Improved audio configs&lt;/h2&gt;
 &lt;p&gt;In previous versions only PulseAudio was supported; now Webcamoid supports 4 new systems: ALSA, JACK, OSS and QtMultimedia. And is also possible to select the output and input you want to use for playback and capture.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/InputDeviceSelection.png"&gt;
-        &lt;img src="/images/20170516-1/InputDeviceSelection.png" alt="Input device selection" title="Input device selection" /&gt;
+    &lt;a href="/images/20170516-1/InputDeviceSelection.webp"&gt;
+        &lt;img src="/images/20170516-1/InputDeviceSelection.webp" alt="Input device selection" title="Input device selection" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;For each input and output, you can set the sample format, number of channels and sample rate.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/AudioDeviceOptions.png"&gt;
-        &lt;img src="/images/20170516-1/AudioDeviceOptions.png" alt="Audio device options" title="Audio device options" /&gt;
+    &lt;a href="/images/20170516-1/AudioDeviceOptions.webp"&gt;
+        &lt;img src="/images/20170516-1/AudioDeviceOptions.webp" alt="Audio device options" title="Audio device options" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;More options for recording&lt;/h2&gt;
 &lt;p&gt;In older versions it was not possible to easily configure codecs and format parameters.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/RecordingOptions.png"&gt;
-        &lt;img src="/images/20170516-1/RecordingOptions.png" alt="Recording options" title="Recording options" /&gt;
+    &lt;a href="/images/20170516-1/RecordingOptions.webp"&gt;
+        &lt;img src="/images/20170516-1/RecordingOptions.webp" alt="Recording options" title="Recording options" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;But now each codec offers its own config dialog, ideal for more advanced users who want to fine tune recording.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/CodecOptions.png"&gt;
-        &lt;img src="/images/20170516-1/CodecOptions.png" alt="Codec options" title="Codec options" /&gt;
+    &lt;a href="/images/20170516-1/CodecOptions.webp"&gt;
+        &lt;img src="/images/20170516-1/CodecOptions.webp" alt="Codec options" title="Codec options" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Libraries configs&lt;/h2&gt;
 &lt;p&gt;Webcamoid support FFmpeg and GStreamer for playback, recording, video and audio convertion, but in previous versions, only one of both were available at compile time, so you had to choose between using one or the other. Now, Webcamoid can be compiled with support for both frameworks and the user will be able choose between both at runtime. And not just that, users can also select the audio system and camera capture library.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/LibrariesOptions.png"&gt;
-        &lt;img src="/images/20170516-1/LibrariesOptions.png" alt="Libraries options" title="Libraries options" /&gt;
+    &lt;a href="/images/20170516-1/LibrariesOptions.webp"&gt;
+        &lt;img src="/images/20170516-1/LibrariesOptions.webp" alt="Libraries options" title="Libraries options" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Plugin configs&lt;/h2&gt;
 &lt;p&gt;For developers and more advanced users there is now a new menu for configuring plugins search paths where you can also enable or disable plugins you don't want to load.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/PluginsOptions.png"&gt;
-        &lt;img src="/images/20170516-1/PluginsOptions.png" alt="Plugins options" title="Plugins options" /&gt;
+    &lt;a href="/images/20170516-1/PluginsOptions.webp"&gt;
+        &lt;img src="/images/20170516-1/PluginsOptions.webp" alt="Plugins options" title="Plugins options" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Updates&lt;/h2&gt;
 &lt;p&gt;From now on you will be informed if you are using an old or a development version of Webcamoid, so you can be up to date with bleeding edge features and bug fixes.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/Updates.png"&gt;
-        &lt;img src="/images/20170516-1/Updates.png" alt="Updates" title="Updates" /&gt;
+    &lt;a href="/images/20170516-1/Updates.webp"&gt;
+        &lt;img src="/images/20170516-1/Updates.webp" alt="Updates" title="Updates" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Installers and portables for GNU/Linux&lt;/h2&gt;
 &lt;p&gt;GNU/Linux users will not need to wait for Weamoid to be packaged for their distros, and they will not need to use an outdated version anymore. Since Webcamoid 8.0.0 you will be able to install it from a nice graphical installer or, if you prefer, run it as a portable program, just make it executable and click it to run.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
-    &lt;a href="/images/20170516-1/GNULinuxBinaries.png"&gt;
-        &lt;img src="/images/20170516-1/GNULinuxBinaries.png" alt="GNU/Linux binaries" title="GNU/Linux binaries" /&gt;
+    &lt;a href="/images/20170516-1/GNULinuxBinaries.webp"&gt;
+        &lt;img src="/images/20170516-1/GNULinuxBinaries.webp" alt="GNU/Linux binaries" title="GNU/Linux binaries" /&gt;
     &lt;/a&gt;
 &lt;/div&gt;</content><category term="news"></category></entry></feed>
