@@ -230,6 +230,7 @@ table {
 td {
     padding: 8px;
     text-align: center;
+    vertical-align: middle;
     border-width: 1px;
     border-color: hsla(0, 0%, 100%, 0.5);
     border-color: var(--color-text-so);
@@ -654,4 +655,9 @@ nav h4 {
     width: 100%;
     max-width: 480px;
     max-height: 360px;
+}
+
+.donation-qr-preview {
+    width: 32px;
+    height: 32px;
 }

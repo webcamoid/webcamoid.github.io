@@ -26,8 +26,16 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-DIRECT_TEMPLATES = ['index', 'blog']
-PAGINATED_TEMPLATES = {'index': None, 'blog': None}
+DIRECT_TEMPLATES = [
+    'index',
+    'blog',
+    'donations'
+]
+PAGINATED_TEMPLATES = {
+    'index': None,
+    'blog': None,
+    'donations': None
+}
 STATIC_PATHS = ['images']
 
 DELETE_OUTPUT_DIRECTORY = False

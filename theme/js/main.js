@@ -1,3 +1,11 @@
+function copyToClipBoard(elementId)
+{
+    var textInput = document.getElementById(elementId);
+    textInput.select();
+    textInput.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(textInput.value);
+}
+
 function maxRatio()
 {
     var screenshots = document.getElementById("preview");
@@ -11,7 +19,7 @@ function maxRatio()
         var r = screenshots.children[i].height / screenshots.children[i].width;
 
         if (r > rmax)
-            rmax = r
+            rmax = r;
     }
 
     return rmax;
