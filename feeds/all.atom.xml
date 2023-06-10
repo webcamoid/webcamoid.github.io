@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2022-02-15T00:00:00+01:00</updated><subtitle></subtitle><entry><title>Webcamoid 9.0.0 released!</title><link href="https://webcamoid.github.io/posts/2022/02/15/webcamoid-900-released/" rel="alternate"></link><published>2022-02-15T00:00:00+01:00</published><updated>2022-02-15T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2022-02-15:/posts/2022/02/15/webcamoid-900-released/</id><summary type="html">&lt;p&gt;Remastered GUI, added PipeWire support, fixed video recording, security bug fix, now accepting donations.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Remastered GUI&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2023-06-10T00:00:00+02:00</updated><subtitle></subtitle><entry><title>Webcamoid 9.1.0 released!</title><link href="https://webcamoid.github.io/posts/2023/06/10/webcamoid-910-released/" rel="alternate"></link><published>2023-06-10T00:00:00+02:00</published><updated>2023-06-10T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2023-06-10:/posts/2023/06/10/webcamoid-910-released/</id><summary type="html">&lt;p&gt;Android, about Mac support, UI in small screens, ARM packages for GNU/Linux, Flatpak.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;UI improvement&lt;/h2&gt;
+&lt;p&gt;Continuing with the user interface improvements, the controls in the interface were arranged just a bit better specially to work well with small screen devices.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20230610-1/00%20-%20Webcamoid%20in%20small%20screens.webp"&gt;
+        &lt;img src="/images/20230610-1/00%20-%20Webcamoid%20in%20small%20screens.webp" alt="Webcamoid in small screens" title="Webcamoid in small screens" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Android support&lt;/h2&gt;
+&lt;p&gt;The Android app of Webcamoid has finally an official release. Most features of Webcamoid should be working acceptably fine, with a few exceptions like the camera flash which isn't working by the moment, but is at least a good advance.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20230610-1/01%20-%20Android.webp"&gt;
+        &lt;img src="/images/20230610-1/01%20-%20Android.webp" alt="Android" title="Android" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Mac support&lt;/h2&gt;
+&lt;p&gt;As &lt;a href="https://eclecticlight.co/2020/08/22/apple-silicon-macs-will-require-signed-code/"&gt;news says&lt;/a&gt; and many users reported me, Apple has enforced code signing for apps working with it's ARM processors, therefore all pre-compiled binaries were removed from download because it make no sense to release binary packages that won't never work in other computers, since Webcamoid 9.1 and forward you will have to &lt;a href="https://github.com/webcamoid/webcamoid/wiki/Build-and-install-in-Mac"&gt;compile it&lt;/a&gt; from &lt;a href="https://github.com/webcamoid/webcamoid"&gt;source code&lt;/a&gt; or install it from &lt;a href="https://brew.sh/"&gt;homebrew&lt;/a&gt;.&lt;br&gt;
+All Mac-specific code were removed and the functionality was switched to 3rd party libraries that offers more or less the same functionality, as following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;CoreAudio&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PortAudio&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SDL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Audio&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;playback&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;AVFoundation&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;FFmpeg&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Screen&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;AVFoundation&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;QCamera&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Camera&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This way it will make much easier for me to maintain the code.&lt;br&gt;
+People that want to maintain Webcamoid's code and homebrew packages for Mac are very welcome.  &lt;/p&gt;
+&lt;h2&gt;GNU/Linux ARM packages&lt;/h2&gt;
+&lt;p&gt;Now providing AppImages and portable packages for ARM32 and ARM64 architectures.&lt;/p&gt;
+&lt;h2&gt;Flatpak&lt;/h2&gt;
+&lt;p&gt;All Webcamoid's features including the virtual camera are working in the Flatpak package.&lt;/p&gt;
+&lt;h2&gt;Better accessibility features&lt;/h2&gt;
+&lt;p&gt;The user interface is fully accessible by screen readers and easy navigable with the keyboard.&lt;/p&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;p&gt;Some new features has been added to Webcamoid 9.1.0:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Image file as video source.&lt;/li&gt;
+&lt;li&gt;Image capture to clipboard (thanks to &lt;a href="https://github.com/iam-TJ"&gt;@iam-TJ&lt;/a&gt;!)&lt;/li&gt;
+&lt;li&gt;PortAudio and SDL as alternative audio device plugins.&lt;/li&gt;
+&lt;li&gt;QCamera as alternative camera capture plugin.&lt;/li&gt;
+&lt;li&gt;FFmpeg screen capture support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;New and improved video Effects&lt;/h2&gt;
+&lt;p&gt;New effects added like AnalogTV, Zoom, Crop, and Opacity, and other improved effects like Warhol and Waves.&lt;/p&gt;
+&lt;div class="img-preview"&gt;
+    &lt;a href="/images/20230610-1/02%20-%20Video%20effects.webp"&gt;
+        &lt;img src="/images/20230610-1/02%20-%20Video%20effects.webp" alt="Video effects" title="Video effects" /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 9.0.0 released!</title><link href="https://webcamoid.github.io/posts/2022/02/15/webcamoid-900-released/" rel="alternate"></link><published>2022-02-15T00:00:00+01:00</published><updated>2022-02-15T00:00:00+01:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2022-02-15:/posts/2022/02/15/webcamoid-900-released/</id><summary type="html">&lt;p&gt;Remastered GUI, added PipeWire support, fixed video recording, security bug fix, now accepting donations.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Remastered GUI&lt;/h2&gt;
 &lt;p&gt;Finally, after 2 years of hard work I can present the new and more modern graphical interface. I took inspiration from phone camera apps to give a similar experience to the user, but still preserving the same features.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
     &lt;a href="/images/20220215-1/00%20-%20Main.webp"&gt;

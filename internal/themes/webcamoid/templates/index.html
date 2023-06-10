@@ -46,23 +46,49 @@
             </header>
             <div class="download-option-container">
                 <nav class="download-option">
+                    <h2 id="downloads-android">for Android</h2>
+                    <p>
+                        <a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-android-9.1.0.apk">Download APK</a>
+                    </p>
+                    <p>
+                        Android 7.0 (API 24) or higher required.
+                    </p>
+                </nav>
+                <nav class="download-option">
                     <h2 id="downloads-gnu-linux">for GNU/Linux</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>Installable</th><th>AppImage</th><th>Portable</th>
+                                <th>Installable</th><th>AppImage</th><th>Flatpak</th><th>Portable</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-installer-linux-9.0.0-x86_64.run">x86_64</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-portable-linux-9.0.0-x86_64.AppImage">x86_64</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-portable-linux-9.0.0-x86_64.tar.xz">x86_64</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-installer-linux-9.1.0-x64.run">x86_64</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-linux-9.1.0-x64.AppImage">x86_64</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-installer-linux-9.1.0-x64.flatpak">x86_64</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-linux-9.1.0-x64.tar.xz">x86_64</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-linux-9.1.0-arm64.AppImage">ARM64</a></td>
+                                <td></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-linux-9.1.0-arm64.tar.xz">ARM64</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-linux-9.1.0-arm32.AppImage">ARM32</a></td>
+                                <td></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-linux-9.1.0-arm32.tar.xz">ARM32</a></td>
                             </tr>
                         </tbody>
                     </table>
                     <p>
-                        glibc 2.31 and gcc 9.3 or higher required.
+                        glibc 2.35 and gcc 11.2 or higher required.
+                    </p>
+                    <h3 id="downloads-gnu-linux-flatpak">Flatpak</h3>
+                    <p>
+                        You can also download Webcamoid from <a href="https://flathub.org/apps/io.github.webcamoid.Webcamoid">Flathub</a>.
                     </p>
                     <h3 id="downloads-gnu-linux-vcam">Virtual Camera Driver</h3>
                     <table>
@@ -79,26 +105,21 @@
                         </tbody>
                     </table>
                     <p>
-                        <strong>akvcam</strong> driver requires linux 4.4 or higher.
+                        <strong>akvcam</strong> driver requires linux 4.14 or higher.
                     </p>
                 </nav>
                 <nav class="download-option">
                     <h2 id="downloads-mac">for Mac</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Installable</th><th>Portable</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-installer-mac-9.0.0-x86_64.pkg">x86_64</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-portable-mac-9.0.0-x86_64.dmg">x86_64</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
                     <p>
-                        OS X 11.7 or higher required.
+                        Since Webcamoid 9.1.0, precompiled binaries are not
+                        provided anymore.<br/>
+                        As explained in <a target="_blank" href="https://github.com/webcamoid/webcamoid/issues/584">issue #584</a>,
+                        Apple Mac M1 requires that all apps to be code signed,
+                        this requirement is imposible to comply with, so the
+                        upload of binaries are disabled because they are simply
+                        unusable. You can still <a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki/Build-and-install-in-Mac">
+                        compile Webcamoid from the source code</a>.<br/>
+                        Developers and maintainers for Mac are welcome.
                     </p>
                     <h3 id="downloads-mac-vcam">Virtual Camera Driver</h3>
                     <p>
@@ -115,12 +136,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-installer-windows-9.0.0-win64.exe">64 bits</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-portable-windows-9.0.0-win64.zip ">64 bits</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-installer-windows-9.1.0-win64.exe">64 bits</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-windows-9.1.0-win64.zip ">64 bits</a></td>
                             </tr>
                             <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-installer-windows-9.0.0-win32.exe">32 bits</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.0.0/webcamoid-portable-windows-9.0.0-win32.zip">32 bits</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-installer-windows-9.1.0-win32.exe">32 bits</a></td>
+                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.0/webcamoid-portable-windows-9.1.0-win32.zip">32 bits</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -148,13 +169,13 @@
                         </a>
                     </p>
                     <p>
-                        <a href="https://github.com/webcamoid/webcamoid/zipball/9.0.0">
-                            webcamoid-9.0.0.zip
+                        <a href="https://github.com/webcamoid/webcamoid/zipball/9.1.0">
+                            webcamoid-9.1.0.zip
                         </a>
                     </p>
                     <p>
-                        <a href="https://github.com/webcamoid/webcamoid/tarball/9.0.0">
-                            webcamoid-9.0.0.tar.gz
+                        <a href="https://github.com/webcamoid/webcamoid/tarball/9.1.0">
+                            webcamoid-9.1.0.tar.gz
                         </a>
                     </p>
                 </nav>

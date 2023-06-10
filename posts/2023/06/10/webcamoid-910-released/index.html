@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+            <title>Webcamoid blog: Webcamoid 9.1.0 released!</title>
+            <meta charset="UTF-8" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <link rel="shortcut icon" type="image/png" href="/theme/images/icons/favicon.png"/>
+            <link rel="stylesheet" href="/theme/css/main.css" />
+            <script src="/theme/js/main.js"></script>
+
+
+                <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Webcamoid blog: Webcamoid 9.1.0 released! Atom Feed" />
+
+                <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Webcamoid blog: Webcamoid 9.1.0 released! RSS Feed" />
+            <meta name="ocs-site-verification" content="633b316f3ac4c8cd47436d1ae9c7a9ad" />
+    </head>
+    <body onload="main();">
+        <div id="contents-wrapper">
+            <header id="header-main">
+                <a id="homepage-link" href="/">
+                    <img id="webcamoid-logo" src="/theme/images/icons/webcamoid.png" alt="Webcamoid" title="Webcamoid" />
+                    <div id="project-title">
+                        <h1 id="project-name">Webcamoid</h1>
+                        <h2 id="project-description">The ultimate webcam suite!</h2>
+                    </div>
+                </a>
+                <div id="menu">
+                    <div id="menu-container">
+                        <div id="menu-button">
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                        </div>
+                        <h1 id="menu-title">Links</h1>
+                        <ul id="menu-links" class="nolist">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/#downloads">Downloads</a></li>
+                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki">Docs</a></li>
+                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/issues">Support</a></li>
+                            <li><a href="/donations">Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+    <section id="blog-articles">
+        <h1>Webcamoid blog</h1>
+
+        <article class="blog-article">
+            <header>
+                <p class="post-date">2023/06/10</p>
+                <h2 class="entry-title">
+                    <a href="/posts/2023/06/10/webcamoid-910-released/">Webcamoid 9.1.0 released!</a>
+                </h2>
+            </header>
+            <div class="post-contents">
+                <h2>UI improvement</h2>
+<p>Continuing with the user interface improvements, the controls in the interface were arranged just a bit better specially to work well with small screen devices.</p>
+<div class="img-preview">
+    <a href="/images/20230610-1/00%20-%20Webcamoid%20in%20small%20screens.webp">
+        <img src="/images/20230610-1/00%20-%20Webcamoid%20in%20small%20screens.webp" alt="Webcamoid in small screens" title="Webcamoid in small screens" />
+    </a>
+</div>
+
+<h2>Android support</h2>
+<p>The Android app of Webcamoid has finally an official release. Most features of Webcamoid should be working acceptably fine, with a few exceptions like the camera flash which isn't working by the moment, but is at least a good advance.</p>
+<div class="img-preview">
+    <a href="/images/20230610-1/01%20-%20Android.webp">
+        <img src="/images/20230610-1/01%20-%20Android.webp" alt="Android" title="Android" />
+    </a>
+</div>
+
+<h2>Mac support</h2>
+<p>As <a href="https://eclecticlight.co/2020/08/22/apple-silicon-macs-will-require-signed-code/">news says</a> and many users reported me, Apple has enforced code signing for apps working with it's ARM processors, therefore all pre-compiled binaries were removed from download because it make no sense to release binary packages that won't never work in other computers, since Webcamoid 9.1 and forward you will have to <a href="https://github.com/webcamoid/webcamoid/wiki/Build-and-install-in-Mac">compile it</a> from <a href="https://github.com/webcamoid/webcamoid">source code</a> or install it from <a href="https://brew.sh/">homebrew</a>.<br>
+All Mac-specific code were removed and the functionality was switched to 3rd party libraries that offers more or less the same functionality, as following:</p>
+<div class="highlight"><pre><span></span><code><span class="n">CoreAudio</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">PortAudio</span><span class="w"> </span><span class="kr">and</span><span class="w"> </span><span class="n">SDL</span><span class="w"> </span><span class="p">(</span><span class="n">Audio</span><span class="w"> </span><span class="n">capture</span><span class="w"> </span><span class="kr">and</span><span class="w"> </span><span class="n">playback</span><span class="p">)</span>
+<span class="n">AVFoundation</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FFmpeg</span><span class="w"> </span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="n">capture</span><span class="p">)</span>
+<span class="n">AVFoundation</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">QCamera</span><span class="w"> </span><span class="p">(</span><span class="n">Camera</span><span class="w"> </span><span class="n">capture</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This way it will make much easier for me to maintain the code.<br>
+People that want to maintain Webcamoid's code and homebrew packages for Mac are very welcome.  </p>
+<h2>GNU/Linux ARM packages</h2>
+<p>Now providing AppImages and portable packages for ARM32 and ARM64 architectures.</p>
+<h2>Flatpak</h2>
+<p>All Webcamoid's features including the virtual camera are working in the Flatpak package.</p>
+<h2>Better accessibility features</h2>
+<p>The user interface is fully accessible by screen readers and easy navigable with the keyboard.</p>
+<h2>New features</h2>
+<p>Some new features has been added to Webcamoid 9.1.0:</p>
+<ul>
+<li>Image file as video source.</li>
+<li>Image capture to clipboard (thanks to <a href="https://github.com/iam-TJ">@iam-TJ</a>!)</li>
+<li>PortAudio and SDL as alternative audio device plugins.</li>
+<li>QCamera as alternative camera capture plugin.</li>
+<li>FFmpeg screen capture support.</li>
+</ul>
+<h2>New and improved video Effects</h2>
+<p>New effects added like AnalogTV, Zoom, Crop, and Opacity, and other improved effects like Warhol and Waves.</p>
+<div class="img-preview">
+    <a href="/images/20230610-1/02%20-%20Video%20effects.webp">
+        <img src="/images/20230610-1/02%20-%20Video%20effects.webp" alt="Video effects" title="Video effects" />
+    </a>
+</div>
+            </div>
+        </article>
+    </section>
+            <div id="footer-separator">
+            </div>
+            <footer id="page-footer">
+                <p id="pelican-notice">
+                    Site powered by <a target="_blank" href="https://getpelican.com/">Pelican</a>.
+                </p>
+                <p id="legals">
+                    Linux is a trademark of Linus Torvalds<br />
+                    Windows is a trademark of Microsoft Corporation<br />
+                    Mac is a trademark of Apple Inc.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
