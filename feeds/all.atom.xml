@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2023-06-10T00:00:00+02:00</updated><subtitle></subtitle><entry><title>Webcamoid 9.1.0 released!</title><link href="https://webcamoid.github.io/posts/2023/06/10/webcamoid-910-released/" rel="alternate"></link><published>2023-06-10T00:00:00+02:00</published><updated>2023-06-10T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2023-06-10:/posts/2023/06/10/webcamoid-910-released/</id><summary type="html">&lt;p&gt;Android, about Mac support, UI in small screens, ARM packages for GNU/Linux, Flatpak.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;UI improvement&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Webcamoid, The ultimate webcam suite!</title><link href="https://webcamoid.github.io/" rel="alternate"></link><link href="https://webcamoid.github.io/feeds/all.atom.xml" rel="self"></link><id>https://webcamoid.github.io/</id><updated>2023-06-10T00:00:00+02:00</updated><subtitle></subtitle><entry><title>Webcamoid 9.1.0 released!</title><link href="https://webcamoid.github.io/posts/2023/06/10/webcamoid-910-released/" rel="alternate"></link><published>2023-06-10T00:00:00+02:00</published><updated>2023-06-10T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2023-06-10:/posts/2023/06/10/webcamoid-910-released/</id><summary type="html">&lt;p&gt;Android, about Mac support, UI in small screens, Flatpak.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;UI improvement&lt;/h2&gt;
 &lt;p&gt;Continuing with the user interface improvements, the controls in the interface were arranged just a bit better specially to work well with small screen devices.&lt;/p&gt;
 &lt;div class="img-preview"&gt;
     &lt;a href="/images/20230610-1/00%20-%20Webcamoid%20in%20small%20screens.webp"&gt;
@@ -25,8 +25,6 @@ All Mac-specific code were removed and the functionality was switched to 3rd par
 
 &lt;p&gt;This way it will make much easier for me to maintain the code.&lt;br&gt;
 People that want to maintain Webcamoid's code and homebrew packages for Mac are very welcome.  &lt;/p&gt;
-&lt;h2&gt;GNU/Linux ARM packages&lt;/h2&gt;
-&lt;p&gt;Now providing AppImages and portable packages for ARM32 and ARM64 architectures.&lt;/p&gt;
 &lt;h2&gt;Flatpak&lt;/h2&gt;
 &lt;p&gt;All Webcamoid's features including the virtual camera are working in the Flatpak package.&lt;/p&gt;
 &lt;h2&gt;Better accessibility features&lt;/h2&gt;
