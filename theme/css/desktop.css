@@ -551,6 +551,14 @@ pre {
     background-color: var(--color-secondary-hi);
 }
 
+#description {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+    background-color: hsl(255, 50%, 33%);
+    background-color: var(--color-main-base);
+    padding: 32px;
+}
+
 #downloads {
     color: hsl(0, 0%, 100%);
     color: var(--color-text);

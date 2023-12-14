@@ -3,33 +3,49 @@
     <head>
             <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
             <meta charset="{{ CHARSET }}" />
-            <meta http-equiv="Content-Type" content="text/html; charset={{ CHARSET }}">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-            <link rel="shortcut icon" type="image/png" href="/{{ THEME_STATIC_DIR }}/images/icons/favicon.png"/>
-            <link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+            <meta http-equiv="Content-Type"
+                  content="text/html; charset={{ CHARSET }}">
+            <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <link rel="shortcut icon"
+                  type="image/png"
+                  href="/{{ THEME_STATIC_DIR }}/images/icons/favicon.png"/>
+            <link rel="stylesheet"
+                  href="/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
             <script src="/{{ THEME_STATIC_DIR }}/js/main.js"></script>
 
             {% block header %}
             {% endblock %}
 
             {% if FEED_ALL_ATOM %}
-                <link href="/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ self.title() }} Atom Feed" />
+                <link href="/{{ FEED_ALL_ATOM }}"
+                      type="application/atom+xml"
+                      rel="alternate"
+                      title="{{ self.title() }} Atom Feed" />
             {% endif %}
 
             {% if FEED_ALL_RSS %}
-                <link href="/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ self.title() }} RSS Feed" />
+                <link href="/{{ FEED_ALL_RSS }}"
+                      type="application/rss+xml"
+                      rel="alternate"
+                      title="{{ self.title() }} RSS Feed" />
             {% endif %}
-            <meta name="ocs-site-verification" content="633b316f3ac4c8cd47436d1ae9c7a9ad" />
-            <meta name="google-adsense-account" content="ca-pub-4948478398401542">
+            <meta name="ocs-site-verification"
+                  content="633b316f3ac4c8cd47436d1ae9c7a9ad" />
+            <meta name="google-adsense-account"
+            content="ca-pub-4948478398401542">
     </head>
     <body onload="main();">
         <div id="contents-wrapper">
             <header id="header-main">
                 <a id="homepage-link" href="/">
-                    <img id="webcamoid-logo" src="/{{ THEME_STATIC_DIR }}/images/icons/webcamoid.png" alt="Webcamoid" title="Webcamoid" />
+                    <img id="webcamoid-logo"
+                         src="/{{ THEME_STATIC_DIR }}/images/icons/webcamoid.png"
+                         alt="Webcamoid"
+                         title="Webcamoid" />
                     <div id="project-title">
                         <h1 id="project-name">Webcamoid</h1>
-                        <h2 id="project-description">The ultimate webcam suite!</h2>
+                        <h2 id="project-description">The ultimate video capture suite!</h2>
                     </div>
                 </a>
                 <div id="menu">
@@ -43,8 +59,10 @@
                         <ul id="menu-links" class="nolist">
                             <li><a href="/blog">Blog</a></li>
                             <li><a href="/#downloads">Downloads</a></li>
-                            <li><a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki">Docs</a></li>
-                            <li><a target="_blank" href="https://github.com/sponsors/hipersayanX">Support</a></li>
+                            <li><a target="_blank"
+                                   href="https://github.com/webcamoid/webcamoid/wiki">Wiki</a></li>
+                            <li><a target="_blank"
+                                   href="https://github.com/sponsors/hipersayanX">Support</a></li>
                             <li><a href="/donations">Donate</a></li>
                         </ul>
                     </div>

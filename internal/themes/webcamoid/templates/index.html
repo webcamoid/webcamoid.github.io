@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block header %}
-    <meta name="description" content="Webcamoid is a webcam app focused on providing all major features required by power users with a very simple and intuitive interface">
+    <meta name="description"
+          content="Webcamoid is a camera capture app focused on providing all major features required by power users with a very simple and intuitive interface">
     <link rel="canonical" href="https://webcamoid.github.io/">
     <link rel="canonical" href="https://webcamoid.github.io/index.html#downloads">
     <link rel="canonical" href="https://webcamoid.github.io/blog/">
@@ -12,11 +13,26 @@
         <div id="showcase">
             <div id="preview">
                 <h1>Screenshots</h1>
-                <img class="screenshot screenshot-selected" src="/{{ THEME_STATIC_DIR }}/images/screenshots/Main.webp" alt="Device selection showing the available webcam controls" title="Device selection showing the available webcam controls" />
-                <img class="screenshot" src="/{{ THEME_STATIC_DIR }}/images/screenshots/Recording.webp" alt="Webcamoid supports many popular video formats and codecs" title="Webcamoid supports many popular video formats and codecs" />
-                <img class="screenshot" src="/{{ THEME_STATIC_DIR }}/images/screenshots/Effects.webp" alt="More than 60 customizable video effects" title="More than 60 customizable video effects" />
-                <img class="screenshot" src="/{{ THEME_STATIC_DIR }}/images/screenshots/DesktopCapture.webp" alt="You can record and take pictures of your desktop session" title="You can record and take pictures of your desktop session" />
-                <img class="screenshot" src="/{{ THEME_STATIC_DIR }}/images/screenshots/VirtualCamera.webp" alt="Share your webcam with other programs" title="Share your webcam with other programs" />
+                <img class="screenshot screenshot-selected"
+                     src="/{{ THEME_STATIC_DIR }}/images/screenshots/Main.webp"
+                     alt="A simple and easy to use interface"
+                     title="A simple and easy to use interface" />
+                <img class="screenshot"
+                     src="/{{ THEME_STATIC_DIR }}/images/screenshots/Recording.webp"
+                     alt="Easy to record videos"
+                     title="Easy to record videos" />
+                <img class="screenshot"
+                     src="/{{ THEME_STATIC_DIR }}/images/screenshots/Effects.webp"
+                     alt="More than 60 customizable video effects"
+                     title="More than 60 customizable video effects" />
+                <img class="screenshot"
+                     src="/{{ THEME_STATIC_DIR }}/images/screenshots/DesktopCapture.webp"
+                     alt="Screen capture is also supported"
+                     title="Screen capture is also supported" />
+                <img class="screenshot"
+                     src="/{{ THEME_STATIC_DIR }}/images/screenshots/VirtualCamera.webp"
+                     alt="Virtual camera is also supported"
+                     title="Virtual camera is also supported" />
             </div>
             <div id="features">
                 <h1>Features</h1>
@@ -24,8 +40,8 @@
                     <li class="feature-item">Simple and intuitive</li>
                     <li class="feature-item">Take pictures and record videos</li>
                     <li class="feature-item">Apply funny effects</li>
-                    <li class="feature-item">Capture from desktop</li>
-                    <li class="feature-item">Create a virtual webcam</li>
+                    <li class="feature-item">Capture from screen</li>
+                    <li class="feature-item">Create virtual cameras</li>
                 </ul>
             </div>
             <div id="slides-controls-wrapper">
@@ -39,6 +55,24 @@
             </div>
         </div>
     </section>
+    <section id="description">
+        <p>
+            Webcamoid is a multi-platform camera capture app focused on providing all major features required by power users with a very simple and intuitive interface.
+        </p>
+        <h1>Features</h1>
+        <p>
+            <ul>
+                <li>Cross-platform (GNU/Linux, Mac, Windows, Android and FreeBSD)</li>
+                <li>Take pictures and record videos with your camera.</li>
+                <li>Add funny video effects.</li>
+                <li>Translated to many languages.</li>
+                <li>Use pictures and videos as sources.</li>
+                <li>Screen capture support.</li>
+                <li>Many video recording formats.</li>
+                <li>Virtual camera support for feeding other programs.</li>
+            </ul>
+        </p>
+    </section>
     <section id="downloads">
         <article class="downloads-container">
             <header class="downloads-title">
@@ -46,67 +80,34 @@
             </header>
             <div class="download-option-container">
                 <nav class="download-option">
-                    <h2 id="downloads-android">for Android</h2>
+                    <h2 id="downloads-binaries">Pre-compiled packages</h2>
                     <p>
-                        <a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-android-9.1.1.apk">Download APK</a>
+                        Download the pre-compiled packages for GNU/Linux, Windows, and Android.<br/>
+                        If you are a Mac user, consider <a target="_blank" href="/donations">making a donation</a> for buying the needed development hardware and also supporting your platform.<br/>
                     </p>
                     <p>
-                        Android 7.0 (API 24) or higher required.
+                        <a target="_blank" href="https://payhip.com/Webcamoid">
+                            <img src="/{{ THEME_STATIC_DIR }}/images/DownloadButtons/BinaryPackagesButton.png"
+                                 alt="Webcamoid pre-compiled packages"
+                                 title="Download the binary packages" />
+                        </a>
                     </p>
                 </nav>
                 <nav class="download-option">
-                    <h2 id="downloads-gnu-linux">for GNU/Linux</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Installable</th><th>AppImage</th><th>Flatpak</th><th>Portable</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-installer-linux-9.1.1-x64.run">x86_64</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-linux-9.1.1-x64.AppImage">x86_64</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-installer-linux-9.1.1-x64.flatpak">x86_64</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-linux-9.1.1-x64.tar.xz">x86_64</a></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-linux-9.1.1-arm64.AppImage">ARM64</a></td>
-                                <td></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-linux-9.1.1-arm64.tar.xz">ARM64</a></td>
-                            </tr>
-                            <!--
-                            <tr>
-                                <td></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-linux-9.1.1-arm32.AppImage">ARM32</a></td>
-                                <td></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-linux-9.1.1-arm32.tar.xz">ARM32</a></td>
-                            </tr>
-                            -->
-                        </tbody>
-                    </table>
+                    <h2 id="downloads-daily">Daily Builds</h2>
                     <p>
-                        glibc 2.35 and gcc 11.2 or higher required.
+                        Become a <a target="_blank" href="https://github.com/sponsors/hipersayanX">Webcamoid sponsor</a> and get early access to the latest features.<br/>
                     </p>
-                    <!--
-                    <h3 id="downloads-gnu-linux-flathub">Flathub</h3>
                     <p>
-                        You can also download Webcamoid from Flathub.<br/>
-                        <br/>
-                        <a href="https://flathub.org/apps/io.github.webcamoid.Webcamoid">
-                            <img alt="Download on Flathub" src="https://dl.flathub.org/assets/badges/flathub-badge-en.png" width="240" height="80" />
-                        </a>.
-                    </p>
-                    <h3 id="downloads-gnu-linux-snap">Snap</h3>
-                    <p>
-                        You can also download Webcamoid from Snap Store.<br/>
-                        <br/>
-                        <a href="https://snapcraft.io/webcamoid">
-                            <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" width="240" height="80" />
+                        <a target="_blank" href="https://github.com/sponsors/hipersayanX">
+                            <img src="/{{ THEME_STATIC_DIR }}/images/DownloadButtons/DailyBuildButton.png"
+                                 alt="Daily Build packages"
+                                 title="Become a sponsor and download the Daily Build packages" />
                         </a>
                     </p>
-                    -->
-                    <h3 id="downloads-gnu-linux-vcam">Virtual Camera Driver</h3>
+                </nav>
+                <nav class="download-option">
+                    <h2 id="downloads-gnu-linux-vcam">Virtual camera driver for GNU/Linux</h2>
                     <table>
                         <thead>
                             <tr>
@@ -125,73 +126,21 @@
                     </p>
                 </nav>
                 <nav class="download-option">
-                    <h2 id="downloads-mac">for Mac</h2>
-                    <p>
-                        Since Webcamoid 9.1.1, precompiled binaries are not
-                        provided anymore.<br/>
-                        As explained in <a target="_blank" href="https://github.com/webcamoid/webcamoid/issues/584">issue #584</a>,
-                        Apple Mac M1 requires that all apps to be code signed,
-                        this requirement is imposible to comply with, so the
-                        upload of binaries are disabled because they are simply
-                        unusable. You can still <a target="_blank" href="https://github.com/webcamoid/webcamoid/wiki/Build-and-install-in-Mac">
-                        compile Webcamoid from the source code</a>.<br/>
-                        Developers and maintainers for Mac are welcome.
-                    </p>
-                    <h3 id="downloads-mac-vcam">Virtual Camera Driver</h3>
+                    <h2 id="downloads-windows-vcam">Virtual Camera driver for Windows</h2>
                     <p>
                         <a target="_blank" href="https://github.com/webcamoid/akvirtualcamera">AkVirtualCamera driver download</a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-windows">for Windows</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Installable</th><th>Portable</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-installer-windows-9.1.1-win64.exe">64 bits</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-windows-9.1.1-win64.zip ">64 bits</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-installer-windows-9.1.1-win32.exe">32 bits</a></td>
-                                <td><a href="https://github.com/webcamoid/webcamoid/releases/download/9.1.1/webcamoid-portable-windows-9.1.1-win32.zip">32 bits</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        Windows 8 or higher required.
-                    </p>
-                    <h3 id="downloads-windows-vcam">Virtual Camera Driver</h3>
-                    <p>
-                        <a target="_blank" href="https://github.com/webcamoid/akvirtualcamera">AkVirtualCamera driver download</a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-daily">Daily Builds</h2>
-                    <p>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid/releases/tag/daily-build">
-                            Download Webcamoid with the latest changes
-                        </a>
                     </p>
                 </nav>
                 <nav class="download-option">
                     <h2 id="downloads-sources">Source Code</h2>
                     <p>
+                        Download the Webcamoid source code.
+                    </p>
+                    <p>
                         <a target="_blank" href="https://github.com/webcamoid/webcamoid">
-                            View on GitHub
-                        </a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/webcamoid/webcamoid/zipball/9.1.1">
-                            webcamoid-9.1.1.zip
-                        </a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/webcamoid/webcamoid/tarball/9.1.1">
-                            webcamoid-9.1.1.tar.gz
+                            <img src="/{{ THEME_STATIC_DIR }}/images/DownloadButtons/SourceCodeButton.png"
+                                 alt="Source Code"
+                                 title="Download the Webcamoid source code" />
                         </a>
                     </p>
                 </nav>

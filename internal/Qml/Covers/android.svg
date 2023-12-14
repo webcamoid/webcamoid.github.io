@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   sodipodi:docname="android.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="0.94335938"
+     inkscape:cx="256"
+     inkscape:cy="256.53002"
+     inkscape:window-width="1358"
+     inkscape:window-height="734"
+     inkscape:window-x="1"
+     inkscape:window-y="1"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       transform="translate(-1.7516432e-4,123.26973)">
+      <path
+         id="path1"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:18.9211;stroke-linecap:round;paint-order:markers fill stroke"
+         d="M 256,9.4609375 C 119.8406,9.4611405 9.4611429,119.8406 9.4609399,256 H 502.53906 C 502.53886,119.8406 392.1594,9.4611418 256,9.4609375 Z M 88.000002,112 A 40,40 0 0 1 128,152 a 40,40 0 0 1 -39.999998,40 40,40 0 0 1 -40,-40 40,40 0 0 1 40,-40 z M 408,112 a 40,40 0 0 1 40,40 40,40 0 0 1 -40,40 40,40 0 0 1 -40,-40 40,40 0 0 1 40,-40 z" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:16;stroke-linecap:round;paint-order:markers fill stroke"
+         id="rect2"
+         width="32"
+         height="128"
+         x="346.03891"
+         y="-355.39093"
+         rx="16"
+         ry="16"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:16;stroke-linecap:round;paint-order:markers fill stroke"
+         id="rect2-2"
+         width="32"
+         height="128"
+         x="-16"
+         y="6.6479993"
+         rx="16"
+         ry="16"
+         transform="rotate(-45)" />
+    </g>
+  </g>
+</svg>
