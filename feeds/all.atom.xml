@@ -22,8 +22,7 @@
 &lt;/div&gt;
 
 &lt;h2&gt;Early access to new features and getting support&lt;/h2&gt;
-&lt;p&gt;Do you want to report an issue or get a new feature? just become a &lt;a href="https://github.com/sponsors/hipersayanX"&gt;sponsor of the project&lt;/a&gt; and get exclusive support for you!
-And for the same price, Also get early access to new Webcamoid features with the daily builds!&lt;/p&gt;
+&lt;p&gt;Become a &lt;a href="https://github.com/sponsors/hipersayanX"&gt;sponsor of the project&lt;/a&gt; and get early access to new Webcamoid features with the daily builds!&lt;/p&gt;
 &lt;div class="img-preview"&gt;
     &lt;a target="_blank" href="https://github.com/sponsors/hipersayanX"&gt;
         &lt;img src="/theme/images/DownloadButtons/DailyBuildButton.png" alt="Become a sponsor" title="Become a sponsor" /&gt;
@@ -31,12 +30,10 @@ And for the same price, Also get early access to new Webcamoid features with the
 &lt;/div&gt;
 
 &lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The project already accept donations, why paid options?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;More ways of collaborating financially with the project is much better, also you get exclusive things for you for a very affordable price.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;I have a problem with Webcamoid, can I have free support?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The open source community is an amazing community full of avid users ready to donate a part of their free time to help you, you can search for help either in your favorite web search site, or in your operating system community forums and bug trackers.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;It's possible to get binary packages for free?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Yes, of course! just &lt;a href="https://github.com/webcamoid/webcamoid"&gt;download the source code&lt;/a&gt; and follow de &lt;a href="https://github.com/webcamoid/webcamoid/wiki"&gt;compile instructions&lt;/a&gt;. Also, you can download it from a third-party site, just make sure you download it from a trusted site and keep you antivirus updated.&lt;/p&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 9.1.1 released!</title><link href="https://webcamoid.github.io/posts/2023/06/15/webcamoid-911-released/" rel="alternate"></link><published>2023-06-15T00:00:00+02:00</published><updated>2023-06-15T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2023-06-15:/posts/2023/06/15/webcamoid-911-released/</id><summary type="html">&lt;p&gt;Bug fix, ARM packages.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Bug fix&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: The project already accept donations, why paid options?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A: More ways of collaborating financially with the project is much better, also you get exclusive things for you for a very affordable price.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: It's possible to get binary packages for free?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A: Yes, of course! just &lt;a href="https://github.com/webcamoid/webcamoid"&gt;download the source code&lt;/a&gt; and follow de &lt;a href="https://github.com/webcamoid/webcamoid/wiki"&gt;compile instructions&lt;/a&gt;. Also, you can download it from a third-party site, just make sure you download it from a trusted site and keep you antivirus updated.&lt;/p&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 9.1.1 released!</title><link href="https://webcamoid.github.io/posts/2023/06/15/webcamoid-911-released/" rel="alternate"></link><published>2023-06-15T00:00:00+02:00</published><updated>2023-06-15T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2023-06-15:/posts/2023/06/15/webcamoid-911-released/</id><summary type="html">&lt;p&gt;Bug fix, ARM packages.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Bug fix&lt;/h2&gt;
 &lt;p&gt;Removed a Qml import line that prevented the Webcamoid to launch in pre-compiled packages.&lt;/p&gt;
 &lt;h2&gt;ARM packages&lt;/h2&gt;
 &lt;p&gt;Added ARM packages to the download.&lt;/p&gt;</content><category term="news"></category></entry><entry><title>Webcamoid 9.1.0 released!</title><link href="https://webcamoid.github.io/posts/2023/06/10/webcamoid-910-released/" rel="alternate"></link><published>2023-06-10T00:00:00+02:00</published><updated>2023-06-10T00:00:00+02:00</updated><author><name>admin</name></author><id>tag:webcamoid.github.io,2023-06-10:/posts/2023/06/10/webcamoid-910-released/</id><summary type="html">&lt;p&gt;Android, about Mac support, UI in small screens, Flatpak.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;UI improvement&lt;/h2&gt;
