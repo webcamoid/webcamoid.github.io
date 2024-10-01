@@ -6,6 +6,13 @@ Item {
     id: downloadButton
     width: 256
     height: 128
+/**/
+    property int stripeWidth: 3
+    property color stripeColor: Qt.rgba(0, 0.66, 0.33)
+    property string buttonIcon: "download.svg"
+    property string buttonText: "Download now!"
+    property int textPointSize: 20
+//*/
 /*
     property int stripeWidth: 3
     property color stripeColor: Qt.rgba(0, 0.66, 0.33)
@@ -13,13 +20,13 @@ Item {
     property string buttonText: "Binary Packages"
     property int textPointSize: 20
 */
-
+/**
     property int stripeWidth: 3
     property color stripeColor: Qt.rgba(0.25, 0.16, 0.5)
     property string buttonIcon: "daily.svg"
     property string buttonText: "Daily Build"
     property int textPointSize: 20
-
+//*/
 /*
     property int stripeWidth: 3
     property color stripeColor: Qt.rgba(0.66, 0.49, 0)

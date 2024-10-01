@@ -11,21 +11,25 @@ Item {
     property int stripeWidth: 3
     property int textPointSize: 20
     property int iconSize: 128
-
 /**
     property color stripeColor: Qt.rgba(0, 0.66, 0.33)
     property string buttonIcon: "android.svg"
     property string buttonText: "Android"
+    property string architecture: ""
 //*/
-/**
+/**/
     property color stripeColor: Qt.rgba(0.25, 0.16, 0.5)
     property string buttonIcon: "linux.svg"
     property string buttonText: "Linux"
+    //property string architecture: "x86_64"
+    //property string architecture: "ARM 64"
+    property string architecture: "ARM 32"
 //*/
-/**/
+/**
     property color stripeColor: Qt.rgba(0, 0.33, 0.66)
     property string buttonIcon: "windows.svg"
     property string buttonText: "Windows"
+    property string architecture: ""
 //*/
     Item {
         id: buttonStripes
@@ -155,6 +159,25 @@ Item {
             text: downloadButton.buttonText
             anchors.horizontalCenter: parent.horizontalCenter
             font.pointSize: downloadButton.textPointSize
+            font.bold: true
+            color: "white"
+        }
+    }
+    Rectangle {
+        color: "red"
+        width: 64
+        height: 32
+        radius: 8
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.rightMargin: 16
+        anchors.bottomMargin: 16
+        visible: downloadButton.architecture.length > 0
+
+        Text {
+            text: downloadButton.architecture
+            anchors.centerIn: parent
+            font.pointSize: 0.6 * downloadButton.textPointSize
             font.bold: true
             color: "white"
         }
