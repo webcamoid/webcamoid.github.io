@@ -58,15 +58,16 @@
 
 :root {
     /* Palette */
-    --color-main-base:      hsl(255,  50%,   33%);
-    --color-main-hi:        hsl(255,  50%, 37.5%);
-    --color-main-low:       hsl(255,  50%, 16.5%);
-    --color-secondary-base: hsl(150, 100%,   50%);
-    --color-secondary-hi:   hsl(150, 100%,   75%);
-    --color-secondary-low:  hsl(150, 100%,   33%);
-    --color-back-base:      hsl(  0,   0%,   12%);
-    --color-back-hi:        hsl(  0,   0%,   15%);
-    --color-text:           hsl(  0,   0%,  100%);
+    --color-main-base:         hsl(255,  50%,   33%);
+    --color-main-hi:           hsl(255,  50%, 37.5%);
+    --color-main-low:          hsl(255,  50%, 16.5%);
+    --color-secondary-base:    hsl(150, 100%,   50%);
+    --color-secondary-hi:      hsl(150, 100%,   75%);
+    --color-secondary-low:     hsl(150, 100%,   33%);
+    --color-secondary-verylow: hsl(150, 100%,   25%);
+    --color-back-base:         hsl(  0,   0%,   12%);
+    --color-back-hi:           hsl(  0,   0%,   15%);
+    --color-text:              hsl(  0,   0%,  100%);
 
     /* Transparent palette */
     --color-secondary-base-so: hsla(150, 100%,  50%,  0.5);
@@ -593,6 +594,38 @@ nav h4 {
     border-left: 5px solid var(--color-main-hi);
     background: hsl(0, 0%, 15%);
     background: var(--color-back-hi);
+}
+
+#donations-campaings {
+    color: hsl(0, 0%, 100%);
+    color: var(--color-text);
+    background-color: hsl(150, 100%, 25%);
+    background-color: var(--color-secondary-verylow);
+    padding: 32px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.donations-container {
+    width: 100%;
+}
+
+.donations-option {
+    position: relative;
+    border-left: 5px solid hsl(150, 100%, 50%);
+    border-left: 5px solid var(--color-secondary-base);
+    margin-left: 16px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.donations-option:hover {
+    border-left: 5px solid hsl(150, 100%, 75%);
+    border-left: 5px solid var(--color-secondary-hi);
+    background: hsl(150, 100%, 33%);
+    background: var(--color-secondary-low);
 }
 
 #page-footer {
