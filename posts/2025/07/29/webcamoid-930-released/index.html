@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+            <title>Webcamoid blog: Webcamoid 9.3.0 released!</title>
+            <meta charset="UTF-8" />
+            <meta http-equiv="Content-Type"
+                  content="text/html; charset=UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <link rel="shortcut icon"
+                  type="image/png"
+                  href="/theme/images/icons/favicon.png"/>
+            <link rel="stylesheet"
+                  href="/theme/css/main.css" />
+            <script src="/theme/js/main.js"></script>
+
+
+                <link href="/feeds/all.atom.xml"
+                      type="application/atom+xml"
+                      rel="alternate"
+                      title="Webcamoid blog: Webcamoid 9.3.0 released! Atom Feed" />
+
+                <link href="/feeds/all.rss.xml"
+                      type="application/rss+xml"
+                      rel="alternate"
+                      title="Webcamoid blog: Webcamoid 9.3.0 released! RSS Feed" />
+            <meta name="ocs-site-verification"
+                  content="633b316f3ac4c8cd47436d1ae9c7a9ad" />
+            <meta name="google-adsense-account"
+            content="ca-pub-4948478398401542">
+    </head>
+    <body onload="main();">
+        <div id="contents-wrapper">
+            <header id="header-main">
+                <a id="homepage-link" href="/">
+                    <img id="webcamoid-logo"
+                         src="/theme/images/icons/webcamoid.png"
+                         alt="Webcamoid"
+                         title="Webcamoid" />
+                    <div id="project-title">
+                        <h1 id="project-name">Webcamoid</h1>
+                        <h2 id="project-description">The ultimate video capture suite!</h2>
+                    </div>
+                </a>
+                <div id="menu">
+                    <div id="menu-container">
+                        <div id="menu-button">
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                        </div>
+                        <h1 id="menu-title">Links</h1>
+                        <ul id="menu-links" class="nolist">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/#downloads">Downloads</a></li>
+                            <li><a target="_blank"
+                                   href="https://github.com/webcamoid/webcamoid/wiki">Wiki</a></li>
+                            <li><a target="_blank"
+                                   href="https://github.com/webcamoid/webcamoid/issues">Issues</a></li>
+                            <li><a href="/donations">Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+    <section id="blog-articles">
+        <h1>Webcamoid blog</h1>
+
+        <article class="blog-article">
+            <header>
+                <p class="post-date">2025/07/29</p>
+                <h2 class="entry-title">
+                    <a href="/posts/2025/07/29/webcamoid-930-released/">Webcamoid 9.3.0 released!</a>
+                </h2>
+            </header>
+            <div class="post-contents">
+                <p>A new release of Webcamoid is avalible, bringing a wealth of new features, performance optimizations, and critical bug fixes.   This update enhances video processing capabilities, improves user experience, and expands platform support, making it a significant milestone for the project. Below, we dive into the key changes introduced in Webcamoid 9.3.0.</p>
+<h1>New Features</h1>
+<h2>Enhanced Video Processing with SIMD Support</h2>
+<p>Webcamoid 9.3.0 introduces support for SIMD (Single Instruction, Multiple Data) instructions, including MMX, SSE, SSE2, SSE4.1, AVX, AVX2, NEON, SVE, and RVV. These are unified under a common interface called AkSimd, enabling optimized video processing for improved performance across compatible hardware. Additionally, specialized 8-bit video conversion functions, tailored for SIMD, further boost efficiency.</p>
+<h2>OpenMP Integration</h2>
+<p>The inclusion of OpenMP support allows Webcamoid to leverage multi-core processors more effectively, enhancing parallel processing for tasks like video encoding and rendering.</p>
+<h2>Expanded Platform Support</h2>
+<p>This release adds support for Android TV, making Webcamoid more versatile for users on smart TV platforms. It also introduces PipeWire audio support, improving audio handling on GNU/Linux systems. For Windows users, Webcamoid now prioritizes Microsoft Media Foundation over DirectShow for camera capture, ensuring better compatibility and performance.</p>
+<h2>Streamlined Video Recording</h2>
+<p>Webcamoid 9.3.0 limits video recording formats and codecs to web-compatible options, simplifying maintenance and ensuring broad compatibility with video players. Supported formats and codecs include:</p>
+<ul>
+<li><strong>WebM</strong>: Video codecs (AV1, VP9, VP8), Audio codecs (Opus, Vorbis)</li>
+<li><strong>MP4</strong>: Video codec (H.264), Audio codecs (AAC, MP3)</li>
+</ul>
+<p>This focused approach reduces complexity and minimizes bugs in video recording workflows.</p>
+<h2>User Interface Enhancements</h2>
+<div class="img-preview">
+    <a href="/images/20250729-1/01%20-%20Color%20schemes.webp">
+        <img src="/images/20250729-1/01%20-%20Color%20schemes.webp" alt="Color schemes" title="Color schemes" />
+    </a>
+</div>
+
+<p>The update introduces customizable UI color schemes with default options, allowing users to personalize their experience. A new "Help" option in the main menu provides easier access to documentation. Additionally, platform information printing has been added for better debugging, and translations have been updated for German (95.7%), Turkish (53.1%), Estonian (52.8%), Hebrew (73.4%), Dutch (83.9%), and Italian (13.4%) via Weblate.</p>
+<div class="img-preview">
+    <a href="/images/20250729-1/02%20-%20Help%20menu.webp">
+        <img src="/images/20250729-1/02%20-%20Help%20menu.webp" alt="Help menu" title="Help menu" />
+    </a>
+</div>
+
+<h1>Security and Build Improvements</h1>
+<p>To enhance user trust, Webcamoid now includes VirusTotal scans for uploaded files. The release also adds RISC-V 64 builds for Ubuntu and support for SDL 3, ensuring compatibility with modern hardware and software ecosystems.</p>
+<h1>Optimizations</h1>
+<p>Webcamoid 9.3.0 brings several performance improvements:</p>
+<ul>
+<li><strong>Improved Desktop Capture</strong>: Frame rates for desktop capture on X11/XLibre have been significantly enhanced.</li>
+<li><strong>Optimized Logging</strong>: Logging processes have been streamlined for better performance.</li>
+<li><strong>Small Screen Support</strong>: Format and codec selection have been optimized for devices with smaller screens, such as mobile devices.</li>
+<li><strong>Video Synchronization</strong>: Improved synchronization ensures smoother video playback and recording.</li>
+<li><strong>Smaller Android Packages</strong>: The size of Android packages has been reduced to comply with Google Play’s limits, making distribution more efficient.</li>
+</ul>
+<h1>Bug Fixes</h1>
+<p>This release addresses numerous issues, improving stability across platforms:</p>
+<ul>
+<li><strong>SDL Bugs</strong>: Fixed issues in SDL for more reliable performance.</li>
+<li><strong>PipeWire Plugins</strong>: Added checks and improvements to resolve PipeWire-related issues.</li>
+<li><strong>Virtual Camera Fixes</strong>: Resolved problems with virtual cameras on macOS and Windows, including API communication issues.</li>
+<li><strong>Android Stability</strong>: Addressed multiple Android-specific issues, including log cleaning, audio recording permissions, video recording, screen capture, and media file handling.</li>
+<li><strong>Camera Format Controls</strong>: Fixed controls and prevented crashes caused by virtual cameras on Windows.</li>
+</ul>
+<h1>Additional Improvements</h1>
+<h2>UI and User Experience</h2>
+<p>The video recording API has been enhanced with standardized codec and format options, making it easier for developers and users to configure recordings. PipeWire (Wayland) screen capture is now disabled when using X11/XLibre (and vice versa) to prevent conflicts.</p>
+<h2>Other Changes</h2>
+<ul>
+<li>The librav1e codec has been disabled in FFmpeg for Windows and Linux-mingw builds due to crashes.</li>
+<li>A minimum font point size of 10 has been set for Windows to improve readability.</li>
+<li>QtMultimedia-related plugins and x86 builds for Android have been disabled to optimize performance.</li>
+</ul>
+<h1>Conclusion</h1>
+<p>Webcamoid 9.3.0 is a robust update that significantly enhances performance, usability, and platform compatibility. With SIMD and OpenMP support, optimized video processing, and a streamlined recording pipeline, users can expect faster and more reliable performance. The addition of Android TV support, improved UI customization, and extensive bug fixes make this release a must-have for both casual users and developers. Whether you're capturing video, streaming, or experimenting with virtual cameras, Webcamoid 9.3.0 delivers a polished and powerful experience.<br>
+Go and <a href="https://payhip.com/Webcamoid">download Webcamoid 9.3.0</a> from the official store now!</p>
+            </div>
+        </article>
+    </section>
+            <div id="footer-separator">
+            </div>
+            <footer id="page-footer">
+                <p id="pelican-notice">
+                    Site powered by <a target="_blank" href="https://getpelican.com/">Pelican</a>.
+                </p>
+                <p id="legals">
+                    Linux is a trademark of Linus Torvalds<br />
+                    Windows is a trademark of Microsoft Corporation<br />
+                    Mac is a trademark of Apple Inc.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
