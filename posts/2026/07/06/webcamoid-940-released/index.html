@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+            <title>Webcamoid blog: Webcamoid 9.4.0 released!</title>
+            <meta charset="UTF-8" />
+            <meta http-equiv="Content-Type"
+                  content="text/html; charset=UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <link rel="shortcut icon"
+                  type="image/png"
+                  href="/theme/images/icons/favicon.png"/>
+            <link rel="stylesheet"
+                  href="/theme/css/main.css" />
+            <script src="/theme/js/main.js"></script>
+
+
+                <link href="/feeds/all.atom.xml"
+                      type="application/atom+xml"
+                      rel="alternate"
+                      title="Webcamoid blog: Webcamoid 9.4.0 released! Atom Feed" />
+
+                <link href="/feeds/all.rss.xml"
+                      type="application/rss+xml"
+                      rel="alternate"
+                      title="Webcamoid blog: Webcamoid 9.4.0 released! RSS Feed" />
+            <meta name="ocs-site-verification"
+                  content="633b316f3ac4c8cd47436d1ae9c7a9ad" />
+            <meta name="google-adsense-account"
+            content="ca-pub-4948478398401542">
+    </head>
+    <body onload="main();">
+        <div id="contents-wrapper">
+            <header id="header-main">
+                <a id="homepage-link" href="/">
+                    <img id="webcamoid-logo"
+                         src="/theme/images/icons/webcamoid.png"
+                         alt="Webcamoid"
+                         title="Webcamoid" />
+                    <div id="project-title">
+                        <h1 id="project-name">Webcamoid</h1>
+                        <h2 id="project-description">The ultimate video capture suite!</h2>
+                    </div>
+                </a>
+                <div id="menu">
+                    <div id="menu-container">
+                        <div id="menu-button">
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                            <div class="menu-button-line"></div>
+                        </div>
+                        <h1 id="menu-title">Links</h1>
+                        <ul id="menu-links" class="nolist">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/#downloads">Downloads</a></li>
+                            <li><a target="_blank"
+                                   href="https://github.com/webcamoid/webcamoid/wiki">Wiki</a></li>
+                            <li><a target="_blank"
+                                   href="https://github.com/webcamoid/webcamoid/issues">Issues</a></li>
+                            <li><a href="/donations">Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+    <section id="blog-articles">
+        <h1>Webcamoid blog</h1>
+
+        <article class="blog-article">
+            <header>
+                <p class="post-date">2026/07/06</p>
+                <h2 class="entry-title">
+                    <a href="/posts/2026/07/06/webcamoid-940-released/">Webcamoid 9.4.0 released!</a>
+                </h2>
+            </header>
+            <div class="post-contents">
+                <p>This is a summary of everything that's happened in Webcamoid over the last year of development.</p>
+<h2>The big one: live streaming to Twitch, YouTube, Kick, and more</h2>
+<p>This is the most requested feature, and it's finally here. Webcamoid can now stream live directly to streaming platforms using RTMP. This is a big step: Webcamoid stops being "just" a webcam app and starts competing on OBS's turf, with the added advantage of also working on Android.<br>
+For now it's single-source (multi-source comes later, see below), but it already includes:  </p>
+<ul>
+<li>Several streaming platforms to choose from, with stream keys and URLs configurable directly from the video outputs.</li>
+<li>Multi-streaming to more than one destination at once.</li>
+<li>Automatic stream cutoff when sources are stopped.</li>
+<li>Stream keys and URLs are hidden on screen while streaming, so they don't get exposed by accident.</li>
+<li>A slider with presets to pick streaming quality, and an equivalent one for recording quality.</li>
+</ul>
+<div class="img-preview">
+    <a href="/images/20260706-1/01%20-%20Live%20streaming.webp">
+        <img src="/images/20260706-1/01%20-%20Live%20streaming.webp" alt="Live streaming" title="Live streaming" />
+    </a>
+</div>
+
+<h2>Local Streaming: an alternative to the virtual camera</h2>
+<p>Alongside platform streaming, <strong>Local Streaming</strong> was added: streaming video and audio over HTTP on localhost, so any browser or player (VLC, for example) can connect directly to Webcamoid without going through a virtual camera driver.<br>
+It turned out to be so stable that it ended up replacing the virtual camera on some systems:</p>
+<ul>
+<li><strong>macOS</strong>: the virtual camera was removed entirely. It was poorly maintained, unstable, and likely no longer worked well on recent versions of the OS. Local Streaming is more stable and also supports audio and video together, something the macOS virtual camera never managed to do well.</li>
+<li><strong>Windows</strong>: the virtual camera still exists, but Local Streaming is now the recommended option instead.</li>
+</ul>
+<div class="img-preview">
+    <a href="/images/20260706-1/02%20-%20Local%20streaming.webp">
+        <img src="/images/20260706-1/02%20-%20Local%20streaming.webp" alt="Local streaming" title="Local streaming" />
+    </a>
+</div>
+
+<h2>The road to get there: porting effects to OpenGL</h2>
+<p>To support multiple sources on screen at once (OBS-style), effect processing first had to move off the CPU and onto the GPU. 20 effects have already been ported to OpenGL:</p>
+<ul>
+<li>Aging</li>
+<li>AnalogTV</li>
+<li>Cartoon</li>
+<li>Charify</li>
+<li>Cinema</li>
+<li>Dice</li>
+<li>Edge</li>
+<li>Emboss</li>
+<li>FaceTrack</li>
+<li>Fire</li>
+<li>GrayScale</li>
+<li>Hypnotic</li>
+<li>Invert</li>
+<li>Matrix</li>
+<li>Otsu</li>
+<li>Pixelate</li>
+<li>Radiactive</li>
+<li>Swirl</li>
+<li>Vignette</li>
+<li>Warhol</li>
+</ul>
+<p>Several more are still left, but this is the groundwork everything else builds on.</p>
+<h2>A friendlier interface, especially on phones</h2>
+<p>The interface was redesigned to work well on small screens:</p>
+<ul>
+<li>Camera controls are much more usable on smaller screens.</li>
+<li>The preferences menu is now shown full-screen instead of side by side, with each section accessed separately.</li>
+</ul>
+<p>Webcamoid also now has full translation coverage in 68 languages, combining the existing Weblate infrastructure with AI-assisted translation.</p>
+<p>Also added:</p>
+<ul>
+<li>Single-instance mode (only one Webcamoid can run at a time).</li>
+<li>Option to hide UI controls when the mouse cursor leaves the window.</li>
+<li>Capture of individual windows, not just the entire screen.</li>
+<li>Screen devices are no longer added automatically as a source, avoiding confusion when no camera is detected.</li>
+<li>Screen capture support on wlroots-based Wayland compositors (Sway, Hyprland, etc.), using the <code>wlr-screencopy</code> protocol.</li>
+</ul>
+<h2>Virtual camera: improvements across every platform</h2>
+<ul>
+<li><strong>akvcam</strong>: added direct mode support, sending frames straight to the client, plus improved format conversion.</li>
+<li>Fixed errors when creating the virtual camera and default picture settings on Windows and macOS.</li>
+<li>As mentioned above, on macOS the virtual camera was retired in favor of Local Streaming.</li>
+</ul>
+<h2>Audio: a full rewrite</h2>
+<p>How Webcamoid handles audio was rewritten from the ground up:</p>
+<ul>
+<li>JACK, SDL, and Qt Audio were removed as dependencies (they were complex to maintain and didn't work very well).</li>
+<li>You can now combine multiple audio inputs at once, each with its own volume control.</li>
+<li>A volume control was added to the audio output.</li>
+<li>Fixed a bug on GNU/Linux that prevented playing the video's audio while capturing from the microphone at the same time (for example, with headsets that have a built-in mic).</li>
+<li>PulseAudio can now be loaded dynamically, improving portability across distros.</li>
+</ul>
+<h2>Build system</h2>
+<p>GNU/Linux packages are now built using Homebrew on top of Ubuntu 24.04, instead of depending on Debian Bookworm's specific libraries. The goal is better compatibility across distros in general (Linux Mint was one of the problem cases that motivated this change).</p>
+<h2>Heading toward an official Android release</h2>
+<p>Webcamoid now works correctly on Android 16, and several screen-capture issues on Android were fixed. The official Google Play launch is close, and testers are still needed to try out the Android version before release.</p>
+<h2>What's next</h2>
+<ul>
+<li>Finish porting the remaining effects to OpenGL/Vulkan.</li>
+<li>Once that foundation is ready, implement multi-source scene mode.</li>
+<li>Revisit avatars and virtual backgrounds when there's room for them.</li>
+<li>Keep moving toward the official Android release.</li>
+</ul>
+<h2>Thanks</h2>
+<p>Thanks to all the sponsors, and to everyone testing development builds and reporting bugs. Every bug report helps these features reach everyone in a more stable state. ❤️  </p>
+            </div>
+        </article>
+    </section>
+            <div id="footer-separator">
+            </div>
+            <footer id="page-footer">
+                <p id="pelican-notice">
+                    Site powered by <a target="_blank" href="https://getpelican.com/">Pelican</a>.
+                </p>
+                <p id="legals">
+                    Linux is a trademark of Linus Torvalds<br />
+                    Windows is a trademark of Microsoft Corporation<br />
+                    Mac is a trademark of Apple Inc.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
