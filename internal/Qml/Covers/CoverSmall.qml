@@ -26,8 +26,9 @@ Item {
     property string buttonText: "Linux"
     //property string architecture: "x86_64"
     //property string architecture: "ARM 64"
-    property string architecture: "ARM 32"
-//*/
+    //property string architecture: "ARM 32"
+    property string architecture: ""
+    //*/
 /**
     property color stripeColor: Qt.rgba(0, 0.33, 0.66)
     property string buttonIcon: "windows.svg"
