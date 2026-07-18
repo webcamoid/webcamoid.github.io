@@ -62,7 +62,99 @@
     display: block;
 }
 
-.feature-item {
+#start-page {
+    padding: 40px 24px;
+}
+
+#hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+#hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+#hero-title {
+    font-size: 2rem;
+}
+
+#hero-description {
+    margin-bottom: 24px;
+}
+
+#hero-download-button {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#hero-showcase {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+#features {
+    padding: 40px 24px;
+}
+
+#features-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+#features-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.feature-card {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: 16px;
+    row-gap: 4px;
+    align-items: start;
+    padding: 14px 16px;
+}
+
+.feature-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0px;
+}
+
+.feature-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.feature-title {
+    grid-column: 2;
+    grid-row: 1;
     font-size: 1rem;
-    font-size: var(--font-size-text);
+    margin-bottom: 0px;
+}
+
+.feature-description {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.85rem;
+}
+
+.feature-chevron {
+    display: none;
 }

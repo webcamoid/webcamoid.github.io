@@ -6,25 +6,6 @@ function copyToClipBoard(elementId)
     navigator.clipboard.writeText(textInput.value);
 }
 
-function maxRatio()
-{
-    var screenshots = document.getElementById("preview");
-
-    if (!screenshots)
-        return 0;
-
-    var rmax = 0;
-
-    for (var i = 1; i < screenshots.children.length; i++) {
-        var r = screenshots.children[i].height / screenshots.children[i].width;
-
-        if (r > rmax)
-            rmax = r;
-    }
-
-    return rmax;
-}
-
 function slidesControlClicked(event)
 {
     var screenshots = document.getElementById("preview");
@@ -32,18 +13,15 @@ function slidesControlClicked(event)
     if (!screenshots)
         return;
 
-    var features = document.getElementById("feature-list");
     var controls = document.getElementsByClassName("slides-control");
 
     for (var i = 0; i < controls.length; i++) {
         controls[i].className = controls[i].className.replace(" slides-control-selected", "");
-        screenshots.children[i + 1].className = screenshots.children[i + 1].className.replace(" screenshot-selected", "");
-        features.children[i].style.display = "none";
+        screenshots.children[i].className = screenshots.children[i].className.replace(" screenshot-selected", "");
 
         if (controls[i] == event.target) {
             controls[i].className += " slides-control-selected";
-            screenshots.children[i + 1].className += " screenshot-selected";
-            features.children[i].style.display = "list-item";
+            screenshots.children[i].className += " screenshot-selected";
         }
     }
 }
@@ -55,42 +33,55 @@ function advanceSlide()
     if (!screenshots)
         return;
 
-    var features = document.getElementById("feature-list");
     var controls = document.getElementsByClassName("slides-control");
 
     for (var i = 0; i < controls.length; i++) {
         var cur = controls[i].className.indexOf(" slides-control-selected") >= 0;
         controls[i].className = controls[i].className.replace(" slides-control-selected", "");
-        screenshots.children[i + 1].className = screenshots.children[i + 1].className.replace(" screenshot-selected", "");
-        features.children[i].style.display = "none";
+        screenshots.children[i].className = screenshots.children[i].className.replace(" screenshot-selected", "");
 
         if (cur) {
             var next = (i + 1) % controls.length;
             controls[next].className += " slides-control-selected";
-            screenshots.children[next + 1].className += " screenshot-selected";
-            features.children[next].style.display = "list-item";
+            screenshots.children[next].className += " screenshot-selected";
             i++;
         }
     }
 }
 
-var ratio = 0.75;
-
-function resizeHandler(event)
+/* Detects the user's operating system and points the hero download
+ * button at the matching package, falling back to the downloads
+ * section for platforms.
+ */
+function setupDownloadButton()
 {
-    var showcase = document.getElementById("showcase");
-    var width = document.body.clientWidth;
-    var height = document.body.clientHeight;
+    var button = document.getElementById("hero-download-button");
+    var label = document.getElementById("hero-download-label");
 
-    var preview = document.getElementById("preview");
-
-    if (!preview)
+    if (!button || !label)
         return;
 
-    if (ratio * width < 480)
-        preview.style.height = showcase.style.height = ratio * width + "px";
-    else
-        preview.style.height = showcase.style.height = "auto";
+    var platform = (navigator.userAgentData && navigator.userAgentData.platform)
+                   || navigator.platform
+                   || "";
+    var ua = navigator.userAgent || "";
+
+    var os = null;
+
+    if (/android/i.test(ua))
+        os = "android";
+    else if (/win/i.test(platform) || /windows/i.test(ua))
+        os = "windows";
+    else if (/linux/i.test(platform) || /linux/i.test(ua))
+        os = "linux";
+
+    var href = os && button.dataset[os + "Href"];
+    var text = os && button.dataset[os + "Label"];
+
+    // MacOS, iOS and any other platform without a direct package fall
+    // back to the default href/label (the downloads section).
+    button.setAttribute("href", href || button.dataset.defaultHref);
+    label.textContent = text || button.dataset.defaultLabel;
 }
 
 function main()
@@ -113,8 +104,8 @@ function main()
     for (var i = 0; i < controls.length; i++)
         controls[i].addEventListener("click", slidesControlClicked);
 
-    setInterval(advanceSlide, 5000);
-    window.addEventListener("resize", resizeHandler, false);
-    ratio = maxRatio();
-    resizeHandler(null);
+    if (controls.length > 0)
+        setInterval(advanceSlide, 5000);
+
+    setupDownloadButton();
 }
