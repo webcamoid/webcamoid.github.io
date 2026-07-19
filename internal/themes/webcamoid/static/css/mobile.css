@@ -158,3 +158,28 @@
 .feature-chevron {
     display: none;
 }
+
+#downloads {
+    padding: 40px 24px;
+}
+
+.download-card {
+    padding: 16px;
+}
+
+.download-card-row {
+    flex-direction: column;
+}
+
+.download-card-button {
+    padding: 14px;
+}
+
+.downloads-more-options {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.download-pill {
+    text-align: center;
+}

@@ -49,10 +49,32 @@ function advanceSlide()
     }
 }
 
-/* Detects the user's operating system and points the hero download
- * button at the matching package, falling back to the downloads
- * section for platforms.
- */
+/* Detects the user's operating system from the browser. Returns
+   "windows", "linux", "android" or null (unknown / unsupported,
+   e.g. macOS, iOS). Shared by the hero download button and every
+   platform selector in the downloads section. */
+function detectOS()
+{
+    var platform = (navigator.userAgentData && navigator.userAgentData.platform)
+                   || navigator.platform
+                   || "";
+    var ua = navigator.userAgent || "";
+
+    if (/android/i.test(ua))
+        return "android";
+
+    if (/win/i.test(platform) || /windows/i.test(ua))
+        return "windows";
+
+    if (/linux/i.test(platform) || /linux/i.test(ua))
+        return "linux";
+
+    return null;
+}
+
+/* Points the hero download button at the matching package for the
+   detected OS, falling back to the downloads section for platforms
+   without a direct one-click download. */
 function setupDownloadButton()
 {
     var button = document.getElementById("hero-download-button");
@@ -61,27 +83,128 @@ function setupDownloadButton()
     if (!button || !label)
         return;
 
-    var platform = (navigator.userAgentData && navigator.userAgentData.platform)
-                   || navigator.platform
-                   || "";
-    var ua = navigator.userAgent || "";
+    var os = detectOS();
+    var option = os && document.querySelector('#app-download-card [role=option][data-os="' + os + '"]');
 
-    var os = null;
+    button.setAttribute("href", option ? option.dataset.href : button.dataset.defaultHref);
+    label.textContent = option ? "Download for " + option.dataset.label : button.dataset.defaultLabel;
+}
 
-    if (/android/i.test(ua))
-        os = "android";
-    else if (/win/i.test(platform) || /windows/i.test(ua))
-        os = "windows";
-    else if (/linux/i.test(platform) || /linux/i.test(ua))
-        os = "linux";
+/* Sets up every custom platform selector in the downloads section
+   (".download-card"): opening/closing the option list, picking an
+   option (which updates the trigger icon/label and the card's
+   download button href), closing on outside click / Escape, and
+   preselecting the option that matches the visitor's detected OS.
+   All URLs/labels/icons live only in index.html as data-* attributes
+   and markup on each <li role="option">. */
+function initPlatformSelects()
+{
+    var cards = document.getElementsByClassName("download-card");
+    var detectedOS = detectOS();
 
-    var href = os && button.dataset[os + "Href"];
-    var text = os && button.dataset[os + "Label"];
+    for (var c = 0; c < cards.length; c++) {
+        var card = cards[c];
+        var select = card.querySelector(".platform-select");
 
-    // MacOS, iOS and any other platform without a direct package fall
-    // back to the default href/label (the downloads section).
-    button.setAttribute("href", href || button.dataset.defaultHref);
-    label.textContent = text || button.dataset.defaultLabel;
+        if (!select)
+            continue;
+
+        var trigger = select.querySelector(".platform-select-trigger");
+        var list = select.querySelector(".platform-select-list");
+        var iconSlot = trigger.querySelector(".platform-select-icon");
+        var labelSlot = trigger.querySelector(".platform-select-label");
+        var options = select.querySelectorAll("[role=option]");
+        var button = card.querySelector(".download-card-button");
+
+        (function (select, trigger, list, iconSlot, labelSlot, options, button) {
+            function selectOption(option)
+            {
+                iconSlot.innerHTML = option.querySelector("svg").outerHTML;
+                labelSlot.textContent = option.dataset.label;
+
+                if (button)
+                    button.setAttribute("href", option.dataset.href);
+
+                for (var i = 0; i < options.length; i++)
+                    options[i].setAttribute("aria-selected", options[i] == option ? "true" : "false");
+            }
+
+            function closeList()
+            {
+                list.hidden = true;
+                trigger.setAttribute("aria-expanded", "false");
+            }
+
+            function openList()
+            {
+                list.hidden = false;
+                trigger.setAttribute("aria-expanded", "true");
+            }
+
+            trigger.addEventListener("click", function (event) {
+                event.stopPropagation();
+
+                if (list.hidden)
+                    openList();
+                else
+                    closeList();
+            });
+
+            for (var i = 0; i < options.length; i++) {
+                options[i].addEventListener("click", function () {
+                    selectOption(this);
+                    closeList();
+                    trigger.focus();
+                });
+            }
+
+            select.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeList();
+                    trigger.focus();
+                }
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!select.contains(event.target))
+                    closeList();
+            });
+
+            // Preselect the option matching the visitor's OS. If none
+            // matches (e.g. macOS, iOS), fall back to the first option
+            // so the button href always matches what's shown selected.
+            var matched = null;
+
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].dataset.os === detectedOS) {
+                    matched = options[i];
+
+                    break;
+                }
+            }
+
+            selectOption(matched || options[0]);
+        })(select, trigger, list, iconSlot, labelSlot, options, button);
+    }
+}
+
+/* Toggles the "More downloads and options" panel in the downloads
+   section. */
+function initDownloadsMoreToggle()
+{
+    var toggle = document.querySelector(".downloads-more-toggle");
+
+    if (!toggle)
+        return;
+
+    var panel = document.querySelector(".downloads-more-options");
+
+    toggle.addEventListener("click", function () {
+        var expanded = toggle.getAttribute("aria-expanded") === "true";
+
+        toggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+        panel.hidden = expanded;
+    });
 }
 
 function main()
@@ -108,4 +231,6 @@ function main()
         setInterval(advanceSlide, 5000);
 
     setupDownloadButton();
+    initPlatformSelects();
+    initDownloadsMoreToggle();
 }

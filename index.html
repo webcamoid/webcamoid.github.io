@@ -82,13 +82,7 @@
                    target="_blank"
                    href="#downloads"
                    data-default-href="#downloads"
-                   data-default-label="Download Now"
-                   data-windows-href="https://payhip.com/b/6djxK"
-                   data-windows-label="Download for Windows"
-                   data-linux-href="https://payhip.com/b/hNUz9"
-                   data-linux-label="Download for GNU/Linux"
-                   data-android-href="https://payhip.com/b/aA9qs"
-                   data-android-label="Download for Android">
+                   data-default-label="Download Now">
                     <svg id="hero-download-icon"
                          viewBox="0 0 24 24"
                          width="20"
@@ -238,117 +232,148 @@
         </ul>
     </section>
     <section id="downloads">
-        <article class="downloads-container">
-            <header class="downloads-title">
-                <h1>Downloads</h1>
-            </header>
-            <div class="download-option-container">
-                <nav class="download-option">
-                    <h2 id="downloads-Windowws">Get Webcamoid for Windows now!</h2>
-                    <p>
-                        Download Webcamoid for Windows 10 and higher.
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://payhip.com/b/6djxK">
-                            <img src="/theme/images/DownloadButtons/windows_cover.png"
-                                 alt="Download Webcamoid for Windows"
-                                 title="Download Webcamoid for Windows" />
-                        </a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-gnu-linux">Get Webcamoid for GNU/Linux now!</h2>
-                    <p>
-                        Download Webcamoid for Ubuntu, Debian, Fedora, OpenSUSE, Magueia, Arch, and meny other GNU/Linux distributions.
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://payhip.com/b/hNUz9">
-                            <img src="/theme/images/DownloadButtons/linux_cover.png"
-                                 alt="Download Webcamoid for GNU/Linux"
-                                 title="Download Webcamoid for GNU/Linux" />
-                        </a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-android">Get Webcamoid for Android now!</h2>
-                    <p>
-                        Download Webcamoid for Android 7.0 and higher.
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://payhip.com/b/aA9qs">
-                            <img src="/theme/images/DownloadButtons/android_cover.png"
-                                 alt="Download Webcamoid for Android"
-                                 title="Download Webcamoid for Android" />
-                        </a>
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=io.github.webcamoid.Webcamoid">
-                            <img src="/theme/images/DownloadButtons/GetItOnGooglePlay_Badge_Web_color_English.png"
-                                 alt="Download Webcamoid on GooglePlay"
-                                 title="Download Webcamoid on GooglePlay"
-                                 height="75px"/>
-                        </a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-binaries">Get Webcamoid for MacOS now!</h2>
-                    <p>
-                        For MacOs users, the binary packages for the releases and the daily builds are avalable for <a target="_blank" href="https://github.com/sponsors/hipersayanX">github sponsors</a> only.<br/>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-daily">Daily Builds</h2>
-                    <p>
-                        Become a <a target="_blank" href="https://github.com/sponsors/hipersayanX">Webcamoid sponsor</a> and get early access to the latest features.<br/>
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://github.com/sponsors/hipersayanX">
-                            <img src="/theme/images/DownloadButtons/DailyBuildButton.png"
-                                 alt="Daily Build packages"
-                                 title="Become a sponsor and download the Daily Build packages" />
-                        </a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-gnu-linux-vcam">Virtual camera driver for GNU/Linux</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>akvcam</th><th>v4l2loopback</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a target="_blank" href="https://github.com/webcamoid/akvcam">Download</a></td>
-                                <td><a target="_blank" href="https://github.com/umlaeute/v4l2loopback">Download</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <strong>akvcam</strong> driver requires linux 5.4 or higher.
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-windows-vcam">Virtual Camera driver for Windows</h2>
-                    <p>
-                        <a target="_blank" href="https://github.com/webcamoid/akvirtualcamera">AkVirtualCamera driver download</a>
-                    </p>
-                </nav>
-                <nav class="download-option">
-                    <h2 id="downloads-sources">Source Code</h2>
-                    <p>
-                        Download the Webcamoid source code.
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://github.com/webcamoid/webcamoid">
-                            <img src="/theme/images/DownloadButtons/SourceCodeButton.png"
-                                 alt="Source Code"
-                                 title="Download the Webcamoid source code" />
-                        </a>
-                    </p>
-                </nav>
+        <div class="downloads-header">
+            <h1 id="downloads-title">Download Webcamoid</h1>
+            <p id="downloads-subtitle">Choose your platform and get started</p>
+        </div>
+
+        <div class="download-card" id="app-download-card">
+            <span class="download-card-label">Platform</span>
+            <div class="download-card-row">
+                <div class="platform-select">
+                    <button type="button" class="platform-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span class="platform-select-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                        </span>
+                        <span class="platform-select-label">Windows</span>
+                        <svg class="platform-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <ul class="platform-select-list" role="listbox" hidden>
+                        <li role="option" tabindex="-1" aria-selected="true" data-os="windows" data-label="Windows" data-href="https://payhip.com/b/6djxK">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                            <span>Windows</span>
+                        </li>
+                        <li role="option" tabindex="-1" aria-selected="false" data-os="linux" data-label="Linux" data-href="https://payhip.com/b/hNUz9">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="6.5" r="3.2" />
+                                <path d="M14.2 5.8l2.6.7-2.6.7" />
+                                <path d="M7 10.5c-1.2 2-1.6 4.7-1.2 7 .3 1.8 1.6 3 3 3.5h6.4c1.4-.5 2.7-1.7 3-3.5.4-2.3 0-5-1.2-7-1.1-1.7-2.8-2.7-5-2.7s-3.9 1-5 2.7z" />
+                                <path d="M9 20.5c-.8.6-1.6.9-2.4.9M15 20.5c.8.6 1.6.9 2.4.9" />
+                            </svg>
+                            <span>Linux</span>
+                        </li>
+                        <li role="option" tabindex="-1" aria-selected="false" data-os="android" data-label="Android" data-href="https://payhip.com/b/aA9qs">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 10a6 6 0 0 1 12 0v6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-6z" />
+                                <path d="M8 4l1.5 2M16 4l-1.5 2" />
+                                <path d="M4 10v4M20 10v4" />
+                                <path d="M9 17v3M15 17v3" />
+                            </svg>
+                            <span>Android</span>
+                        </li>
+                    </ul>
+                </div>
+                <a class="download-card-button" target="_blank" href="#downloads">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="M7 10l5 5 5-5" />
+                        <path d="M4 19h16" />
+                    </svg>
+                    <span>Download</span>
+                </a>
             </div>
-        </article>
+        </div>
+
+        <div class="downloads-more">
+            <button type="button" class="downloads-more-toggle" aria-expanded="false">
+                <span>More downloads and options</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
+            <div class="downloads-more-options" hidden>
+                <a class="download-pill" target="_blank" href="https://play.google.com/store/apps/details?id=io.github.webcamoid.Webcamoid">Android (Google Play)</a>
+                <a class="download-pill" target="_blank" href="https://github.com/sponsors/hipersayanX">Daily Builds</a>
+                <a class="download-pill" target="_blank" href="https://github.com/webcamoid/webcamoid">Source Code</a>
+                <a class="download-pill" target="_blank" href="https://github.com/sponsors/hipersayanX">macOS (Sponsors)</a>
+            </div>
+        </div>
+
+        <div class="downloads-header downloads-subheader">
+            <h2 id="vcam-downloads-title">Virtual Camera Driver</h2>
+            <p id="vcam-downloads-subtitle">Feed your enhanced video into other apps</p>
+        </div>
+
+        <div class="download-card">
+            <span class="download-card-label">Platform</span>
+            <div class="download-card-row">
+                <div class="platform-select">
+                    <button type="button" class="platform-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span class="platform-select-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                        </span>
+                        <span class="platform-select-label">Windows</span>
+                        <svg class="platform-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <ul class="platform-select-list" role="listbox" hidden>
+                        <li role="option" tabindex="-1" aria-selected="true" data-os="windows" data-label="Windows" data-href="https://github.com/webcamoid/akvirtualcamera">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                            <span>Windows</span>
+                        </li>
+                        <li role="option" tabindex="-1" aria-selected="false" data-os="linux" data-label="Linux (akvcam)" data-href="https://github.com/webcamoid/akvcam">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="6.5" r="3.2" />
+                                <path d="M14.2 5.8l2.6.7-2.6.7" />
+                                <path d="M7 10.5c-1.2 2-1.6 4.7-1.2 7 .3 1.8 1.6 3 3 3.5h6.4c1.4-.5 2.7-1.7 3-3.5.4-2.3 0-5-1.2-7-1.1-1.7-2.8-2.7-5-2.7s-3.9 1-5 2.7z" />
+                                <path d="M9 20.5c-.8.6-1.6.9-2.4.9M15 20.5c.8.6 1.6.9 2.4.9" />
+                            </svg>
+                            <span>Linux (akvcam)</span>
+                        </li>
+                        <li role="option" tabindex="-1" aria-selected="false" data-os="linux" data-label="Linux (v4l2loopback)" data-href="https://github.com/umlaeute/v4l2loopback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="6.5" r="3.2" />
+                                <path d="M14.2 5.8l2.6.7-2.6.7" />
+                                <path d="M7 10.5c-1.2 2-1.6 4.7-1.2 7 .3 1.8 1.6 3 3 3.5h6.4c1.4-.5 2.7-1.7 3-3.5.4-2.3 0-5-1.2-7-1.1-1.7-2.8-2.7-5-2.7s-3.9 1-5 2.7z" />
+                                <path d="M9 20.5c-.8.6-1.6.9-2.4.9M15 20.5c.8.6 1.6.9 2.4.9" />
+                            </svg>
+                            <span>Linux (v4l2loopback)</span>
+                        </li>
+                    </ul>
+                </div>
+                <a class="download-card-button" target="_blank" href="#downloads">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="M7 10l5 5 5-5" />
+                        <path d="M4 19h16" />
+                    </svg>
+                    <span>Download</span>
+                </a>
+            </div>
+        </div>
     </section>
             <div id="footer-separator">
             </div>
