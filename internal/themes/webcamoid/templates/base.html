@@ -7,6 +7,8 @@
                   content="text/html; charset={{ CHARSET }}">
             <meta name="viewport"
                   content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+            <meta name="description"
+                  content="{% block meta_description %}{{ SITENAME }}{% endblock %}" />
             <link rel="shortcut icon"
                   type="image/png"
                   href="/{{ THEME_STATIC_DIR }}/images/icons/favicon.png"/>
@@ -16,6 +18,21 @@
 
             {% block header %}
             {% endblock %}
+
+            <!-- Open Graph / Twitter Card. Each page only needs to define
+                 title/meta_description (and og_image, if different from
+                 the site's default logo) once; these tags just reuse
+                 those same blocks so the text/URLs are never duplicated. -->
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="{{ SITENAME }}" />
+            <meta property="og:title" content="{{ self.title() }}" />
+            <meta property="og:description" content="{{ self.meta_description() }}" />
+            <meta property="og:url" content="{% block og_url %}{{ SITEURL }}/{% endblock %}" />
+            <meta property="og:image" content="{% block og_image %}{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icons/webcamoid.png{% endblock %}" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="{{ self.title() }}" />
+            <meta name="twitter:description" content="{{ self.meta_description() }}" />
+            <meta name="twitter:image" content="{{ self.og_image() }}" />
 
             {% if FEED_ALL_ATOM %}
                 <link href="/{{ FEED_ALL_ATOM }}"
@@ -42,7 +59,9 @@
                     <img id="webcamoid-logo"
                          src="/{{ THEME_STATIC_DIR }}/images/icons/webcamoid.png"
                          alt="Webcamoid"
-                         title="Webcamoid" />
+                         title="Webcamoid"
+                         width="64"
+                         height="64" />
                     <div id="project-title">
                         <h1 id="project-name">Webcamoid</h1>
                         <h2 id="project-description">The ultimate video capture suite!</h2>

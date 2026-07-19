@@ -1,11 +1,30 @@
 {% extends "base.html" %}
 
+{% block title %}Webcamoid - Free Open Source Software Webcam Capture, Streaming &amp; Virtual Camera Software{% endblock %}
+
+{% block meta_description %}Webcamoid is a Free Open Source Software camera app for Windows, Linux and Android. Manage multiple cameras, add effects, stream to Twitch/YouTube, and use a virtual camera in other apps.{% endblock %}
+
+{% block og_image %}{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/screenshots/Main.webp{% endblock %}
+
 {% block header %}
-    <meta name="description"
-          content="Webcamoid is a camera capture app focused on providing all major features required by power users with a very simple and intuitive interface">
-    <link rel="canonical" href="https://webcamoid.github.io/">
-    <link rel="canonical" href="https://webcamoid.github.io/index.html#downloads">
-    <link rel="canonical" href="https://webcamoid.github.io/blog/">
+    <link rel="canonical" href="{{ SITEURL }}/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Webcamoid",
+        "description": "{{ self.meta_description() }}",
+        "url": "{{ SITEURL }}/",
+        "image": "{{ self.og_image() }}",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows, Linux, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
 {% endblock %}
 
 {% block content %}
@@ -47,31 +66,45 @@
                     <img class="screenshot screenshot-selected"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/Main.webp"
                          alt="A simple and easy to use interface"
-                         title="A simple and easy to use interface" />
+                         title="A simple and easy to use interface"
+                         width="640"
+                         height="480" />
                     <img class="screenshot"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/CameraControls.webp"
                          alt="Maximum control of your camera"
-                         title="Maximum control of your camera" />
+                         title="Maximum control of your camera"
+                         width="640"
+                         height="480" />
                     <img class="screenshot"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/Recording.webp"
                          alt="Easy to record videos"
-                         title="Easy to record videos" />
+                         title="Easy to record videos"
+                         width="640"
+                         height="480" />
                     <img class="screenshot"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/Streaming.webp"
                          alt="Simple and basic streaming"
-                         title="Simple and basic streaming" />
+                         title="Simple and basic streaming"
+                         width="640"
+                         height="480" />
                     <img class="screenshot"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/Effects.webp"
                          alt="More than 60 customizable video effects"
-                         title="More than 60 customizable video effects" />
+                         title="More than 60 customizable video effects"
+                         width="640"
+                         height="480" />
                     <img class="screenshot"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/DesktopCapture.webp"
                          alt="Screen capture is also supported"
-                         title="Screen capture is also supported" />
+                         title="Screen capture is also supported"
+                         width="1366"
+                         height="768" />
                     <img class="screenshot"
                          src="/{{ THEME_STATIC_DIR }}/images/screenshots/VirtualCamera.webp"
                          alt="Virtual camera is also supported"
-                         title="Virtual camera is also supported" />
+                         title="Virtual camera is also supported"
+                         width="1334"
+                         height="768" />
                 </div>
                 <div id="slides-controls">
                     <div class="slides-control slides-control-selected"></div>
@@ -86,7 +119,7 @@
         </div>
     </section>
     <section id="features">
-        <h1 id="features-title">Powerful features</h1>
+        <h2 id="features-title">Powerful features</h2>
         <ul id="features-grid" class="nolist">
             <li class="feature-card">
                 <div class="feature-icon">
@@ -96,7 +129,7 @@
                     </svg>
                 </div>
                 <h2 class="feature-title">Multiple Cameras</h2>
-                <p class="feature-description">Use and manage multiple cameras with ease.</p>
+                <p class="feature-description">Use and manage multiple webcams with ease.</p>
                 <svg class="feature-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9 6l6 6-6 6" />
                 </svg>
@@ -175,7 +208,7 @@
     </section>
     <section id="downloads">
         <div class="downloads-header">
-            <h1 id="downloads-title">Download Webcamoid</h1>
+            <h2 id="downloads-title">Download Webcamoid</h2>
             <p id="downloads-subtitle">Choose your platform and get started</p>
         </div>
 
@@ -254,7 +287,7 @@
         </div>
 
         <div class="downloads-header downloads-subheader">
-            <h2 id="vcam-downloads-title">Virtual Camera Driver</h2>
+            <h3 id="vcam-downloads-title">Virtual Camera Driver</h3>
             <p id="vcam-downloads-subtitle">Feed your enhanced video into other apps</p>
         </div>
 
