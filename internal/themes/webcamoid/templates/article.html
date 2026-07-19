@@ -2,16 +2,42 @@
 
 {% block title %}{{ BLOGNAME }}: {{ article.title }}{% endblock %}
 
+{% block meta_description %}{{ article.summary | striptags | truncate(160) }}{% endblock %}
+
+{% block og_url %}{{ SITEURL }}/{{ article.url }}{% endblock %}
+
+{% block header %}
+    <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ article.title }}",
+        "description": "{{ self.meta_description() }}",
+        "datePublished": "{{ article.date.isoformat() }}",
+        {% if article.modified %}"dateModified": "{{ article.modified.isoformat() }}",{% endif %}
+        "url": "{{ self.og_url() }}",
+        "mainEntityOfPage": "{{ self.og_url() }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ article.author }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ SITENAME }}"
+        }
+    }
+    </script>
+{% endblock %}
+
 {% block content %}
     <section id="blog-articles">
-        <h1>{{ BLOGNAME }}</h1>
+        <p><a href="/blog">&laquo; {{ BLOGNAME }}</a></p>
 
         <article class="blog-article">
             <header>
                 <p class="post-date">{{ article.date | strftime(article.date_format) }}</p>
-                <h2 class="entry-title">
-                    <a href="/{{ article.url }}">{{ article.title }}</a>
-                </h2>
+                <h1 class="entry-title">{{ article.title }}</h1>
             </header>
             <div class="post-contents">
                 {{ article.content }}

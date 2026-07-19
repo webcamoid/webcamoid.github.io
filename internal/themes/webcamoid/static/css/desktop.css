@@ -487,6 +487,18 @@ pre {
     margin-right: auto;
 }
 
+.hero-cta {
+    display: inline-block;
+}
+
+#hero-version {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    font-size: 0.85rem;
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
 #hero-text {
     flex: 1 1 420px;
     max-width: 480px;

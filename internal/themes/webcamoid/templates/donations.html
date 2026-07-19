@@ -3,6 +3,12 @@
 {% set donations_title = 'Webcamoid donations' %}
 {% block title %}{{donations_title}}{% endblock %}
 
+{% block meta_description %}Support Webcamoid's development through GitHub Sponsors, PayPal, Patreon, Ko-fi, Liberapay, or cryptocurrency donations.{% endblock %}
+
+{% block header %}
+    <link rel="canonical" href="{{ SITEURL }}/donations">
+{% endblock %}
+
 {% block content %}
     <section id="blog-articles">
         <h1>{{donations_title}}</h1>
