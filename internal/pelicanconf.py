@@ -29,14 +29,12 @@ AUTHOR_FEED_RSS = None
 DIRECT_TEMPLATES = [
     'index',
     'blog',
-    'donations',
-    'effects'
+    'donations'
 ]
 PAGINATED_TEMPLATES = {
     'index': None,
     'blog': None,
-    'donations': None,
-    'effects': None
+    'donations': None
 }
 STATIC_PATHS = ['images', 'data']
 
