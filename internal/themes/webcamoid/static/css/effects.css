@@ -1,0 +1,282 @@
+/* Effects catalogue and home-page preview */
+
+#plans,
+#effects-preview,
+#effects-catalogue {
+    color: var(--color-text);
+    background-color: var(--color-back-base);
+    padding: 64px 48px;
+}
+
+#plans {
+    border-top: 1px solid var(--color-main-hi);
+}
+
+.plans-header,
+.effects-header,
+.effects-preview-header {
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.plans-header h2,
+.effects-header h1,
+.effects-preview-header h2 {
+    margin-bottom: 12px;
+    font-size: 1.7rem;
+}
+
+.plans-header p,
+.effects-header p,
+.effects-preview-header p {
+    margin-bottom: 0;
+    color: hsla(0, 0%, 100%, 0.65);
+}
+
+.plans-table-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow-x: auto;
+    border: 1px solid var(--color-main-hi);
+    border-radius: 12px;
+    background: var(--color-back-hi);
+}
+
+.plans-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.plans-table th,
+.plans-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.08);
+    vertical-align: middle;
+}
+
+.plans-table thead th {
+    color: var(--color-secondary-hi);
+    font-weight: 600;
+    background: hsla(255, 50%, 37.5%, 0.22);
+}
+
+.plans-table tbody th {
+    width: 22%;
+    font-weight: 500;
+    color: hsla(0, 0%, 100%, 0.85);
+}
+
+.plans-table tbody td {
+    color: hsla(0, 0%, 100%, 0.72);
+}
+
+.plans-table tbody tr:last-child th,
+.plans-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.plans-note {
+    max-width: 1120px;
+    margin: 18px auto 0;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.plans-note a,
+.effects-preview-link {
+    color: var(--color-secondary-hi);
+}
+
+.effects-preview-header {
+    margin-bottom: 28px;
+}
+
+.effects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.effects-grid-preview {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.effect-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-main-hi);
+    border-radius: 12px;
+    background: var(--color-back-hi);
+}
+
+.effect-card-link {
+    display: block;
+    height: 100%;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.effect-card-link:hover .effect-card-title {
+    color: var(--color-secondary-hi);
+}
+
+.effect-card-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 40%, hsla(255, 65%, 58%, 0.24), transparent 65%),
+        linear-gradient(135deg, var(--color-back-base), var(--color-main-low));
+}
+
+.effect-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.effect-image-placeholder {
+    padding: 16px;
+    color: hsla(0, 0%, 100%, 0.42);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.effect-card-content {
+    padding: 14px 16px 16px;
+}
+
+.effect-card-title {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    transition: color 0.15s ease;
+}
+
+.effect-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.effect-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid var(--color-main-hi);
+    border-radius: 999px;
+    color: hsla(0, 0%, 100%, 0.68);
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+.effect-tag-premium {
+    border-color: hsla(150, 100%, 50%, 0.45);
+    color: var(--color-secondary-hi);
+}
+
+.effect-tag-development {
+    border-color: hsla(40, 90%, 60%, 0.45);
+    color: hsl(40, 90%, 70%);
+}
+
+.effects-preview-footer {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.effects-preview-link {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 1px solid var(--color-secondary-low);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.effects-preview-link:hover {
+    background: var(--color-secondary-verylow);
+}
+
+.effects-toolbar {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+}
+
+.effects-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.effect-filter {
+    padding: 9px 16px;
+    border: 1px solid var(--color-main-hi);
+    border-radius: 999px;
+    background: var(--color-back-hi);
+    color: var(--color-text);
+    font: inherit;
+    cursor: pointer;
+}
+
+.effect-filter:hover,
+.effect-filter-selected {
+    border-color: var(--color-secondary-base);
+    background: var(--color-secondary-verylow);
+}
+
+.effects-loading,
+.effects-message {
+    grid-column: 1 / -1;
+    color: hsla(0, 0%, 100%, 0.65);
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    #plans,
+    #effects-preview,
+    #effects-catalogue {
+        padding: 40px 24px;
+    }
+
+    .plans-header h2,
+    .effects-header h1,
+    .effects-preview-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .plans-table th,
+    .plans-table td {
+        padding: 12px 14px;
+    }
+
+    .effects-grid,
+    .effects-grid-preview {
+        grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+        gap: 12px;
+    }
+
+    .effect-card-content {
+        padding: 12px;
+    }
+
+    .effect-card-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .effects-grid,
+    .effects-grid-preview {
+        grid-template-columns: 1fr;
+    }
+}
