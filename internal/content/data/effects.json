@@ -1,5 +1,5 @@
 {
-    "schema_version": 1,
+    "schema_version": 2,
     "stable_reference": {
         "version": "9.4.0",
         "public_repository_commit": "b6e2c65",
@@ -17,7 +17,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/AdjustHSL.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "AspectRatio",
@@ -26,7 +27,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/AspectRatio.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Blur",
@@ -35,7 +37,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Blur.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "ChangeHSL",
@@ -44,7 +47,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/ChangeHSL.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Contrast",
@@ -53,7 +57,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Contrast.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Crop",
@@ -62,7 +67,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Crop.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Edge",
@@ -71,7 +77,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Edge.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Emboss",
@@ -80,7 +87,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Emboss.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Flip",
@@ -89,7 +97,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Flip.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Gamma",
@@ -98,7 +107,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Gamma.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "GrayScale",
@@ -107,7 +117,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/GrayScale.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Invert",
@@ -116,7 +127,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Invert.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Normalize",
@@ -125,7 +137,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Normalize.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Pixelate",
@@ -134,7 +147,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Pixelate.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "SwapRB",
@@ -143,7 +157,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/SwapRB.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Temperature",
@@ -152,7 +167,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Temperature.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Vignette",
@@ -161,7 +177,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Vignette.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Zoom",
@@ -170,7 +187,8 @@
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Zoom.webp",
             "stable_9_4_0": true,
-            "development_build": true
+            "development_build": true,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Aging",
@@ -180,7 +198,8 @@
             "image": "/theme/images/effects/Aging.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "AnalogTV",
@@ -190,7 +209,8 @@
             "image": "/theme/images/effects/AnalogTV.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Cartoon",
@@ -200,7 +220,8 @@
             "image": "/theme/images/effects/Cartoon.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Charify",
@@ -210,7 +231,8 @@
             "image": "/theme/images/effects/Charify.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Cinema",
@@ -220,7 +242,8 @@
             "image": "/theme/images/effects/Cinema.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "ColorFilter",
@@ -230,7 +253,8 @@
             "image": "/theme/images/effects/ColorFilter.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "ColorKey",
@@ -240,7 +264,8 @@
             "image": "/theme/images/effects/ColorKey.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "ColorReplace",
@@ -250,7 +275,8 @@
             "image": "/theme/images/effects/ColorReplace.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "ColorTap",
@@ -260,7 +286,8 @@
             "image": "/theme/images/effects/ColorTap.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "ColorTransform",
@@ -270,7 +297,8 @@
             "image": "/theme/images/effects/ColorTransform.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Convolve",
@@ -280,7 +308,8 @@
             "image": "/theme/images/effects/Convolve.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Cube",
@@ -290,7 +319,8 @@
             "image": "/theme/images/effects/Cube.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "DelayGrab",
@@ -300,7 +330,8 @@
             "image": "/theme/images/effects/DelayGrab.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Denoise",
@@ -310,7 +341,8 @@
             "image": "/theme/images/effects/Denoise.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Dice",
@@ -320,7 +352,8 @@
             "image": "/theme/images/effects/Dice.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Distort",
@@ -330,7 +363,8 @@
             "image": "/theme/images/effects/Distort.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Dizzy",
@@ -340,7 +374,8 @@
             "image": "/theme/images/effects/Dizzy.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Equalize",
@@ -350,7 +385,8 @@
             "image": "/theme/images/effects/Equalize.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "FaceDetect",
@@ -360,7 +396,8 @@
             "image": "/theme/images/effects/FaceDetect.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "FaceTrack",
@@ -370,7 +407,8 @@
             "image": "/theme/images/effects/FaceTrack.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "FalseColor",
@@ -380,7 +418,8 @@
             "image": "/theme/images/effects/FalseColor.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Fire",
@@ -390,7 +429,8 @@
             "image": "/theme/images/effects/Fire.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "FrameOverlap",
@@ -400,7 +440,8 @@
             "image": "/theme/images/effects/FrameOverlap.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "FreezeFrame",
@@ -410,7 +451,8 @@
             "image": "/theme/images/effects/FreezeFrame.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "Glitch",
@@ -420,7 +462,8 @@
             "image": "/theme/images/effects/Glitch.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "Halftone",
@@ -430,7 +473,8 @@
             "image": "/theme/images/effects/Halftone.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Hypnotic",
@@ -440,7 +484,8 @@
             "image": "/theme/images/effects/Hypnotic.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Implode",
@@ -450,7 +495,8 @@
             "image": "/theme/images/effects/Implode.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Kaleidoscope",
@@ -460,7 +506,8 @@
             "image": "/theme/images/effects/Kaleidoscope.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "LensDistortion",
@@ -470,7 +517,8 @@
             "image": "/theme/images/effects/LensDistortion.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "Life",
@@ -480,7 +528,8 @@
             "image": "/theme/images/effects/Life.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Matrix",
@@ -490,7 +539,8 @@
             "image": "/theme/images/effects/Matrix.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "MatrixTransform",
@@ -500,7 +550,8 @@
             "image": "/theme/images/effects/MatrixTransform.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Nervous",
@@ -510,7 +561,8 @@
             "image": "/theme/images/effects/Nervous.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "OilPaint",
@@ -520,7 +572,8 @@
             "image": "/theme/images/effects/OilPaint.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Otsu",
@@ -530,7 +583,8 @@
             "image": "/theme/images/effects/Otsu.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Photocopy",
@@ -540,7 +594,8 @@
             "image": "/theme/images/effects/Photocopy.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Quark",
@@ -550,7 +605,8 @@
             "image": "/theme/images/effects/Quark.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Radar",
@@ -560,7 +616,8 @@
             "image": "/theme/images/effects/Radar.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "Radiactive",
@@ -570,7 +627,8 @@
             "image": "/theme/images/effects/Radiactive.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Ripple",
@@ -580,7 +638,8 @@
             "image": "/theme/images/effects/Ripple.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Saturated",
@@ -590,7 +649,8 @@
             "image": "/theme/images/effects/Saturated.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "ScanLines",
@@ -600,7 +660,8 @@
             "image": "/theme/images/effects/ScanLines.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Shagadelic",
@@ -610,7 +671,8 @@
             "image": "/theme/images/effects/Shagadelic.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Swirl",
@@ -620,7 +682,8 @@
             "image": "/theme/images/effects/Swirl.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Temple",
@@ -630,7 +693,8 @@
             "image": "/theme/images/effects/Temple.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "Tetromino",
@@ -640,7 +704,8 @@
             "image": "/theme/images/effects/Tetromino.webp",
             "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true
+            "development_only": true,
+            "stable_9_4_0_channel": null
         },
         {
             "id": "Warhol",
@@ -650,7 +715,8 @@
             "image": "/theme/images/effects/Warhol.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "paid-binaries"
         },
         {
             "id": "Warp",
@@ -660,7 +726,8 @@
             "image": "/theme/images/effects/Warp.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         },
         {
             "id": "Wave",
@@ -670,7 +737,8 @@
             "image": "/theme/images/effects/Wave.webp",
             "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false
+            "development_only": false,
+            "stable_9_4_0_channel": "public-source"
         }
     ]
 }
