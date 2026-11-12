@@ -1,5 +1,5 @@
 {
-    "schema_version": 3,
+    "schema_version": 4,
     "stable_reference": {
         "version": "9.4.0",
         "public_repository_commit": "b6e2c65",
@@ -16,9 +16,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/AdjustHSL.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "AspectRatio",
@@ -26,9 +26,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/AspectRatio.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Blur",
@@ -36,9 +36,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Blur.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "ChangeHSL",
@@ -46,9 +46,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/ChangeHSL.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Contrast",
@@ -56,9 +56,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Contrast.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Crop",
@@ -66,9 +66,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Crop.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Edge",
@@ -76,9 +76,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Edge.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Emboss",
@@ -86,9 +86,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Emboss.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Flip",
@@ -96,9 +96,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Flip.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Gamma",
@@ -106,9 +106,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Gamma.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "GrayScale",
@@ -116,9 +116,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/GrayScale.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Invert",
@@ -126,9 +126,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Invert.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Normalize",
@@ -136,9 +136,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Normalize.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Pixelate",
@@ -146,9 +146,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Pixelate.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "SwapRB",
@@ -156,9 +156,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/SwapRB.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Temperature",
@@ -166,9 +166,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Temperature.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Vignette",
@@ -176,9 +176,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Vignette.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Zoom",
@@ -186,9 +186,9 @@
             "category": "basic",
             "repository": "webcamoid/webcamoid",
             "image": "/theme/images/effects/Zoom.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Aging",
@@ -196,10 +196,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Aging.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "AnalogTV",
@@ -207,10 +206,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/AnalogTV.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Cartoon",
@@ -218,10 +216,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Cartoon.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Charify",
@@ -229,10 +226,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Charify.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Cinema",
@@ -240,10 +236,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Cinema.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "ColorFilter",
@@ -251,10 +246,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorFilter.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "ColorKey",
@@ -262,10 +256,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorKey.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "ColorReplace",
@@ -273,10 +266,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorReplace.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "ColorTap",
@@ -284,10 +276,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorTap.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "ColorTransform",
@@ -295,10 +286,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorTransform.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Convolve",
@@ -306,10 +296,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Convolve.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Cube",
@@ -317,10 +306,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Cube.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "DelayGrab",
@@ -328,10 +316,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/DelayGrab.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Denoise",
@@ -339,10 +326,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Denoise.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Dice",
@@ -350,10 +336,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Dice.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Distort",
@@ -361,10 +346,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Distort.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Dizzy",
@@ -372,10 +356,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Dizzy.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Equalize",
@@ -383,10 +366,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Equalize.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "FaceDetect",
@@ -394,10 +376,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FaceDetect.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "FaceTrack",
@@ -405,10 +386,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FaceTrack.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "FalseColor",
@@ -416,10 +396,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FalseColor.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Fire",
@@ -427,10 +406,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Fire.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "FrameOverlap",
@@ -438,10 +416,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FrameOverlap.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "FreezeFrame",
@@ -449,10 +426,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FreezeFrame.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Glitch",
@@ -460,10 +436,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Glitch.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Halftone",
@@ -471,10 +446,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Halftone.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Hypnotic",
@@ -482,10 +456,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Hypnotic.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Implode",
@@ -493,10 +466,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Implode.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Kaleidoscope",
@@ -504,10 +476,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Kaleidoscope.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "LensDistortion",
@@ -515,10 +486,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/LensDistortion.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Life",
@@ -526,10 +496,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Life.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Matrix",
@@ -537,10 +506,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Matrix.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "MatrixTransform",
@@ -548,10 +516,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/MatrixTransform.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Nervous",
@@ -559,10 +526,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Nervous.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "OilPaint",
@@ -570,10 +536,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/OilPaint.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Otsu",
@@ -581,10 +546,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Otsu.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Photocopy",
@@ -592,10 +556,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Photocopy.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Quark",
@@ -603,10 +566,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Quark.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Radar",
@@ -614,10 +576,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Radar.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Radiactive",
@@ -625,10 +586,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Radiactive.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Ripple",
@@ -636,10 +596,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Ripple.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Saturated",
@@ -647,10 +606,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Saturated.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "ScanLines",
@@ -658,10 +616,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ScanLines.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Shagadelic",
@@ -669,10 +626,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Shagadelic.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Swirl",
@@ -680,10 +636,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Swirl.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Temple",
@@ -691,10 +646,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Temple.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Tetromino",
@@ -702,10 +656,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Tetromino.webp",
-            "stable_9_4_0": false,
             "development_build": true,
-            "development_only": true,
-            "stable_9_4_0_channel": null
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Warhol",
@@ -713,10 +666,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Warhol.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "paid-binaries"
+            "stable": true,
+            "stable_channel": "paid-binaries"
         },
         {
             "id": "Warp",
@@ -724,10 +676,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Warp.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         },
         {
             "id": "Wave",
@@ -735,10 +686,9 @@
             "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Wave.webp",
-            "stable_9_4_0": true,
             "development_build": true,
-            "development_only": false,
-            "stable_9_4_0_channel": "public-source"
+            "stable": true,
+            "stable_channel": "public-source"
         }
     ]
 }
