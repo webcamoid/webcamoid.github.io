@@ -1,5 +1,5 @@
 {
-    "schema_version": 2,
+    "schema_version": 3,
     "stable_reference": {
         "version": "9.4.0",
         "public_repository_commit": "b6e2c65",
@@ -193,7 +193,7 @@
         {
             "id": "Aging",
             "description": "Aging",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Aging.webp",
             "stable_9_4_0": true,
@@ -204,7 +204,7 @@
         {
             "id": "AnalogTV",
             "description": "Analog TV",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/AnalogTV.webp",
             "stable_9_4_0": true,
@@ -215,7 +215,7 @@
         {
             "id": "Cartoon",
             "description": "Cartoonify",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Cartoon.webp",
             "stable_9_4_0": true,
@@ -226,7 +226,7 @@
         {
             "id": "Charify",
             "description": "ASCII art",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Charify.webp",
             "stable_9_4_0": true,
@@ -237,7 +237,7 @@
         {
             "id": "Cinema",
             "description": "Cinema",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Cinema.webp",
             "stable_9_4_0": true,
@@ -248,7 +248,7 @@
         {
             "id": "ColorFilter",
             "description": "Color Filter",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorFilter.webp",
             "stable_9_4_0": true,
@@ -259,7 +259,7 @@
         {
             "id": "ColorKey",
             "description": "Color Key",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorKey.webp",
             "stable_9_4_0": true,
@@ -270,7 +270,7 @@
         {
             "id": "ColorReplace",
             "description": "Replace Color",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorReplace.webp",
             "stable_9_4_0": true,
@@ -281,7 +281,7 @@
         {
             "id": "ColorTap",
             "description": "Color from Palette",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorTap.webp",
             "stable_9_4_0": true,
@@ -292,7 +292,7 @@
         {
             "id": "ColorTransform",
             "description": "Color Matrix Transform",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ColorTransform.webp",
             "stable_9_4_0": true,
@@ -303,7 +303,7 @@
         {
             "id": "Convolve",
             "description": "Convolve Matrix",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Convolve.webp",
             "stable_9_4_0": true,
@@ -314,7 +314,7 @@
         {
             "id": "Cube",
             "description": "Cube",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Cube.webp",
             "stable_9_4_0": false,
@@ -325,7 +325,7 @@
         {
             "id": "DelayGrab",
             "description": "Delay Grab",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/DelayGrab.webp",
             "stable_9_4_0": true,
@@ -336,7 +336,7 @@
         {
             "id": "Denoise",
             "description": "Denoise",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Denoise.webp",
             "stable_9_4_0": true,
@@ -347,7 +347,7 @@
         {
             "id": "Dice",
             "description": "Dice",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Dice.webp",
             "stable_9_4_0": true,
@@ -358,7 +358,7 @@
         {
             "id": "Distort",
             "description": "Distort",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Distort.webp",
             "stable_9_4_0": true,
@@ -369,7 +369,7 @@
         {
             "id": "Dizzy",
             "description": "Stoned",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Dizzy.webp",
             "stable_9_4_0": true,
@@ -380,7 +380,7 @@
         {
             "id": "Equalize",
             "description": "Equalize",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Equalize.webp",
             "stable_9_4_0": true,
@@ -391,7 +391,7 @@
         {
             "id": "FaceDetect",
             "description": "Face Detection",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FaceDetect.webp",
             "stable_9_4_0": true,
@@ -402,7 +402,7 @@
         {
             "id": "FaceTrack",
             "description": "Face Tracking",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FaceTrack.webp",
             "stable_9_4_0": true,
@@ -413,7 +413,7 @@
         {
             "id": "FalseColor",
             "description": "False Color",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FalseColor.webp",
             "stable_9_4_0": true,
@@ -424,7 +424,7 @@
         {
             "id": "Fire",
             "description": "Fire",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Fire.webp",
             "stable_9_4_0": true,
@@ -435,7 +435,7 @@
         {
             "id": "FrameOverlap",
             "description": "Kung Fu Master",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FrameOverlap.webp",
             "stable_9_4_0": true,
@@ -446,7 +446,7 @@
         {
             "id": "FreezeFrame",
             "description": "Freeze Frame",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/FreezeFrame.webp",
             "stable_9_4_0": false,
@@ -457,7 +457,7 @@
         {
             "id": "Glitch",
             "description": "Glitch",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Glitch.webp",
             "stable_9_4_0": false,
@@ -468,7 +468,7 @@
         {
             "id": "Halftone",
             "description": "Dithering",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Halftone.webp",
             "stable_9_4_0": true,
@@ -479,7 +479,7 @@
         {
             "id": "Hypnotic",
             "description": "Hypnotic",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Hypnotic.webp",
             "stable_9_4_0": true,
@@ -490,7 +490,7 @@
         {
             "id": "Implode",
             "description": "Implode",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Implode.webp",
             "stable_9_4_0": true,
@@ -501,7 +501,7 @@
         {
             "id": "Kaleidoscope",
             "description": "Kaleidoscope",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Kaleidoscope.webp",
             "stable_9_4_0": false,
@@ -512,7 +512,7 @@
         {
             "id": "LensDistortion",
             "description": "Lens Distortion",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/LensDistortion.webp",
             "stable_9_4_0": false,
@@ -523,7 +523,7 @@
         {
             "id": "Life",
             "description": "Life Game",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Life.webp",
             "stable_9_4_0": true,
@@ -534,7 +534,7 @@
         {
             "id": "Matrix",
             "description": "Matrix",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Matrix.webp",
             "stable_9_4_0": true,
@@ -545,7 +545,7 @@
         {
             "id": "MatrixTransform",
             "description": "Matrix Transform",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/MatrixTransform.webp",
             "stable_9_4_0": true,
@@ -556,7 +556,7 @@
         {
             "id": "Nervous",
             "description": "Nervous",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Nervous.webp",
             "stable_9_4_0": true,
@@ -567,7 +567,7 @@
         {
             "id": "OilPaint",
             "description": "Oil Paint",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/OilPaint.webp",
             "stable_9_4_0": true,
@@ -578,7 +578,7 @@
         {
             "id": "Otsu",
             "description": "Otsu threshold",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Otsu.webp",
             "stable_9_4_0": true,
@@ -589,7 +589,7 @@
         {
             "id": "Photocopy",
             "description": "PhotoCopy",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Photocopy.webp",
             "stable_9_4_0": true,
@@ -600,7 +600,7 @@
         {
             "id": "Quark",
             "description": "Quark",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Quark.webp",
             "stable_9_4_0": true,
@@ -611,7 +611,7 @@
         {
             "id": "Radar",
             "description": "Radar",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Radar.webp",
             "stable_9_4_0": false,
@@ -622,7 +622,7 @@
         {
             "id": "Radiactive",
             "description": "Radiactivity",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Radiactive.webp",
             "stable_9_4_0": true,
@@ -633,7 +633,7 @@
         {
             "id": "Ripple",
             "description": "Water",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Ripple.webp",
             "stable_9_4_0": true,
@@ -644,7 +644,7 @@
         {
             "id": "Saturated",
             "description": "Saturated Colors",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Saturated.webp",
             "stable_9_4_0": true,
@@ -655,7 +655,7 @@
         {
             "id": "ScanLines",
             "description": "Scan Lines",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/ScanLines.webp",
             "stable_9_4_0": true,
@@ -666,7 +666,7 @@
         {
             "id": "Shagadelic",
             "description": "Psychedelic",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Shagadelic.webp",
             "stable_9_4_0": true,
@@ -677,7 +677,7 @@
         {
             "id": "Swirl",
             "description": "Swirl",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Swirl.webp",
             "stable_9_4_0": true,
@@ -688,7 +688,7 @@
         {
             "id": "Temple",
             "description": "Temple",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Temple.webp",
             "stable_9_4_0": false,
@@ -699,7 +699,7 @@
         {
             "id": "Tetromino",
             "description": "Tetromino",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Tetromino.webp",
             "stable_9_4_0": false,
@@ -710,7 +710,7 @@
         {
             "id": "Warhol",
             "description": "Warhol",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Warhol.webp",
             "stable_9_4_0": true,
@@ -721,7 +721,7 @@
         {
             "id": "Warp",
             "description": "Warp",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Warp.webp",
             "stable_9_4_0": true,
@@ -732,7 +732,7 @@
         {
             "id": "Wave",
             "description": "Wave",
-            "category": "premium",
+            "category": "extra",
             "repository": "webcamoid/WebcamoidPrivate",
             "image": "/theme/images/effects/Wave.webp",
             "stable_9_4_0": true,
