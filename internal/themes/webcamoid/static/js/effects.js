@@ -47,8 +47,8 @@
 
         var tags = document.createElement("div");
         tags.className = "effect-card-tags";
-        tags.appendChild(createTag(effect.category === "basic" ? "Basic" : "Premium",
-                                   effect.category === "premium" ? "effect-tag-premium" : ""));
+        tags.appendChild(createTag(effect.category === "basic" ? "Basic" : "Extra plugin",
+                                   effect.category === "extra" ? "effect-tag-premium" : ""));
 
         if (effect.stable_9_4_0)
             tags.appendChild(createTag("Stable 9.4.0", ""));
@@ -103,7 +103,7 @@
                     var previewEffects = effects.filter(function (effect) {
                         return effect.category === "basic";
                     }).slice(0, 3).concat(effects.filter(function (effect) {
-                        return effect.category === "premium";
+                        return effect.category === "extra";
                     }).slice(0, 3));
                     renderEffects(preview, previewEffects);
                 }
