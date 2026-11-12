@@ -29,14 +29,16 @@ AUTHOR_FEED_RSS = None
 DIRECT_TEMPLATES = [
     'index',
     'blog',
-    'donations'
+    'donations',
+    'effects'
 ]
 PAGINATED_TEMPLATES = {
     'index': None,
     'blog': None,
-    'donations': None
+    'donations': None,
+    'effects': None
 }
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'data']
 
 DELETE_OUTPUT_DIRECTORY = False
 USE_FOLDER_AS_CATEGORY = False
