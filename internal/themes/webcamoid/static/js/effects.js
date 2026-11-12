@@ -10,7 +10,7 @@
         return tag;
     }
 
-    function createEffectCard(effect)
+    function createEffectCard(effect, stableVersion)
     {
         var article = document.createElement("article");
         article.className = "effect-card";
@@ -50,10 +50,10 @@
         tags.appendChild(createTag(effect.category === "basic" ? "Basic" : "Extra plugin",
                                    effect.category === "extra" ? "effect-tag-premium" : ""));
 
-        if (effect.stable_9_4_0_channel === "public-source")
-            tags.appendChild(createTag("9.4.0 public source", ""));
-        else if (effect.stable_9_4_0_channel === "paid-binaries")
-            tags.appendChild(createTag("9.4.0 extra plugin", "effect-tag-premium"));
+        if (effect.stable && effect.stable_channel === "public-source")
+            tags.appendChild(createTag(stableVersion + " public source", ""));
+        else if (effect.stable && effect.stable_channel === "paid-binaries")
+            tags.appendChild(createTag(stableVersion + " extra plugin", "effect-tag-premium"));
         else
             tags.appendChild(createTag("Development build", "effect-tag-development"));
 
@@ -65,7 +65,7 @@
         return article;
     }
 
-    function renderEffects(container, effects, limit)
+    function renderEffects(container, effects, limit, stableVersion)
     {
         container.textContent = "";
         var selected = effects.slice(0, limit || effects.length);
@@ -79,7 +79,7 @@
         }
 
         selected.forEach(function (effect) {
-            container.appendChild(createEffectCard(effect));
+            container.appendChild(createEffectCard(effect, stableVersion));
         });
     }
 
@@ -100,6 +100,7 @@
             })
             .then(function (data) {
                 var effects = data.effects || [];
+                var stableVersion = data.stable_reference && data.stable_reference.version || "Stable";
 
                 if (preview) {
                     var previewEffects = effects.filter(function (effect) {
@@ -107,7 +108,7 @@
                     }).slice(0, 3).concat(effects.filter(function (effect) {
                         return effect.category === "extra";
                     }).slice(0, 3));
-                    renderEffects(preview, previewEffects);
+                    renderEffects(preview, previewEffects, undefined, stableVersion);
                 }
 
                 if (!catalogue)
@@ -123,12 +124,12 @@
                             return effect.category === activeFilter;
 
                         if (activeFilter === "development")
-                            return effect.development_only === true;
+                            return !effect.stable;
 
                         return true;
                     });
 
-                    renderEffects(catalogue, visible);
+                    renderEffects(catalogue, visible, undefined, stableVersion);
                 }
 
                 if (filters) {
