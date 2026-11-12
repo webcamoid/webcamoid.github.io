@@ -50,10 +50,10 @@
         tags.appendChild(createTag(effect.category === "basic" ? "Basic" : "Premium",
                                    effect.category === "premium" ? "effect-tag-premium" : ""));
 
-        if (effect.development_only)
-            tags.appendChild(createTag("Development build", "effect-tag-development"));
-        else
+        if (effect.stable_9_4_0)
             tags.appendChild(createTag("Stable 9.4.0", ""));
+        else
+            tags.appendChild(createTag("Development build", "effect-tag-development"));
 
         content.appendChild(tags);
         link.appendChild(imageBox);
