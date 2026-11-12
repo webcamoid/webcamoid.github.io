@@ -117,7 +117,7 @@
                 function applyFilter()
                 {
                     var visible = effects.filter(function (effect) {
-                        if (activeFilter === "basic" || activeFilter === "premium")
+                        if (activeFilter === "basic" || activeFilter === "extra")
                             return effect.category === activeFilter;
 
                         if (activeFilter === "development")
