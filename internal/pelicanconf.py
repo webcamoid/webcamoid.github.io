@@ -36,6 +36,7 @@ PAGINATED_TEMPLATES = {
     'blog': None,
     'donations': None
 }
+PAGE_PATHS = ['pages']
 STATIC_PATHS = ['images', 'data']
 
 DELETE_OUTPUT_DIRECTORY = False
