@@ -83,6 +83,44 @@
         });
     }
 
+    function sampleRandom(effects, count)
+    {
+        var shuffled = effects.slice();
+
+        for (var i = shuffled.length - 1; i > 0; --i) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temporary = shuffled[i];
+            shuffled[i] = shuffled[j];
+            shuffled[j] = temporary;
+        }
+
+        return shuffled.slice(0, count);
+    }
+
+    function selectPreviewEffects(effects)
+    {
+        var basic = sampleRandom(effects.filter(function (effect) {
+            return effect.category === "basic";
+        }), 3);
+        var extra = sampleRandom(effects.filter(function (effect) {
+            return effect.category === "extra";
+        }), 3);
+
+        var selected = basic.concat(extra);
+
+        if (selected.length < 6) {
+            var selectedIds = new Set(selected.map(function (effect) {
+                return effect.id;
+            }));
+            var remaining = effects.filter(function (effect) {
+                return !selectedIds.has(effect.id);
+            });
+            selected = selected.concat(sampleRandom(remaining, 6 - selected.length));
+        }
+
+        return sampleRandom(selected, selected.length);
+    }
+
     function loadEffects()
     {
         var catalogue = document.getElementById("effects-grid");
@@ -102,14 +140,8 @@
                 var effects = data.effects || [];
                 var stableVersion = data.stable_reference && data.stable_reference.version || "Stable";
 
-                if (preview) {
-                    var previewEffects = effects.filter(function (effect) {
-                        return effect.category === "basic";
-                    }).slice(0, 3).concat(effects.filter(function (effect) {
-                        return effect.category === "extra";
-                    }).slice(0, 3));
-                    renderEffects(preview, previewEffects, undefined, stableVersion);
-                }
+                if (preview)
+                    renderEffects(preview, selectPreviewEffects(effects), undefined, stableVersion);
 
                 if (!catalogue)
                     return;
