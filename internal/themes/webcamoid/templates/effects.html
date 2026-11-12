@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Video Effects - Webcamoid{% endblock %}
+
+{% block meta_description %}Explore Webcamoid's basic and premium video effects, including effects available in the latest development builds.{% endblock %}
+
+{% block header %}
+    <link rel="canonical" href="{{ SITEURL }}/effects/">
+{% endblock %}
+
+{% block content %}
+    <section id="effects-catalogue">
+        <div class="effects-header">
+            <h1>Video Effects</h1>
+            <p>Explore the effects available in Webcamoid. Select a category to narrow the collection.</p>
+        </div>
+
+        <div class="effects-toolbar">
+            <div id="effects-filters" class="effects-filters" role="group" aria-label="Filter effects">
+                <button type="button" class="effect-filter effect-filter-selected" data-filter="all" aria-pressed="true">All effects</button>
+                <button type="button" class="effect-filter" data-filter="basic" aria-pressed="false">Basic</button>
+                <button type="button" class="effect-filter" data-filter="premium" aria-pressed="false">Premium</button>
+                <button type="button" class="effect-filter" data-filter="development" aria-pressed="false">Development builds</button>
+            </div>
+        </div>
+
+        <div id="effects-grid" class="effects-grid" aria-live="polite">
+            <p class="effects-loading">Loading effects…</p>
+        </div>
+
+        <noscript>
+            <p class="effects-message">Enable JavaScript to browse and filter the effects catalogue.</p>
+        </noscript>
+    </section>
+{% endblock %}
