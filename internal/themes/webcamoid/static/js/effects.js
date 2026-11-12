@@ -50,8 +50,10 @@
         tags.appendChild(createTag(effect.category === "basic" ? "Basic" : "Extra plugin",
                                    effect.category === "extra" ? "effect-tag-premium" : ""));
 
-        if (effect.stable_9_4_0)
-            tags.appendChild(createTag("Stable 9.4.0", ""));
+        if (effect.stable_9_4_0_channel === "public-source")
+            tags.appendChild(createTag("9.4.0 public source", ""));
+        else if (effect.stable_9_4_0_channel === "paid-binaries")
+            tags.appendChild(createTag("9.4.0 extra plugin", "effect-tag-premium"));
         else
             tags.appendChild(createTag("Development build", "effect-tag-development"));
 
