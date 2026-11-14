@@ -120,6 +120,7 @@
     height: 100%;
     color: var(--color-text);
     text-decoration: none;
+    cursor: zoom-in;
 }
 
 .effect-card-link:hover .effect-card-title {
@@ -206,6 +207,59 @@
     background: var(--color-secondary-verylow);
 }
 
+/* Full-size effect screenshot dialog */
+
+.effect-image-dialog {
+    position: fixed;
+    width: min(92vw, 1200px);
+    max-width: 92vw;
+    max-height: 92vh;
+    padding: 48px 20px 18px;
+    border: 1px solid var(--color-main-hi);
+    border-radius: 12px;
+    background: var(--color-back-hi);
+    color: var(--color-text);
+    overflow: auto;
+}
+
+.effect-image-dialog::backdrop {
+    background: hsla(0, 0%, 0%, 0.82);
+    backdrop-filter: blur(4px);
+}
+
+.effect-image-dialog-image {
+    display: block;
+    width: 100%;
+    max-height: calc(92vh - 100px);
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.effect-image-dialog-caption {
+    margin: 12px 0 0;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.effect-image-dialog-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-main-hi);
+    border-radius: 50%;
+    background: var(--color-back-base);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.effect-image-dialog-close:hover {
+    background: var(--color-secondary-verylow);
+}
+
 .effects-toolbar {
     max-width: 1200px;
     margin: 0 auto 24px;
@@ -271,6 +325,17 @@
 
     .effect-card-title {
         font-size: 0.95rem;
+    }
+
+    .effect-image-dialog {
+        width: 96vw;
+        max-width: 96vw;
+        max-height: 94vh;
+        padding: 44px 10px 12px;
+    }
+
+    .effect-image-dialog-image {
+        max-height: calc(94vh - 90px);
     }
 }
 
