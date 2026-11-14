@@ -9,6 +9,8 @@
 {% block og_image %}{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/screenshots/Main.webp{% endblock %}
 
 {% block header %}
+    <link rel="stylesheet" href="/theme/css/effects.css" />
+    <script src="/theme/js/effects.js"></script>
     <link rel="canonical" href="{{ SITEURL }}/">
     <script type="application/ld+json">
     {
@@ -210,6 +212,82 @@
                 </svg>
             </li>
         </ul>
+    </section>
+    <section id="plans">
+        <div class="plans-header">
+            <h2>Choose how to use Webcamoid</h2>
+            <p>Use the free source code, purchase a stable release, or support ongoing development and get continuously updated builds.</p>
+        </div>
+        <div class="plans-table-wrapper">
+            <table class="plans-table">
+                <thead>
+                    <tr>
+                        <th>Included</th>
+                        <th>Free</th>
+                        <th>Payhip</th>
+                        <th>GitHub Sponsors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>What you get</th>
+                        <td>Public source code</td>
+                        <td>Ready-to-use stable binaries</td>
+                        <td>Ready-to-use binaries for all supported platforms</td>
+                    </tr>
+                    <tr>
+                        <th>Release channel</th>
+                        <td>Build it yourself from source</td>
+                        <td>Current stable release</td>
+                        <td>Daily development builds</td>
+                    </tr>
+                    <tr>
+                        <th>Updates</th>
+                        <td>Follow the public repository</td>
+                        <td>Each stable version is a separate purchase</td>
+                        <td>Frequent builds, updated as development progresses</td>
+                    </tr>
+                    <tr>
+                        <th>Video effects</th>
+                        <td>Basic effects</td>
+                        <td>Basic effects and extra plugins included in the purchased release</td>
+                        <td>Basic effects and extra plugins available in development builds</td>
+                    </tr>
+                    <tr>
+                        <th>Streaming</th>
+                        <td>Explore and build from public source</td>
+                        <td>Streaming features included in the purchased stable release</td>
+                        <td>Latest streaming-focused development features</td>
+                    </tr>
+                    <tr>
+                        <th>Development support</th>
+                        <td>Community development</td>
+                        <td>One-time purchase</td>
+                        <td>Recurring support for ongoing development</td>
+                    </tr>
+                    <tr>
+                        <th>Development priority</th>
+                        <td>Community-based support; users can rely on their distro or modify the source code themselves</td>
+                        <td>Highest priority for bug fixes and feature requests in the purchased stable release</td>
+                        <td>Highest development priority, with ongoing feedback and discussion during development</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="plans-note">The stable release and daily builds represent different points in Webcamoid's ongoing development. Features and implementation may change before the next stable release. <a href="https://github.com/sponsors/hipersayanX" target="_blank" rel="noopener">See GitHub Sponsors benefits</a>.</p>
+    </section>
+
+    <section id="effects-preview">
+        <div class="effects-preview-header">
+            <h2>Explore video effects</h2>
+            <p>Discover the basic effects and extra plugins available in Webcamoid.</p>
+        </div>
+        <div id="effects-preview-grid" class="effects-grid effects-grid-preview">
+            <p class="effects-loading">Loading effects…</p>
+        </div>
+        <div class="effects-preview-footer">
+            <a class="effects-preview-link" href="/effects/">Browse all video effects</a>
+        </div>
     </section>
     <section id="downloads">
         <div class="downloads-header">
