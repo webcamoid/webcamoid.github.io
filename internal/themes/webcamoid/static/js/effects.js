@@ -1,6 +1,59 @@
 (function () {
     "use strict";
 
+    var imageDialog;
+
+    function getImageDialog()
+    {
+        if (imageDialog)
+            return imageDialog;
+
+        imageDialog = document.createElement("dialog");
+        imageDialog.className = "effect-image-dialog";
+        imageDialog.setAttribute("aria-label", "Effect preview");
+
+        var closeButton = document.createElement("button");
+        closeButton.className = "effect-image-dialog-close";
+        closeButton.type = "button";
+        closeButton.textContent = "×";
+        closeButton.setAttribute("aria-label", "Close image preview");
+        closeButton.addEventListener("click", function () {
+            imageDialog.close();
+        });
+
+        var image = document.createElement("img");
+        image.className = "effect-image-dialog-image";
+        image.alt = "";
+
+        var caption = document.createElement("p");
+        caption.className = "effect-image-dialog-caption";
+
+        imageDialog.appendChild(closeButton);
+        imageDialog.appendChild(image);
+        imageDialog.appendChild(caption);
+
+        imageDialog.addEventListener("click", function (event) {
+            if (event.target === imageDialog)
+                imageDialog.close();
+        });
+
+        document.body.appendChild(imageDialog);
+
+        return imageDialog;
+    }
+
+    function openEffectImage(effect, imageUrl)
+    {
+        var dialog = getImageDialog();
+        var image = dialog.querySelector(".effect-image-dialog-image");
+        var caption = dialog.querySelector(".effect-image-dialog-caption");
+
+        image.src = imageUrl;
+        image.alt = effect.description;
+        caption.textContent = effect.description;
+        dialog.showModal();
+    }
+
     function createTag(label, className)
     {
         var tag = document.createElement("span");
@@ -19,7 +72,7 @@
         var link = document.createElement("a");
         link.className = "effect-card-link";
         link.href = "/effects/#effect-" + encodeURIComponent(effect.id);
-        link.setAttribute("aria-label", effect.description);
+        link.setAttribute("aria-label", "View " + effect.description + " screenshot");
 
         var imageBox = document.createElement("div");
         imageBox.className = "effect-card-image";
@@ -34,8 +87,18 @@
             placeholder.className = "effect-image-placeholder";
             placeholder.textContent = "Screenshot coming soon";
             imageBox.appendChild(placeholder);
+            link.removeAttribute("aria-label");
+            link.setAttribute("aria-label", effect.description);
         }, {once: true});
         imageBox.appendChild(img);
+
+        link.addEventListener("click", function (event) {
+            if (!img.isConnected || !img.complete || !img.naturalWidth)
+                return;
+
+            event.preventDefault();
+            openEffectImage(effect, img.src);
+        });
 
         var content = document.createElement("div");
         content.className = "effect-card-content";
