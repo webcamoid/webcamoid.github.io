@@ -211,6 +211,26 @@
             "stable_channel": "paid-binaries"
         },
         {
+            "id": "AudioMeter",
+            "description": "Audio Level Meter",
+            "category": "extra",
+            "repository": "webcamoid/WebcamoidPrivate",
+            "image": "/theme/images/effects/AudioMeter.webp",
+            "development_build": true,
+            "stable": false,
+            "stable_channel": null
+        },
+        {
+            "id": "AudioWarp",
+            "description": "Audio Radial Warp",
+            "category": "extra",
+            "repository": "webcamoid/WebcamoidPrivate",
+            "image": "/theme/images/effects/AudioWarp.webp",
+            "development_build": true,
+            "stable": false,
+            "stable_channel": null
+        },
+        {
             "id": "Cartoon",
             "description": "Cartoonify",
             "category": "extra",
@@ -339,6 +359,16 @@
             "development_build": true,
             "stable": true,
             "stable_channel": "paid-binaries"
+        },
+        {
+            "id": "DiscoBall",
+            "description": "Disco Ball",
+            "category": "extra",
+            "repository": "webcamoid/WebcamoidPrivate",
+            "image": "/theme/images/effects/DiscoBall.webp",
+            "development_build": true,
+            "stable": false,
+            "stable_channel": null
         },
         {
             "id": "Distort",

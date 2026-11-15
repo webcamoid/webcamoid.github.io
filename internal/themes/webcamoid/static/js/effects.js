@@ -192,7 +192,7 @@
         if (!catalogue && !preview)
             return;
 
-        fetch("/data/effects.json")
+        fetch("/data/effects.json", {cache: "no-cache"})
             .then(function (response) {
                 if (!response.ok)
                     throw new Error("Unable to load effects data");
